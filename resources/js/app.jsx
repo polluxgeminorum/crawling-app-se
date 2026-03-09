@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./bootstrap";
 import "../css/app.css";
 
@@ -8,6 +8,10 @@ import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 import useAuthStore from "./stores/authStore";
 
 const appName = import.meta.env.VITE_APP_NAME || "Sensus Ekonomi Crawling";
+
+// Check authentication on app load
+const { checkAuth } = useAuthStore.getState();
+checkAuth();
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,

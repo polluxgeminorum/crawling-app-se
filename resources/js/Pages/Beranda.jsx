@@ -1,7 +1,19 @@
 import SidebarLayout from '../Layouts/SidebarLayout';
 import { Link } from '@inertiajs/react';
+import useAuthStore from '../stores/authStore';
 
 export default function Beranda() {
+    const { isAuthenticated, user } = useAuthStore();
+
+    // Format role for display
+    const formatRole = (role) => {
+        const roles = {
+            'admin': 'Administrator',
+            'pegawai': 'Pegawai',
+            'pelaku_usaha': 'Pelaku Usaha'
+        };
+        return roles[role] || role;
+    };
     const features = [
         {
             icon: (
@@ -121,23 +133,45 @@ export default function Beranda() {
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                        Siap Memulai?
-                    </h2>
-                    <p className="text-xl text-blue-100 mb-10">
-                        Login sekarang untuk memulai proses crawling dan deteksi pelaku ekonomi digital.
-                    </p>
-                    <Link
-                        href="/login"
-                        className="inline-block px-10 py-4 bg-white text-blue-600 text-lg font-semibold rounded-xl hover:bg-blue-50 transition-colors shadow-lg"
-                    >
-                        Login Sekarang
-                    </Link>
-                </div>
-            </section>
+            {/* CTA Section - Only show if not authenticated */}
+            {!isAuthenticated && (
+                <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700">
+                    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                            Siap Memulai?
+                        </h2>
+                        <p className="text-xl text-blue-100 mb-10">
+                            Login sekarang untuk memulai proses crawling dan deteksi pelaku ekonomi digital.
+                        </p>
+                        <Link
+                            href="/login"
+                            className="inline-block px-10 py-4 bg-white text-blue-600 text-lg font-semibold rounded-xl hover:bg-blue-50 transition-colors shadow-lg"
+                        >
+                            Login Sekarang
+                        </Link>
+                    </div>
+                </section>
+            )}
+
+            {/* Welcome Section - Only show if authenticated */}
+            {isAuthenticated && (
+                <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700">
+                    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                            Selamat Datang, {user?.name || 'User'}!
+                        </h2>
+                        <p className="text-xl text-blue-100 mb-10">
+                            Anda sudah login sebagai {formatRole(user?.role)}
+                        </p>
+                        <Link
+                            href="/crawling"
+                            className="inline-block px-10 py-4 bg-white text-blue-600 text-lg font-semibold rounded-xl hover:bg-blue-50 transition-colors shadow-lg"
+                        >
+                            Mulai Crawling
+                        </Link>
+                    </div>
+                </section>
+            )}
         </SidebarLayout>
     );
 }

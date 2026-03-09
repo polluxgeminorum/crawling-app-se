@@ -1,6 +1,18 @@
 import SidebarLayout from '../Layouts/SidebarLayout';
+import useAuthStore from '../stores/authStore';
 
 export default function SensusEkonomi() {
+    const { isAuthenticated, user } = useAuthStore();
+
+    // Format role for display
+    const formatRole = (role) => {
+        const roles = {
+            'admin': 'Administrator',
+            'pegawai': 'Pegawai',
+            'pelaku_usaha': 'Pelaku Usaha'
+        };
+        return roles[role] || role;
+    };
     const objectives = [
         'Mengidentifikasi dan memetakan pelaku ekonomi digital di seluruh Indonesia',
         'Memperbarui data baseline pelaksanaan SENSUS EKONOMI 2026',
@@ -129,19 +141,37 @@ export default function SensusEkonomi() {
                     </div>
                 </div>
 
-                {/* CTA */}
-                <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-8 text-center">
-                    <h2 className="text-2xl font-bold text-white mb-4">Siap Berontribusi?</h2>
-                    <p className="text-blue-100 mb-6">
-                        Mari bersama-sama mendukung Sensus Ekonomi 2026 dengan data yang akurat
-                    </p>
-                    <a
-                        href="/login"
-                        className="inline-block px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors"
-                    >
-                        Login Sekarang
-                    </a>
-                </div>
+                {/* CTA - Only show if not authenticated */}
+                {!isAuthenticated && (
+                    <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-8 text-center">
+                        <h2 className="text-2xl font-bold text-white mb-4">Siap Berontribusi?</h2>
+                        <p className="text-blue-100 mb-6">
+                            Mari bersama-sama mendukung Sensus Ekonomi 2026 dengan data yang akurat
+                        </p>
+                        <a
+                            href="/login"
+                            className="inline-block px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors"
+                        >
+                            Login Sekarang
+                        </a>
+                    </div>
+                )}
+
+                {/* Welcome - Only show if authenticated */}
+                {isAuthenticated && (
+                    <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-8 text-center">
+                        <h2 className="text-2xl font-bold text-white mb-4">Selamat Datang, {user?.name || 'User'}!</h2>
+                        <p className="text-blue-100 mb-6">
+                            Anda sudah login sebagai {formatRole(user?.role)}. Mari berkontribusi untuk Sensus Ekonomi 2026!
+                        </p>
+                        <a
+                            href="/crawling"
+                            className="inline-block px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors"
+                        >
+                            Mulai Crawling
+                        </a>
+                    </div>
+                )}
             </div>
         </SidebarLayout>
     );

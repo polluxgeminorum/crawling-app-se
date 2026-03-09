@@ -94,15 +94,22 @@ export default function Login() {
                         </button>
                     </form>
 
-                    <div className="mt-6 text-center">
+                    <div className="mt-4 text-center">
                         <Link href="/" className="text-sm text-blue-600 hover:text-blue-700">
                             ← Kembali ke Beranda
+                        </Link>
+                    </div>
+
+                    <div className="mt-6 text-center">
+                        <span className="text-sm text-slate-600">Belum punya akun? </span>
+                        <Link href="/register" className="text-sm text-blue-600 hover:text-blue-700 font-medium">
+                            Daftar Sekarang
                         </Link>
                     </div>
                 </div>
 
                 <p className="mt-6 text-center text-sm text-slate-500">
-                    Sistem menggunakan data users dari aplikasi WAWAI
+                    Sistem menggunakan data users dari database db_crawl_se
                 </p>
             </div>
         </div>

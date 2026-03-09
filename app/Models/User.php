@@ -6,11 +6,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, HasApiTokens;
 
     /**
      * The attributes that are mass assignable.
@@ -20,7 +22,9 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'nip',
         'password',
+        'role',
     ];
 
     /**
@@ -44,5 +48,53 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    /**
+     * Get the prelist records created by this user.
+     */
+    public function prelistsCreated(): HasMany
+    {
+        return $this->hasMany(Prelist::class, 'created_by');
+    }
+
+    /**
+     * Get the prelist records updated by this user.
+     */
+    public function prelistsUpdated(): HasMany
+    {
+        return $this->hasMany(Prelist::class, 'updated_by');
+    }
+
+    /**
+     * Get the snowball records created by this user.
+     */
+    public function snowballsCreated(): HasMany
+    {
+        return $this->hasMany(Snowball::class, 'created_by');
+    }
+
+    /**
+     * Get the snowball records updated by this user.
+     */
+    public function snowballsUpdated(): HasMany
+    {
+        return $this->hasMany(Snowball::class, 'updated_by');
+    }
+
+    /**
+     * Check if user is admin.
+     */
+    public function isAdmin(): bool
+    {
+        return $this->role === 'admin';
+    }
+
+    /**
+     * Check if user is employee (pegawai).
+     */
+    public function isPegawai(): bool
+    {
+        return $this->role === 'pegawai';
     }
 }

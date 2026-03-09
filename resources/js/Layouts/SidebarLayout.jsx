@@ -8,21 +8,44 @@ import {
     Bars3Icon,
     XMarkIcon,
     ArrowLeftOnRectangleIcon,
+    ChevronDownIcon,
+    ClockIcon,
 } from '@heroicons/react/24/outline';
 import useAuthStore from '../stores/authStore';
+
+const prelistMenu = [
+    { name: 'Form Prelist', href: '/form-prelist' },
+    { name: 'Tabel Prelist', href: '/tabel-prelist' },
+];
+
+const snowballMenu = [
+    { name: 'Form Snowball', href: '/form-snowball' },
+    { name: 'Tabel Snowball', href: '/tabel-snowball' },
+];
 
 const navigation = [
     { name: 'Beranda', href: '/', icon: HomeIcon },
     { name: 'Sensus Ekonomi 2026', href: '/sensus-ekonomi', icon: ChartBarIcon },
     { name: 'Crawling', href: '/crawling', icon: ChartBarIcon },
     { name: 'Panduan', href: '/panduan', icon: DocumentTextIcon },
+    { name: 'Log Aktivitas', href: '/activity-log', icon: ClockIcon },
+    { name: 'Kelola User', href: '/tabel-user', icon: Cog6ToothIcon },
 ];
 
 export default function SidebarLayout({ children, title = 'Sensus Ekonomi' }) {
-    const { user, isAuthenticated, logout } = useAuthStore();
+    const { user, isAuthenticated, logout, checkAuth, token } = useAuthStore();
     const [sidebarOpen, setSidebarOpen] = useState(true);
     const [mobileOpen, setMobileOpen] = useState(false);
+    const [prelistOpen, setPrelistOpen] = useState(false);
+    const [snowballOpen, setSnowballOpen] = useState(false);
     const currentPath = window.location.pathname;
+
+    // Only check auth on mount if token exists, but don't clear on failure
+    useEffect(() => {
+        if (token && !user) {
+            checkAuth();
+        }
+    }, []);
 
     const handleLogout = async () => {
         await logout();
@@ -87,6 +110,80 @@ export default function SidebarLayout({ children, title = 'Sensus Ekonomi' }) {
                                 </Link>
                             );
                         })}
+
+                        {/* Prelist Dropdown */}
+                        <div>
+                            <button
+                                onClick={() => setPrelistOpen(!prelistOpen)}
+                                className="w-full flex items-center justify-between px-3 py-2.5 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900"
+                            >
+                                <span className="flex items-center">
+                                    <DocumentTextIcon className="w-5 h-5 mr-3 text-gray-400" />
+                                    Prelist
+                                </span>
+                                <ChevronDownIcon className={`w-4 h-4 transition-transform ${prelistOpen ? 'rotate-180' : ''}`} />
+                            </button>
+                            {prelistOpen && (
+                                <div className="ml-8 mt-1 space-y-1">
+                                    {prelistMenu.map((item) => {
+                                        const isActive = currentPath === item.href;
+                                        return (
+                                            <Link
+                                                key={item.name}
+                                                href={item.href}
+                                                className={`
+                                                    block px-3 py-2 text-sm font-medium rounded-lg transition-colors
+                                                    ${isActive 
+                                                        ? 'bg-blue-50 text-blue-600' 
+                                                        : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                                                    }
+                                                `}
+                                                onClick={() => setMobileOpen(false)}
+                                            >
+                                                {item.name}
+                                            </Link>
+                                        );
+                                    })}
+                                </div>
+                            )}
+                        </div>
+
+                        {/* Snowball Dropdown */}
+                        <div>
+                            <button
+                                onClick={() => setSnowballOpen(!snowballOpen)}
+                                className="w-full flex items-center justify-between px-3 py-2.5 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900"
+                            >
+                                <span className="flex items-center">
+                                    <DocumentTextIcon className="w-5 h-5 mr-3 text-gray-400" />
+                                    Snowball
+                                </span>
+                                <ChevronDownIcon className={`w-4 h-4 transition-transform ${snowballOpen ? 'rotate-180' : ''}`} />
+                            </button>
+                            {snowballOpen && (
+                                <div className="ml-8 mt-1 space-y-1">
+                                    {snowballMenu.map((item) => {
+                                        const isActive = currentPath === item.href;
+                                        return (
+                                            <Link
+                                                key={item.name}
+                                                href={item.href}
+                                                className={`
+                                                    block px-3 py-2 text-sm font-medium rounded-lg transition-colors
+                                                    ${isActive 
+                                                        ? 'bg-blue-50 text-blue-600' 
+                                                        : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                                                    }
+                                                `}
+                                                onClick={() => setMobileOpen(false)}
+                                            >
+                                                {item.name}
+                                            </Link>
+                                        );
+                                    })}
+                                </div>
+                            )}
+                        </div>
                     </nav>
 
                     {/* User section */}
