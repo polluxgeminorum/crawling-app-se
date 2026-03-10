@@ -81,6 +81,9 @@ export default function TabelUser() {
         setEditForm({
             name: item.name,
             email: item.email,
+            no_telp: item.no_telp || '',
+            role: item.role || 'pegawai',
+            nip: item.nip || '',
             password: '',
         });
         setShowEditModal(true);
@@ -98,6 +101,9 @@ export default function TabelUser() {
             const updateData = {
                 name: editForm.name,
                 email: editForm.email,
+                no_telp: editForm.no_telp,
+                role: editForm.role,
+                nip: editForm.nip,
             };
             if (editForm.password) {
                 updateData.password = editForm.password;
@@ -147,7 +153,9 @@ export default function TabelUser() {
             'No': index + 1,
             'Nama': item.name,
             'Email': item.email,
+            'No. Telp': item.no_telp || '-',
             'Role': item.role || 'user',
+            'NIP': item.nip || '-',
             'Tanggal Dibuat': new Date(item.created_at).toLocaleDateString('id-ID'),
         })));
         const workbook = XLSX.utils.book_new();
@@ -185,7 +193,7 @@ export default function TabelUser() {
             {/* Edit Modal */}
             {showEditModal && (
                 <div className="fixed inset-0 bg-white/30 backdrop-blur-sm flex items-center justify-center z-50">
-                    <div className="bg-white rounded-xl shadow-2xl border-2 border-blue-200 w-full max-w-lg mx-4">
+                    <div className="bg-white rounded-xl shadow-2xl border-2 border-orange-200 w-full max-w-lg mx-4">
                         <div className="p-6 border-b">
                             <h3 className="text-xl font-bold">Edit User</h3>
                         </div>
@@ -196,7 +204,7 @@ export default function TabelUser() {
                                     type="text"
                                     value={editForm.name}
                                     onChange={(e) => setEditForm({...editForm, name: e.target.value})}
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-blue-500"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-orange-500"
                                     required
                                 />
                             </div>
@@ -206,17 +214,51 @@ export default function TabelUser() {
                                     type="email"
                                     value={editForm.email}
                                     onChange={(e) => setEditForm({...editForm, email: e.target.value})}
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-blue-500"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-orange-500"
                                     required
                                 />
                             </div>
+                            <div>
+                                <label className="block text-sm font-medium text-slate-700 mb-1">No. Telepon</label>
+                                <input
+                                    type="tel"
+                                    value={editForm.no_telp}
+                                    onChange={(e) => setEditForm({...editForm, no_telp: e.target.value})}
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-orange-500"
+                                    placeholder="Contoh: 081234567890"
+                                />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-medium text-slate-700 mb-1">Role</label>
+                                <select
+                                    value={editForm.role}
+                                    onChange={(e) => setEditForm({...editForm, role: e.target.value})}
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-orange-500"
+                                >
+                                    <option value="admin">Admin</option>
+                                    <option value="pegawai">Pegawai</option>
+                                    <option value="pelaku_usaha">Pelaku Usaha</option>
+                                </select>
+                            </div>
+                            {editForm.role === 'pegawai' && (
+                            <div>
+                                <label className="block text-sm font-medium text-slate-700 mb-1">NIP</label>
+                                <input
+                                    type="text"
+                                    value={editForm.nip}
+                                    onChange={(e) => setEditForm({...editForm, nip: e.target.value})}
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-orange-500"
+                                    placeholder="Masukkan NIP (jika Pegawai)"
+                                />
+                            </div>
+                            )}
                             <div>
                                 <label className="block text-sm font-medium text-slate-700 mb-1">Password (Kosongkan jika tidak ingin mengubah)</label>
                                 <input
                                     type="password"
                                     value={editForm.password}
                                     onChange={(e) => setEditForm({...editForm, password: e.target.value})}
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-blue-500"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-orange-500"
                                     placeholder="Min. 8 karakter"
                                 />
                             </div>
@@ -231,7 +273,7 @@ export default function TabelUser() {
                                 <button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-blue-400"
+                                    className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 disabled:bg-orange-400"
                                 >
                                     {isSubmitting ? 'Menyimpan...' : 'Simpan'}
                                 </button>
@@ -296,7 +338,7 @@ export default function TabelUser() {
                                     placeholder="Cari data..."
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
-                                    className="pl-10 pr-4 py-2 border border-slate-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 w-full md:w-64"
+                                    className="pl-10 pr-4 py-2 border border-slate-300 rounded-lg focus:border-orange-500 focus:ring-2 focus:ring-orange-200 w-full md:w-64"
                                 />
                                 <svg className="w-5 h-5 text-slate-400 absolute left-3 top-1/2 transform -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -331,6 +373,9 @@ export default function TabelUser() {
                                         <th className="px-4 py-3 cursor-pointer hover:bg-slate-100" onClick={() => handleSort('email')}>
                                             Email {getSortIcon('email')}
                                         </th>
+                                        <th className="px-4 py-3 cursor-pointer hover:bg-slate-100" onClick={() => handleSort('no_telp')}>
+                                            No. Telp {getSortIcon('no_telp')}
+                                        </th>
                                         <th className="px-4 py-3 cursor-pointer hover:bg-slate-100" onClick={() => handleSort('role')}>
                                             Role {getSortIcon('role')}
                                         </th>
@@ -346,15 +391,16 @@ export default function TabelUser() {
                                             <td className="px-4 py-3">{index + 1}</td>
                                             <td className="px-4 py-3 font-medium">{item.name}</td>
                                             <td className="px-4 py-3">{item.email}</td>
+                                            <td className="px-4 py-3">{item.no_telp || '-'}</td>
                                             <td className="px-4 py-3">
                                                 <span className={`px-2 py-1 text-xs font-semibold rounded ${
                                                     item.role === 'admin' 
                                                         ? 'bg-purple-100 text-purple-800' 
                                                         : item.role === 'pelaku_usaha'
                                                         ? 'bg-green-100 text-green-800'
-                                                        : 'bg-blue-100 text-blue-800'
+                                                        : 'bg-orange-100 text-orange-800'
                                                 }`}>
-                                                    {item.role === 'admin' ? 'Admin' : item.role === 'pelaku_usaha' ? 'Pelaku Usaha' : item.role || 'User'}
+                                                    {item.role === 'admin' ? 'Admin' : item.role === 'pelaku_usaha' ? 'Pelaku Usaha' : item.role === 'pegawai' ? 'Pegawai' : item.role || 'User'}
                                                 </span>
                                             </td>
                                             <td className="px-4 py-3">{new Date(item.created_at).toLocaleDateString('id-ID')}</td>
@@ -362,7 +408,7 @@ export default function TabelUser() {
                                                 <div className="flex gap-2">
                                                     <button
                                                         onClick={() => openEditModal(item)}
-                                                        className="p-2 text-blue-600 hover:bg-blue-50 rounded"
+                                                        className="p-2 text-orange-600 hover:bg-orange-50 rounded"
                                                         title="Edit"
                                                     >
                                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

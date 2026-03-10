@@ -13,7 +13,7 @@ export default function Crawling() {
         { id: 'tokopedia', name: 'Tokopedia', logo: '🛒', color: 'bg-green-500', productCount: '2.5 juta+' },
         { id: 'shopee', name: 'Shopee', logo: '🛍️', color: 'bg-orange-500', productCount: '3 juta+' },
         { id: 'bukalapak', name: 'Bukalapak', logo: '📦', color: 'bg-purple-500', productCount: '1.2 juta+' },
-        { id: 'lazada', name: 'Lazada', logo: '🏬', color: 'bg-blue-500', productCount: '800 ribu+' },
+        { id: 'lazada', name: 'Lazada', logo: '🏬', color: 'bg-orange-500', productCount: '800 ribu+' },
         { id: 'tokotalk', name: 'TokoTalk', logo: '💬', color: 'bg-pink-500', productCount: '500 ribu+' },
         { id: 'blibli', name: 'Blibli', logo: '🔵', color: 'bg-cyan-500', productCount: '600 ribu+' },
     ];
@@ -53,8 +53,8 @@ export default function Crawling() {
             <SidebarLayout title="Crawling">
                 <div className="min-h-[60vh] flex items-center justify-center px-4">
                     <div className="text-center max-w-md">
-                        <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg className="w-10 h-10 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                             </svg>
                         </div>
@@ -64,7 +64,7 @@ export default function Crawling() {
                         </p>
                         <Link
                             href="/login"
-                            className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
+                            className="inline-block px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-colors"
                         >
                             Login Sekarang
                         </Link>
@@ -98,8 +98,8 @@ export default function Crawling() {
                                             onClick={() => setSelectedMarketplace(marketplace)}
                                             className={`p-4 rounded-xl border-2 transition-all text-left ${
                                                 selectedMarketplace?.id === marketplace.id
-                                                    ? 'border-blue-500 bg-blue-50'
-                                                    : 'border-slate-200 hover:border-blue-300'
+                                                    ? 'border-orange-500 bg-orange-50'
+                                                    : 'border-slate-200 hover:border-orange-300'
                                             }`}
                                         >
                                             <div className="flex items-center space-x-3">
@@ -127,7 +127,7 @@ export default function Crawling() {
                                         <label className="block text-sm font-medium text-slate-700 mb-2">
                                             Kategori Produk
                                         </label>
-                                        <select className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                        <select className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
                                             <option value="">Semua Kategori</option>
                                             {categories.map(cat => (
                                                 <option key={cat} value={cat}>{cat}</option>
@@ -139,7 +139,7 @@ export default function Crawling() {
                                         <label className="block text-sm font-medium text-slate-700 mb-2">
                                             Jumlah Maksimal Data
                                         </label>
-                                        <select className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                        <select className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
                                             <option value="100">100 data</option>
                                             <option value="500">500 data</option>
                                             <option value="1000">1.000 data</option>
@@ -152,7 +152,7 @@ export default function Crawling() {
                                         <label className="block text-sm font-medium text-slate-700 mb-2">
                                             Wilayah
                                         </label>
-                                        <select className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                        <select className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
                                             <option value="">Provinsi Lampung</option>
                                             <option value="kota-bandar-lampung">Kota Bandar Lampung</option>
                                             <option value="kota-metro">Kota Metro</option>
@@ -180,7 +180,7 @@ export default function Crawling() {
                                 disabled={!selectedMarketplace}
                                 className={`w-full py-4 rounded-xl font-semibold text-lg transition-all ${
                                     selectedMarketplace
-                                        ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl'
+                                        ? 'bg-orange-600 hover:bg-orange-700 text-white shadow-lg hover:shadow-xl'
                                         : 'bg-slate-200 text-slate-400 cursor-not-allowed'
                                 }`}
                             >
@@ -195,9 +195,9 @@ export default function Crawling() {
                     <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-100">
                         <div className="text-center">
                             <div className="w-20 h-20 mx-auto mb-6 relative">
-                                <div className="absolute inset-0 border-4 border-blue-200 rounded-full"></div>
+                                <div className="absolute inset-0 border-4 border-orange-200 rounded-full"></div>
                                 <div 
-                                    className="absolute inset-0 border-4 border-blue-600 rounded-full border-t-transparent animate-spin"
+                                    className="absolute inset-0 border-4 border-orange-600 rounded-full border-t-transparent animate-spin"
                                 ></div>
                             </div>
                             
@@ -216,7 +216,7 @@ export default function Crawling() {
                                 </div>
                                 <div className="w-full bg-slate-200 rounded-full h-4 overflow-hidden">
                                     <div 
-                                        className="bg-blue-600 h-4 rounded-full transition-all duration-300"
+                                        className="bg-orange-600 h-4 rounded-full transition-all duration-300"
                                         style={{ width: `${progress}%` }}
                                     ></div>
                                 </div>
@@ -249,12 +249,12 @@ export default function Crawling() {
                             </p>
 
                             <div className="bg-slate-50 rounded-xl p-4 mb-6 inline-block">
-                                <div className="text-3xl font-bold text-blue-600">1,234</div>
+                                <div className="text-3xl font-bold text-orange-600">1,234</div>
                                 <div className="text-sm text-slate-500">Data berhasil dikumpulkan</div>
                             </div>
 
                             <div className="flex gap-4 justify-center">
-                                <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors">
+                                <button className="px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-colors">
                                     Lihat Data
                                 </button>
                                 <button className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors">

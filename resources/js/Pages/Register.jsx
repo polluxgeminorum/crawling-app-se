@@ -6,6 +6,7 @@ import useAuthStore from '../stores/authStore';
 export default function Register() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [no_telp, setNoTelp] = useState('');
     const [password, setPassword] = useState('');
     const [passwordConfirmation, setPasswordConfirmation] = useState('');
     const [role, setRole] = useState('pelaku_usaha');
@@ -18,7 +19,7 @@ export default function Register() {
     // Redirect if already authenticated
     useEffect(() => {
         if (isAuthenticated) {
-            router.visit('/crawling');
+            router.visit('/');
         }
     }, [isAuthenticated]);
 
@@ -31,6 +32,7 @@ export default function Register() {
             await axios.post('/api/register', {
                 name,
                 email,
+                no_telp,
                 password,
                 password_confirmation: passwordConfirmation,
                 role,
@@ -51,12 +53,12 @@ export default function Register() {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 flex items-center justify-center px-4 py-12">
+        <div className="min-h-screen bg-gradient-to-br from-slate-50 via-orange-50 to-orange-50 flex items-center justify-center px-4 py-12">
             <div className="max-w-md w-full">
                 {/* Logo */}
                 <div className="text-center mb-8">
                     <Link href="/" className="inline-flex items-center space-x-2">
-                        <div className="w-12 h-12 bg-blue-600 to-gradient-to-br from-indigo-700 rounded-xl flex items-center justify-center">
+                        <div className="w-12 h-12 bg-orange-600 to-gradient-to-br from-orange-700 rounded-xl flex items-center justify-center">
                             <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                             </svg>
@@ -94,7 +96,7 @@ export default function Register() {
                                     onClick={() => setRole('pelaku_usaha')}
                                     className={`p-4 rounded-lg border-2 transition-all ${
                                         role === 'pelaku_usaha'
-                                            ? 'border-blue-600 bg-blue-50 text-blue-700'
+                                            ? 'border-orange-600 bg-orange-50 text-orange-700'
                                             : 'border-slate-200 hover:border-slate-300'
                                     }`}
                                 >
@@ -106,7 +108,7 @@ export default function Register() {
                                     onClick={() => setRole('pegawai')}
                                     className={`p-4 rounded-lg border-2 transition-all ${
                                         role === 'pegawai'
-                                            ? 'border-blue-600 bg-blue-50 text-blue-700'
+                                            ? 'border-orange-600 bg-orange-50 text-orange-700'
                                             : 'border-slate-200 hover:border-slate-300'
                                     }`}
                                 >
@@ -127,7 +129,7 @@ export default function Register() {
                                     type="text"
                                     value={nip}
                                     onChange={(e) => setNip(e.target.value)}
-                                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                                     placeholder="Masukkan NIP"
                                     required={role === 'pegawai'}
                                 />
@@ -143,7 +145,7 @@ export default function Register() {
                                 type="text"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
-                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                                 placeholder="Masukkan nama lengkap"
                                 required
                             />
@@ -158,8 +160,23 @@ export default function Register() {
                                 type="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                                 placeholder="email@example.com"
+                                required
+                            />
+                        </div>
+
+                        <div>
+                            <label htmlFor="no_telp" className="block text-sm font-medium text-slate-700 mb-2">
+                                No. Telepon
+                            </label>
+                            <input
+                                id="no_telp"
+                                type="tel"
+                                value={no_telp}
+                                onChange={(e) => setNoTelp(e.target.value)}
+                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
+                                placeholder="Contoh: 081234567890"
                                 required
                             />
                         </div>
@@ -173,7 +190,7 @@ export default function Register() {
                                 type="password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                                 placeholder="Min. 8 karakter"
                                 minLength={8}
                                 required
@@ -189,7 +206,7 @@ export default function Register() {
                                 type="password"
                                 value={passwordConfirmation}
                                 onChange={(e) => setPasswordConfirmation(e.target.value)}
-                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                                 placeholder="Masukkan password lagi"
                                 minLength={8}
                                 required
@@ -199,7 +216,7 @@ export default function Register() {
                         <button
                             type="submit"
                             disabled={isLoading}
-                            className="w-full py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold rounded-lg transition-colors shadow-md hover:shadow-lg"
+                            className="w-full py-3 bg-orange-600 hover:bg-orange-700 disabled:bg-orange-400 text-white font-semibold rounded-lg transition-colors shadow-md hover:shadow-lg"
                         >
                             {isLoading ? 'Memproses...' : 'Daftar'}
                         </button>
@@ -207,7 +224,7 @@ export default function Register() {
 
                     <div className="mt-6 text-center">
                         <span className="text-sm text-slate-600">Sudah punya akun? </span>
-                        <Link href="/login" className="text-sm text-blue-600 hover:text-blue-700 font-medium">
+                        <Link href="/login" className="text-sm text-orange-600 hover:text-orange-700 font-medium">
                             Login
                         </Link>
                     </div>

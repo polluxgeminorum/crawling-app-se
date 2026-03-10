@@ -166,6 +166,7 @@ class SnowballController extends Controller
      */
     public function sync(Request $request)
     {
+        $user = $request->user();
         $snowballData = Snowball::all();
         $updatedCount = 0;
 
@@ -189,9 +190,40 @@ class SnowballController extends Controller
             }
         }
 
+        // Log activity for sync
+        LogActivity::create([
+            'name' => $user->name,
+            'email' => $user->email,
+            'activity_log' => 'Sinkronisasi data snowball: ' . $updatedCount . ' data ditemukan di prelist',
+            'timestamp' => now(),
+        ]);
+
         return response()->json([
             'success' => true,
             'message' => 'Sinkronisasi berhasil. ' . $updatedCount . ' data snowball ditemukan di prelist.',
+        ]);
+    }
+
+    /**
+     * Get activity logs
+     */
+    public function logs(Request $request)
+    {
+        $user = $request->user();
+
+        // Log activity
+        LogActivity::create([
+            'name' => $user->name,
+            'email' => $user->email,
+            'activity_log' => 'Melihat log aktivitas',
+            'timestamp' => now(),
+        ]);
+
+        $logs = LogActivity::orderBy('timestamp', 'desc')->get();
+
+        return response()->json([
+            'success' => true,
+            'data' => $logs,
         ]);
     }
 }

@@ -23,11 +23,13 @@ class AuthController extends Controller
             'password' => 'required|string|min:8|confirmed',
             'role' => 'required|in:pegawai,pelaku_usaha',
             'nip' => 'nullable|string|max:255',
+            'no_telp' => 'nullable|string|max:20',
         ]);
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
+            'no_telp' => $request->no_telp,
             'password' => Hash::make($request->password),
             'role' => $request->role,
             'nip' => $request->role === 'pegawai' ? $request->nip : null,

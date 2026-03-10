@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\LogActivity;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -60,11 +61,17 @@ class UserController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255|unique:users,email,' . $id,
             'password' => 'nullable|string|min:8',
+            'no_telp' => 'nullable|string|max:20',
+            'role' => 'nullable|in:admin,pegawai,pelaku_usaha',
+            'nip' => 'nullable|string|max:255',
         ]);
 
         $updateData = [
             'name' => $request->name,
             'email' => $request->email,
+            'no_telp' => $request->no_telp,
+            'role' => $request->role,
+            'nip' => $request->nip,
         ];
 
         if ($request->password) {
@@ -72,6 +79,14 @@ class UserController extends Controller
         }
 
         $user->update($updateData);
+
+        // Log activity
+        LogActivity::create([
+            'name' => $request->user()->name,
+            'email' => $request->user()->email,
+            'activity_log' => 'Mengupdate user: ' . $user->name . ' (ID: ' . $user->id . ')',
+            'timestamp' => now(),
+        ]);
 
         return response()->json([
             'success' => true,
@@ -103,6 +118,14 @@ class UserController extends Controller
         }
 
         $user->delete();
+
+        // Log activity
+        LogActivity::create([
+            'name' => $request->user()->name,
+            'email' => $request->user()->email,
+            'activity_log' => 'Menghapus user: ' . $user->name . ' (ID: ' . $user->id . ')',
+            'timestamp' => now(),
+        ]);
 
         return response()->json([
             'success' => true,

@@ -125,7 +125,7 @@ export default function FormSnowball() {
                                 value={formData.nama_keluarga_bangunan_usaha}
                                 onChange={handleChange}
                                 required
-                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                                 placeholder="Nama pelaku usaha yang Anda ketahui"
                             />
                         </div>
@@ -140,7 +140,7 @@ export default function FormSnowball() {
                                 value={formData.nama_pengisi}
                                 onChange={handleChange}
                                 required
-                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                                 placeholder="Nama orang yang bisa dihubungi"
                             />
                         </div>
@@ -154,7 +154,7 @@ export default function FormSnowball() {
                                 name="no_telp"
                                 value={formData.no_telp}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                                 placeholder="Nomor telepon yang bisa dihubungi"
                             />
                         </div>
@@ -168,7 +168,7 @@ export default function FormSnowball() {
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                                 placeholder="Alamat email yang bisa dihubungi"
                             />
                         </div>
@@ -177,7 +177,7 @@ export default function FormSnowball() {
                             <button
                                 type="submit"
                                 disabled={isLoading}
-                                className="w-full py-4 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold rounded-lg transition-colors shadow-md"
+                                className="w-full py-4 bg-orange-600 hover:bg-orange-700 disabled:bg-orange-400 text-white font-semibold rounded-lg transition-colors shadow-md"
                             >
                                 {isLoading ? 'Menyimpan...' : 'Simpan Data'}
                             </button>
@@ -188,7 +188,7 @@ export default function FormSnowball() {
                         <div className="text-center">
                             <Link
                                 href="/form-prelist"
-                                className="text-blue-600 hover:text-blue-700 font-medium"
+                                className="text-orange-600 hover:text-orange-700 font-medium"
                             >
                                 ← Kembali ke Form Data Pelaku Usaha
                             </Link>

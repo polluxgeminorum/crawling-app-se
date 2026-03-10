@@ -197,7 +197,7 @@ export default function TabelSnowball() {
             {/* Edit Modal */}
             {showEditModal && (
                 <div className="fixed inset-0 bg-white/30 backdrop-blur-sm flex items-center justify-center z-50">
-                    <div className="bg-white rounded-xl shadow-2xl border-2 border-blue-200 w-full max-w-lg mx-4">
+                    <div className="bg-white rounded-xl shadow-2xl border-2 border-orange-200 w-full max-w-lg mx-4">
                         <div className="p-6 border-b">
                             <h3 className="text-xl font-bold">Edit Data Snowball</h3>
                         </div>
@@ -208,7 +208,7 @@ export default function TabelSnowball() {
                                     type="text"
                                     value={editForm.nama_keluarga_bangunan_usaha}
                                     onChange={(e) => setEditForm({...editForm, nama_keluarga_bangunan_usaha: e.target.value})}
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-blue-500"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-orange-500"
                                     required
                                 />
                             </div>
@@ -218,7 +218,7 @@ export default function TabelSnowball() {
                                     type="text"
                                     value={editForm.nama_pengisi}
                                     onChange={(e) => setEditForm({...editForm, nama_pengisi: e.target.value})}
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-blue-500"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-orange-500"
                                     required
                                 />
                             </div>
@@ -228,7 +228,7 @@ export default function TabelSnowball() {
                                     type="text"
                                     value={editForm.no_telp}
                                     onChange={(e) => setEditForm({...editForm, no_telp: e.target.value})}
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-blue-500"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-orange-500"
                                 />
                             </div>
                             <div>
@@ -237,7 +237,7 @@ export default function TabelSnowball() {
                                     type="email"
                                     value={editForm.email}
                                     onChange={(e) => setEditForm({...editForm, email: e.target.value})}
-                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-blue-500"
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-orange-500"
                                 />
                             </div>
                             <div className="flex justify-end gap-3 pt-4">
@@ -251,7 +251,7 @@ export default function TabelSnowball() {
                                 <button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-blue-400"
+                                    className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 disabled:bg-orange-400"
                                 >
                                     {isSubmitting ? 'Menyimpan...' : 'Simpan'}
                                 </button>
@@ -326,7 +326,7 @@ export default function TabelSnowball() {
                                     placeholder="Cari data..."
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
-                                    className="pl-10 pr-4 py-2 border border-slate-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 w-full md:w-64"
+                                    className="pl-10 pr-4 py-2 border border-slate-300 rounded-lg focus:border-orange-500 focus:ring-2 focus:ring-orange-200 w-full md:w-64"
                                 />
                                 <svg className="w-5 h-5 text-slate-400 absolute left-3 top-1/2 transform -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -400,7 +400,7 @@ export default function TabelSnowball() {
                                                 <div className="flex gap-2">
                                                     <button
                                                         onClick={() => openEditModal(item)}
-                                                        className="p-2 text-blue-600 hover:bg-blue-50 rounded"
+                                                        className="p-2 text-orange-600 hover:bg-orange-50 rounded"
                                                         title="Edit"
                                                     >
                                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

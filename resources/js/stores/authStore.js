@@ -73,6 +73,57 @@ const useAuthStore = create((set, get) => ({
             set({ user: null, token: null, isAuthenticated: false });
         }
     },
+
+    // Role-based access control methods
+    getRole: () => {
+        const { user } = get();
+        return user?.role || 'guest';
+    },
+
+    isAdmin: () => {
+        const { user } = get();
+        return user?.role === 'admin';
+    },
+
+    isPegawai: () => {
+        const { user } = get();
+        return user?.role === 'pegawai';
+    },
+
+    isPelakuUsaha: () => {
+        const { user } = get();
+        return user?.role === 'pelaku_usaha';
+    },
+
+    isGuest: () => {
+        const { isAuthenticated } = get();
+        return !isAuthenticated;
+    },
+
+    canAccessCrawl: () => {
+        const { user, isAuthenticated } = get();
+        return isAuthenticated && (user?.role === 'admin' || user?.role === 'pegawai');
+    },
+
+    canAccessTable: () => {
+        const { user, isAuthenticated } = get();
+        return isAuthenticated && (user?.role === 'admin' || user?.role === 'pegawai');
+    },
+
+    canAccessForm: () => {
+        const { user, isAuthenticated } = get();
+        return isAuthenticated && (user?.role === 'admin' || user?.role === 'pegawai' || user?.role === 'pelaku_usaha');
+    },
+
+    canAccessLogActivity: () => {
+        const { user, isAuthenticated } = get();
+        return isAuthenticated && user?.role === 'admin';
+    },
+
+    canAccessUserManagement: () => {
+        const { user, isAuthenticated } = get();
+        return isAuthenticated && user?.role === 'admin';
+    },
 }));
 
 export default useAuthStore;

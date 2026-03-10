@@ -1,6 +1,54 @@
 import SidebarLayout from '../Layouts/SidebarLayout';
 import { Link } from '@inertiajs/react';
 import useAuthStore from '../stores/authStore';
+import { useState, useEffect, useRef } from 'react';
+
+// Animated Counter Component
+function AnimatedCounter({ end, suffix = '', duration = 2000 }) {
+    const [count, setCount] = useState(0);
+    const [isVisible, setIsVisible] = useState(false);
+    const ref = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting && !isVisible) {
+                    setIsVisible(true);
+                }
+            },
+            { threshold: 0.5 }
+        );
+
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+
+        return () => observer.disconnect();
+    }, [isVisible]);
+
+    useEffect(() => {
+        if (!isVisible) return;
+
+        let startTime;
+        const startValue = 0;
+        const endValue = parseInt(end.replace(/\D/g, '')) || 0;
+
+        const animate = (timestamp) => {
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / duration, 1);
+            const easeOut = 1 - Math.pow(1 - progress, 3);
+            setCount(Math.floor(startValue + (endValue - startValue) * easeOut));
+
+            if (progress < 1) {
+                requestAnimationFrame(animate);
+            }
+        };
+
+        requestAnimationFrame(animate);
+    }, [isVisible, end, duration]);
+
+    return <span ref={ref}>{count}{suffix}</span>;
+}
 
 export default function Beranda() {
     const { isAuthenticated, user } = useAuthStore();
@@ -54,40 +102,40 @@ export default function Beranda() {
     ];
 
     const stats = [
-        { value: '10+', label: 'Marketplace' },
-        { value: '50K+', label: 'Data Points' },
-        { value: '15', label: 'Kabupaten/Kota' },
-        { value: '99%', label: 'Akurasi' },
+        { value: '10', suffix: '+', label: 'Marketplace' },
+        { value: '50', suffix: 'K+', label: 'Data Points' },
+        { value: '15', suffix: '', label: 'Kabupaten/Kota' }
     ];
 
     return (
         <SidebarLayout title="Beranda">
             {/* Hero Section */}
             <section className="relative py-20 lg:py-32 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-indigo-600/10" />
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-600/10 to-orange-600/10" />
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                     <div className="text-center">
                         <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6">
                             Deteksi Pelaku Ekonomi Digital
-                            <span className="block text-blue-600">Untuk Sensus Ekonomi 2026</span>
+                            <span className="block text-orange-600">Untuk Sensus Ekonomi 2026</span>
                         </h1>
                         <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-10">
-                            Platform crawling marketplace untuk mendeteksi dan mengidentifikasi pelaku ekonomi digital
-                            dalam rangka pemutakhiran data Sensus Ekonomi 2026.
+                            Platform untuk mendeteksi dan mengidentifikasi pelaku ekonomi digital dalam rangka pemutakhiran data Sensus Ekonomi 2026.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link
-                                href="/crawling"
-                                className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold rounded-xl transition-all shadow-lg hover:shadow-xl"
+                                href="/tentang"
+                                className="px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white text-lg font-semibold rounded-xl transition-all shadow-lg hover:shadow-xl"
                             >
-                                Mulai Crawling
+                                Lihat Penjelasan
                             </Link>
-                            <Link
-                                href="/sensus-ekonomi"
+                            <a
+                                href="https://sensus.bps.go.id/se2026/"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="px-8 py-4 bg-white hover:bg-slate-50 text-slate-700 text-lg font-semibold rounded-xl transition-all border border-slate-200 hover:border-slate-300"
                             >
                                 Pelajari Lebih Lanjut
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -96,11 +144,13 @@ export default function Beranda() {
             {/* Stats Section */}
             <section className="py-16 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div className="flex flex-wrap justify-center gap-8 md:gap-16">
                         {stats.map((stat, index) => (
-                            <div key={index} className="text-center">
-                                <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">{stat.value}</div>
-                                <div className="text-slate-600">{stat.label}</div>
+                            <div key={index} className="text-center min-w-[150px]">
+                                <div className="text-4xl md:text-5xl font-bold text-orange-600 mb-2">
+                                    <AnimatedCounter end={stat.value} suffix={stat.suffix} />
+                                </div>
+                                <div className="text-slate-600 font-medium">{stat.label}</div>
                             </div>
                         ))}
                     </div>
@@ -122,7 +172,7 @@ export default function Beranda() {
                                 key={index}
                                 className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-slate-100"
                             >
-                                <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-4">
+                                <div className="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600 mb-4">
                                     {feature.icon}
                                 </div>
                                 <h3 className="text-xl font-semibold text-slate-900 mb-2">{feature.title}</h3>
@@ -135,17 +185,17 @@ export default function Beranda() {
 
             {/* CTA Section - Only show if not authenticated */}
             {!isAuthenticated && (
-                <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700">
+                <section className="py-20 bg-gradient-to-r from-orange-600 to-orange-700">
                     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                             Siap Memulai?
                         </h2>
-                        <p className="text-xl text-blue-100 mb-10">
+                        <p className="text-xl text-orange-100 mb-10">
                             Login sekarang untuk memulai proses crawling dan deteksi pelaku ekonomi digital.
                         </p>
                         <Link
                             href="/login"
-                            className="inline-block px-10 py-4 bg-white text-blue-600 text-lg font-semibold rounded-xl hover:bg-blue-50 transition-colors shadow-lg"
+                            className="inline-block px-10 py-4 bg-white text-orange-600 text-lg font-semibold rounded-xl hover:bg-orange-50 transition-colors shadow-lg"
                         >
                             Login Sekarang
                         </Link>
@@ -155,19 +205,19 @@ export default function Beranda() {
 
             {/* Welcome Section - Only show if authenticated */}
             {isAuthenticated && (
-                <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700">
+                <section className="py-20 bg-gradient-to-r from-orange-600 to-orange-700">
                     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                             Selamat Datang, {user?.name || 'User'}!
                         </h2>
-                        <p className="text-xl text-blue-100 mb-10">
+                        <p className="text-xl text-orange-100 mb-10">
                             Anda sudah login sebagai {formatRole(user?.role)}
                         </p>
                         <Link
-                            href="/crawling"
-                            className="inline-block px-10 py-4 bg-white text-blue-600 text-lg font-semibold rounded-xl hover:bg-blue-50 transition-colors shadow-lg"
+                            href="/sensus-ekonomi"
+                            className="inline-block px-10 py-4 bg-white text-orange-600 text-lg font-semibold rounded-xl hover:bg-orange-50 transition-colors shadow-lg"
                         >
-                            Mulai Crawling
+                            Lihat Penjelasan
                         </Link>
                     </div>
                 </section>

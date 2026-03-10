@@ -136,7 +136,7 @@ export default function FormPrelist() {
                                     value={formData.no_urut_bangunan}
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                                     placeholder="Contoh: 001"
                                 />
                             </div>
@@ -151,7 +151,7 @@ export default function FormPrelist() {
                                     value={formData.no_urut_keluarga}
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                                     placeholder="Contoh: 001"
                                 />
                             </div>
@@ -167,7 +167,7 @@ export default function FormPrelist() {
                                 value={formData.nama_keluarga_bangunan_usaha}
                                 onChange={handleChange}
                                 required
-                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                                 placeholder="Contoh: Toko Maju Jaya"
                             />
                         </div>
@@ -181,7 +181,7 @@ export default function FormPrelist() {
                                 value={formData.jenis_usaha}
                                 onChange={handleChange}
                                 required
-                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                             >
                                 <option value="">Pilih Jenis Usaha</option>
                                 <option value="toko offline">Toko Offline</option>
@@ -204,7 +204,7 @@ export default function FormPrelist() {
                                 onChange={handleChange}
                                 required
                                 rows={3}
-                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                                 placeholder="Alamat lengkap pelaku usaha"
                             />
                         </div>
@@ -221,7 +221,7 @@ export default function FormPrelist() {
                                     onChange={handleChange}
                                     required
                                     min={1}
-                                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                                 />
                             </div>
 
@@ -234,7 +234,7 @@ export default function FormPrelist() {
                                     name="kode_pos"
                                     value={formData.kode_pos}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                                     placeholder="Contoh: 40111"
                                 />
                             </div>
@@ -249,7 +249,7 @@ export default function FormPrelist() {
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                                 placeholder="email@contoh.com"
                             />
                         </div>
@@ -263,7 +263,7 @@ export default function FormPrelist() {
                                 name="no_telp"
                                 value={formData.no_telp}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
+                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                                 placeholder="Contoh: 081234567890"
                             />
                         </div>
@@ -272,7 +272,7 @@ export default function FormPrelist() {
                             <button
                                 type="submit"
                                 disabled={isLoading}
-                                className="w-full py-4 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold rounded-lg transition-colors shadow-md"
+                                className="w-full py-4 bg-orange-600 hover:bg-orange-700 disabled:bg-orange-400 text-white font-semibold rounded-lg transition-colors shadow-md"
                             >
                                 {isLoading ? 'Menyimpan...' : 'Simpan Data'}
                             </button>
@@ -281,13 +281,13 @@ export default function FormPrelist() {
 
                     {/* Question about other pelaku usaha */}
                     <div className="mt-8 pt-6 border-t border-slate-200">
-                        <div className="bg-blue-50 rounded-xl p-6 text-center">
+                        <div className="bg-orange-50 rounded-xl p-6 text-center">
                             <p className="text-lg text-slate-700 mb-4">
                                 Apakah Anda mengetahui pelaku usaha lain yang mungkin bisa dimintai datanya?
                             </p>
                             <Link
                                 href="/form-snowball"
-                                className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
+                                className="inline-block px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-colors"
                             >
                                 Ya, Saya Tahu Pelaku Usaha Lain
                             </Link>

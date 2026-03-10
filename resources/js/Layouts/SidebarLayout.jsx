@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, usePage } from '@inertiajs/react';
+import { Link, usePage, router } from '@inertiajs/react';
 import {
     HomeIcon,
     ChartBarIcon,
@@ -12,6 +12,7 @@ import {
     ClockIcon,
 } from '@heroicons/react/24/outline';
 import useAuthStore from '../stores/authStore';
+import { checkPageAccess } from '../utils/roleCheck';
 
 const prelistMenu = [
     { name: 'Form Prelist', href: '/form-prelist' },
@@ -25,6 +26,7 @@ const snowballMenu = [
 
 const navigation = [
     { name: 'Beranda', href: '/', icon: HomeIcon },
+    { name: 'Tentang', href: '/tentang', icon: DocumentTextIcon },
     { name: 'Sensus Ekonomi 2026', href: '/sensus-ekonomi', icon: ChartBarIcon },
     { name: 'Crawling', href: '/crawling', icon: ChartBarIcon },
     { name: 'Panduan', href: '/panduan', icon: DocumentTextIcon },
@@ -33,7 +35,7 @@ const navigation = [
 ];
 
 export default function SidebarLayout({ children, title = 'Sensus Ekonomi' }) {
-    const { user, isAuthenticated, logout, checkAuth, token } = useAuthStore();
+    const { user, isAuthenticated, logout, checkAuth, token, canAccessCrawl, canAccessLogActivity, canAccessUserManagement, canAccessTable, canAccessForm } = useAuthStore();
     const [sidebarOpen, setSidebarOpen] = useState(true);
     const [mobileOpen, setMobileOpen] = useState(false);
     const [prelistOpen, setPrelistOpen] = useState(false);
@@ -46,6 +48,16 @@ export default function SidebarLayout({ children, title = 'Sensus Ekonomi' }) {
             checkAuth();
         }
     }, []);
+
+    // Check page access and redirect if needed
+    useEffect(() => {
+        const pathname = currentPath.split('?')[0];
+        const accessResult = checkPageAccess(pathname);
+        
+        if (accessResult.redirectTo) {
+            window.location.href = accessResult.redirectTo;
+        }
+    }, [currentPath]);
 
     const handleLogout = async () => {
         await logout();
@@ -72,7 +84,7 @@ export default function SidebarLayout({ children, title = 'Sensus Ekonomi' }) {
                     {/* Logo */}
                     <div className="flex items-center justify-between h-16 px-6 border-b border-gray-200">
                         <div className="flex items-center space-x-3">
-                            <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center">
+                            <div className="w-8 h-8 bg-gradient-to-br from-orange-600 to-orange-700 rounded-lg flex items-center justify-center">
                                 <ChartBarIcon className="w-5 h-5 text-white" />
                             </div>
                             <span className="text-sm font-semibold text-gray-900">Sensus Ekonomi</span>
@@ -87,103 +99,219 @@ export default function SidebarLayout({ children, title = 'Sensus Ekonomi' }) {
 
                     {/* Navigation */}
                     <nav className="flex-1 px-4 py-6 space-y-1 overflow-y-auto">
-                        {navigation.map((item) => {
-                            const isActive = item.href === '/' 
-                                ? currentPath === '/' 
-                                : currentPath.startsWith(item.href);
-                            
-                            return (
-                                <Link
-                                    key={item.name}
-                                    href={item.href}
-                                    className={`
-                                        flex items-center px-3 py-2.5 text-sm font-medium rounded-lg transition-colors
-                                        ${isActive 
-                                            ? 'bg-blue-50 text-blue-600' 
-                                            : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
-                                        }
-                                    `}
-                                    onClick={() => setMobileOpen(false)}
-                                >
-                                    <item.icon className={`w-5 h-5 mr-3 ${isActive ? 'text-blue-600' : 'text-gray-400'}`} />
-                                    {item.name}
-                                </Link>
-                            );
-                        })}
-
-                        {/* Prelist Dropdown */}
-                        <div>
-                            <button
-                                onClick={() => setPrelistOpen(!prelistOpen)}
-                                className="w-full flex items-center justify-between px-3 py-2.5 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900"
-                            >
-                                <span className="flex items-center">
-                                    <DocumentTextIcon className="w-5 h-5 mr-3 text-gray-400" />
-                                    Prelist
-                                </span>
-                                <ChevronDownIcon className={`w-4 h-4 transition-transform ${prelistOpen ? 'rotate-180' : ''}`} />
-                            </button>
-                            {prelistOpen && (
-                                <div className="ml-8 mt-1 space-y-1">
-                                    {prelistMenu.map((item) => {
-                                        const isActive = currentPath === item.href;
-                                        return (
-                                            <Link
-                                                key={item.name}
-                                                href={item.href}
-                                                className={`
-                                                    block px-3 py-2 text-sm font-medium rounded-lg transition-colors
-                                                    ${isActive 
-                                                        ? 'bg-blue-50 text-blue-600' 
-                                                        : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
-                                                    }
-                                                `}
-                                                onClick={() => setMobileOpen(false)}
-                                            >
-                                                {item.name}
-                                            </Link>
-                                        );
-                                    })}
-                                </div>
-                            )}
+                        {/* UMUM Section - visible to all */}
+                        <div className="mb-4">
+                            <p className="px-3 text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+                                Umum
+                            </p>
                         </div>
+                        <Link
+                            href="/"
+                            className={`
+                                flex items-center px-3 py-2.5 text-sm font-medium rounded-lg transition-colors
+                                ${currentPath === '/' 
+                                    ? 'bg-orange-50 text-orange-600' 
+                                    : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                                }
+                            `}
+                            onClick={() => setMobileOpen(false)}
+                        >
+                            <HomeIcon className={`w-5 h-5 mr-3 ${currentPath === '/' ? 'text-orange-600' : 'text-gray-400'}`} />
+                            Beranda
+                        </Link>
 
-                        {/* Snowball Dropdown */}
-                        <div>
-                            <button
-                                onClick={() => setSnowballOpen(!snowballOpen)}
-                                className="w-full flex items-center justify-between px-3 py-2.5 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50 hover:text-gray-900"
-                            >
-                                <span className="flex items-center">
-                                    <DocumentTextIcon className="w-5 h-5 mr-3 text-gray-400" />
-                                    Snowball
-                                </span>
-                                <ChevronDownIcon className={`w-4 h-4 transition-transform ${snowballOpen ? 'rotate-180' : ''}`} />
-                            </button>
-                            {snowballOpen && (
-                                <div className="ml-8 mt-1 space-y-1">
-                                    {snowballMenu.map((item) => {
-                                        const isActive = currentPath === item.href;
-                                        return (
-                                            <Link
-                                                key={item.name}
-                                                href={item.href}
-                                                className={`
-                                                    block px-3 py-2 text-sm font-medium rounded-lg transition-colors
-                                                    ${isActive 
-                                                        ? 'bg-blue-50 text-blue-600' 
-                                                        : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
-                                                    }
-                                                `}
-                                                onClick={() => setMobileOpen(false)}
-                                            >
-                                                {item.name}
-                                            </Link>
-                                        );
-                                    })}
+                        <Link
+                            href="/tentang"
+                            className={`
+                                flex items-center px-3 py-2.5 text-sm font-medium rounded-lg transition-colors
+                                ${currentPath.startsWith('/tentang') 
+                                    ? 'bg-orange-50 text-orange-600' 
+                                    : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                                }
+                            `}
+                            onClick={() => setMobileOpen(false)}
+                        >
+                            <DocumentTextIcon className={`w-5 h-5 mr-3 ${currentPath.startsWith('/tentang') ? 'text-orange-600' : 'text-gray-400'}`} />
+                            Tentang
+                        </Link>
+
+                        <Link
+                            href="/panduan"
+                            className={`
+                                flex items-center px-3 py-2.5 text-sm font-medium rounded-lg transition-colors
+                                ${currentPath.startsWith('/panduan') 
+                                    ? 'bg-orange-50 text-orange-600' 
+                                    : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                                }
+                            `}
+                            onClick={() => setMobileOpen(false)}
+                        >
+                            <DocumentTextIcon className={`w-5 h-5 mr-3 ${currentPath.startsWith('/panduan') ? 'text-orange-600' : 'text-gray-400'}`} />
+                            Panduan
+                        </Link>
+
+                        {/* FITUR Section - only for authenticated users */}
+                        {isAuthenticated && (
+                            <>
+                                <div className="mt-6 mb-4">
+                                    <p className="px-3 text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+                                        Fitur
+                                    </p>
                                 </div>
-                            )}
-                        </div>
+
+                                {/* Prelist Dropdown */}
+                                {canAccessForm() && (
+                                    <div>
+                                        <button
+                                            onClick={() => setPrelistOpen(!prelistOpen)}
+                                            className={`w-full flex items-center justify-between px-3 py-2.5 text-sm font-medium rounded-lg transition-colors ${
+                                                currentPath.startsWith('/form-prelist') || currentPath.startsWith('/tabel-prelist')
+                                                    ? 'bg-orange-50 text-orange-600'
+                                                    : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                                            }`}
+                                        >
+                                            <span className="flex items-center">
+                                                <DocumentTextIcon className="w-5 h-5 mr-3 text-gray-400" />
+                                                Prelist
+                                            </span>
+                                            <ChevronDownIcon className={`w-4 h-4 transition-transform ${prelistOpen ? 'rotate-180' : ''}`} />
+                                        </button>
+                                        {prelistOpen && (
+                                            <div className="ml-8 mt-1 space-y-1">
+                                                <Link
+                                                    href="/form-prelist"
+                                                    className={`block px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                                                        currentPath === '/form-prelist'
+                                                            ? 'bg-orange-50 text-orange-600'
+                                                            : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                                                    }`}
+                                                    onClick={() => setMobileOpen(false)}
+                                                >
+                                                    Form Prelist
+                                                </Link>
+                                                {canAccessTable() && (
+                                                    <Link
+                                                        href="/tabel-prelist"
+                                                        className={`block px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                                                            currentPath === '/tabel-prelist'
+                                                                ? 'bg-orange-50 text-orange-600'
+                                                                : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                                                        }`}
+                                                        onClick={() => setMobileOpen(false)}
+                                                    >
+                                                        Tabel Prelist
+                                                    </Link>
+                                                )}
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
+
+                                {/* Snowball Dropdown */}
+                                {canAccessForm() && (
+                                    <div className="mt-1">
+                                        <button
+                                            onClick={() => setSnowballOpen(!snowballOpen)}
+                                            className={`w-full flex items-center justify-between px-3 py-2.5 text-sm font-medium rounded-lg transition-colors ${
+                                                currentPath.startsWith('/form-snowball') || currentPath.startsWith('/tabel-snowball')
+                                                    ? 'bg-orange-50 text-orange-600'
+                                                    : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                                            }`}
+                                        >
+                                            <span className="flex items-center">
+                                                <DocumentTextIcon className="w-5 h-5 mr-3 text-gray-400" />
+                                                Snowball
+                                            </span>
+                                            <ChevronDownIcon className={`w-4 h-4 transition-transform ${snowballOpen ? 'rotate-180' : ''}`} />
+                                        </button>
+                                        {snowballOpen && (
+                                            <div className="ml-8 mt-1 space-y-1">
+                                                <Link
+                                                    href="/form-snowball"
+                                                    className={`block px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                                                        currentPath === '/form-snowball'
+                                                            ? 'bg-orange-50 text-orange-600'
+                                                            : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                                                    }`}
+                                                    onClick={() => setMobileOpen(false)}
+                                                >
+                                                    Form Snowball
+                                                </Link>
+                                                {canAccessTable() && (
+                                                    <Link
+                                                        href="/tabel-snowball"
+                                                        className={`block px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                                                            currentPath === '/tabel-snowball'
+                                                                ? 'bg-orange-50 text-orange-600'
+                                                                : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                                                        }`}
+                                                        onClick={() => setMobileOpen(false)}
+                                                    >
+                                                        Tabel Snowball
+                                                    </Link>
+                                                )}
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
+
+                                {/* Crawling - only for Admin and Pegawai */}
+                                {canAccessCrawl() && (
+                                    <Link
+                                        href="/crawling"
+                                        className={`flex items-center px-3 py-2.5 text-sm font-medium rounded-lg transition-colors mt-1
+                                            ${currentPath.startsWith('/crawling') 
+                                                ? 'bg-orange-50 text-orange-600' 
+                                                : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                                            }
+                                        `}
+                                        onClick={() => setMobileOpen(false)}
+                                    >
+                                        <ChartBarIcon className={`w-5 h-5 mr-3 ${currentPath.startsWith('/crawling') ? 'text-orange-600' : 'text-gray-400'}`} />
+                                        Crawling
+                                    </Link>
+                                )}
+
+                                {/* ADMINISTRASI Section - only for Admin */}
+                                {canAccessLogActivity() && (
+                                    <>
+                                        <div className="mt-6 mb-4">
+                                            <p className="px-3 text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+                                                Administrasi
+                                            </p>
+                                        </div>
+                                        <Link
+                                            href="/activity-log"
+                                            className={`
+                                                flex items-center px-3 py-2.5 text-sm font-medium rounded-lg transition-colors
+                                                ${currentPath.startsWith('/activity-log') 
+                                                    ? 'bg-orange-50 text-orange-600' 
+                                                    : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                                                }
+                                            `}
+                                            onClick={() => setMobileOpen(false)}
+                                        >
+                                            <ClockIcon className={`w-5 h-5 mr-3 ${currentPath.startsWith('/activity-log') ? 'text-orange-600' : 'text-gray-400'}`} />
+                                            Log Aktivitas
+                                        </Link>
+                                        <Link
+                                            href="/tabel-user"
+                                            className={`
+                                                flex items-center px-3 py-2.5 text-sm font-medium rounded-lg transition-colors
+                                                ${currentPath.startsWith('/tabel-user') 
+                                                    ? 'bg-orange-50 text-orange-600' 
+                                                    : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                                                }
+                                            `}
+                                            onClick={() => setMobileOpen(false)}
+                                        >
+                                            <Cog6ToothIcon className={`w-5 h-5 mr-3 ${currentPath.startsWith('/tabel-user') ? 'text-orange-600' : 'text-gray-400'}`} />
+                                            Kelola User
+                                        </Link>
+                                    </>
+                                )}
+                            </>
+                        )}
                     </nav>
 
                     {/* User section */}
@@ -191,8 +319,8 @@ export default function SidebarLayout({ children, title = 'Sensus Ekonomi' }) {
                         {isAuthenticated && user ? (
                             <div className="space-y-3">
                                 <div className="flex items-center">
-                                    <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                                        <span className="text-sm font-medium text-blue-600">
+                                    <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+                                        <span className="text-sm font-medium text-orange-600">
                                             {user.name?.charAt(0).toUpperCase()}
                                         </span>
                                     </div>
@@ -212,7 +340,7 @@ export default function SidebarLayout({ children, title = 'Sensus Ekonomi' }) {
                         ) : (
                             <Link
                                 href="/login"
-                                className="flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors"
+                                className="flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-orange-600 rounded-lg hover:bg-orange-700 transition-colors"
                             >
                                 Login
                             </Link>
@@ -250,7 +378,7 @@ export default function SidebarLayout({ children, title = 'Sensus Ekonomi' }) {
                             ) : (
                                 <Link
                                     href="/login"
-                                    className="text-sm text-blue-600 hover:text-blue-700"
+                                    className="text-sm text-orange-600 hover:text-orange-700"
                                 >
                                     Login
                                 </Link>
