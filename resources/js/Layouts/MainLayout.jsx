@@ -46,7 +46,7 @@ export default function MainLayout({ children }) {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                                 </svg>
                             </div>
-                            <span className="text-xl font-bold text-slate-800">Sensus Ekonomi</span>
+                            <span className="text-xl font-bold text-slate-800">DIGI-TRACE SE26</span>
                         </Link>
 
                         {/* Desktop Navigation */}
@@ -156,7 +156,7 @@ export default function MainLayout({ children }) {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col md:flex-row justify-between items-center">
                         <div className="mb-4 md:mb-0">
-                            <p className="text-sm">© 2026 Sensus Ekonomi Crawling. BPS Lampung.</p>
+                            <p className="text-sm">© 2026 DIGI-TRACE SE26. BPS Lampung.</p>
                         </div>
                         <div className="flex space-x-6 text-sm">
                             <a href="#" className="hover:text-white transition-colors">Tentang</a>

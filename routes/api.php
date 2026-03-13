@@ -2,10 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
-use App\Http\Controllers\Api\PrelistController;
+use App\Http\Controllers\Api\CrowdlistingController;
 use App\Http\Controllers\Api\SnowballController;
 use App\Http\Controllers\Api\LogActivityController;
 use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\Api\DtsenController;
+use App\Http\Controllers\Api\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,12 +24,12 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/user', [AuthController::class, 'user']);
     Route::post('/logout', [AuthController::class, 'logout']);
     
-    // Prelist routes (CRUD)
-    Route::get('/prelist', [PrelistController::class, 'index']);
-    Route::post('/prelist', [PrelistController::class, 'store']);
-    Route::get('/prelist/{id}', [PrelistController::class, 'show']);
-    Route::put('/prelist/{id}', [PrelistController::class, 'update']);
-    Route::delete('/prelist/{id}', [PrelistController::class, 'destroy']);
+    // Crowdlisting routes (CRUD)
+    Route::get('/crowdlisting', [CrowdlistingController::class, 'index']);
+    Route::post('/crowdlisting', [CrowdlistingController::class, 'store']);
+    Route::get('/crowdlisting/{id}', [CrowdlistingController::class, 'show']);
+    Route::put('/crowdlisting/{id}', [CrowdlistingController::class, 'update']);
+    Route::delete('/crowdlisting/{id}', [CrowdlistingController::class, 'destroy']);
     
     // Snowball routes (CRUD)
     Route::get('/snowball', [SnowballController::class, 'index']);
@@ -48,4 +50,15 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/users/{id}', [UserController::class, 'show']);
     Route::put('/users/{id}', [UserController::class, 'update']);
     Route::delete('/users/{id}', [UserController::class, 'destroy']);
+    
+    // DTSEN routes (CRUD)
+    Route::get('/dtsen', [DtsenController::class, 'index']);
+    Route::post('/dtsen', [DtsenController::class, 'store']);
+    Route::get('/dtsen/{id}', [DtsenController::class, 'show']);
+    Route::put('/dtsen/{id}', [DtsenController::class, 'update']);
+    Route::delete('/dtsen/{id}', [DtsenController::class, 'destroy']);
+
+    // Dashboard route
+    Route::get('/dashboard', [DashboardController::class, 'index']);
+    Route::get('/dashboard/statistik-kabupaten-kota', [DashboardController::class, 'statistikKabupatenKota']);
 });

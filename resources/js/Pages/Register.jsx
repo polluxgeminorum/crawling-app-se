@@ -63,14 +63,13 @@ export default function Register() {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                             </svg>
                         </div>
-                        <span className="text-2xl font-bold text-slate-800">Sensus Ekonomi</span>
+                        <span className="text-2xl font-bold text-slate-800">DIGI-TRACE SE26</span>
                     </Link>
                 </div>
 
                 {/* Register Card */}
                 <div className="bg-white rounded-2xl shadow-xl border border-slate-100 p-8">
                     <h2 className="text-2xl font-bold text-slate-900 mb-2">Daftar Akun</h2>
-                    <p className="text-slate-600 mb-6">Buat akun untuk mengakses sistem crawling</p>
 
                     {success && (
                         <div className="mb-4 p-4 bg-green-50 border border-green-200 rounded-lg">

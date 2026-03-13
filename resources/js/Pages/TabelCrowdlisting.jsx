@@ -4,7 +4,27 @@ import * as XLSX from 'xlsx';
 import useAuthStore from '../stores/authStore';
 import SidebarLayout from '../Layouts/SidebarLayout';
 
-export default function TabelPrelist() {
+// List of Lampung Regency/City
+const KABUPATEN_KOTA_LAMPUNG = [
+    { value: '', label: 'Pilih Kabupaten/Kota' },
+    { value: 'Lampung Barat', label: 'Lampung Barat' },
+    { value: 'Tanggamus', label: 'Tanggamus' },
+    { value: 'Lampung Selatan', label: 'Lampung Selatan' },
+    { value: 'Lampung Timur', label: 'Lampung Timur' },
+    { value: 'Lampung Tengah', label: 'Lampung Tengah' },
+    { value: 'Lampung Utara', label: 'Lampung Utara' },
+    { value: 'Way Kanan', label: 'Way Kanan' },
+    { value: 'Tulang Bawang', label: 'Tulang Bawang' },
+    { value: 'Pesawaran', label: 'Pesawaran' },
+    { value: 'Pringsewu', label: 'Pringsewu' },
+    { value: 'Mesuji', label: 'Mesuji' },
+    { value: 'Tulang Bawang Barat', label: 'Tulang Bawang Barat' },
+    { value: 'Pesisir Barat', label: 'Pesisir Barat' },
+    { value: 'Kota Bandar Lampung', label: 'Kota Bandar Lampung' },
+    { value: 'Kota Metro', label: 'Kota Metro' },
+];
+
+export default function TabelCrowdlisting() {
     const { token } = useAuthStore();
     const [data, setData] = useState([]);
     const [filteredData, setFilteredData] = useState([]);
@@ -12,6 +32,29 @@ export default function TabelPrelist() {
     const [error, setError] = useState(null);
     const [searchTerm, setSearchTerm] = useState('');
     const [sortConfig, setSortConfig] = useState({ key: null, direction: 'asc' });
+    
+    // Filter states for each column
+    const [filters, setFilters] = useState({
+        jenis_usaha: '',
+        platform_digital: '',
+        jumlah_usaha: '',
+        kode_pos: '',
+        created_by: '',
+        created_at: '',
+        kabupaten_kota: '',
+    });
+    
+    // Get unique values for dropdown filters
+    const [filterOptions, setFilterOptions] = useState({
+        jenis_usaha: [],
+        platform_digital: [],
+        jumlah_usaha: [],
+        kode_pos: [],
+        created_by: [],
+        created_at: [],
+        kabupaten_kota: [],
+    });
+    const [showFilters, setShowFilters] = useState(false);
     
     // Modal states
     const [showEditModal, setShowEditModal] = useState(false);
@@ -40,6 +83,23 @@ export default function TabelPrelist() {
             );
         }
         
+        // Filter by column-specific filters
+        const filterKeys = ['jenis_usaha', 'platform_digital', 'jumlah_usaha', 'kode_pos', 'created_by', 'created_at', 'kabupaten_kota'];
+        filterKeys.forEach(key => {
+            if (filters[key]) {
+                result = result.filter(item => {
+                    const value = key === 'created_by' ? item.creator?.name : 
+                                  key === 'created_at' ? new Date(item.created_at).toLocaleDateString('id-ID') :
+                                  key === 'jumlah_usaha' ? item.jumlah_usaha?.toString() :
+                                  key === 'email' ? item.email :
+                                  key === 'no_telp' ? item.no_telp :
+                                  item[key];
+                    if (value === null || value === undefined) return false;
+                    return String(value).toLowerCase().includes(filters[key].toLowerCase());
+                });
+            }
+        });
+        
         // Sort
         if (sortConfig.key) {
             result.sort((a, b) => {
@@ -54,14 +114,27 @@ export default function TabelPrelist() {
         }
         
         setFilteredData(result);
-    }, [data, searchTerm, sortConfig]);
+    }, [data, searchTerm, sortConfig, filters]);
 
     const fetchData = async () => {
         try {
-            const response = await axios.get('/api/prelist', {
+            const response = await axios.get('/api/crowdlisting', {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setData(response.data.data);
+            
+            // Extract unique options for all dropdown filters
+            const extractUnique = (arr) => [...new Set(arr.filter(Boolean))].sort();
+            
+            setFilterOptions({
+                jenis_usaha: extractUnique(response.data.data.map(item => item.jenis_usaha)),
+                platform_digital: extractUnique(response.data.data.map(item => item.platform_digital)),
+                jumlah_usaha: extractUnique(response.data.data.map(item => item.jumlah_usaha?.toString())),
+                kode_pos: extractUnique(response.data.data.map(item => item.kode_pos)),
+                created_by: extractUnique(response.data.data.map(item => item.creator?.name)),
+                created_at: extractUnique(response.data.data.map(item => new Date(item.created_at).toLocaleDateString('id-ID'))),
+                kabupaten_kota: extractUnique(response.data.data.map(item => item.kabupaten_kota))
+            });
         } catch (err) {
             setError('Gagal memuat data');
         } finally {
@@ -77,18 +150,36 @@ export default function TabelPrelist() {
         setSortConfig({ key, direction });
     };
 
+    const handleFilterChange = (key, value) => {
+        setFilters(prev => ({ ...prev, [key]: value }));
+    };
+
+    const clearAllFilters = () => {
+        setFilters({
+            jenis_usaha: '',
+            platform_digital: '',
+            jumlah_usaha: '',
+            kode_pos: '',
+            created_by: '',
+            created_at: '',
+            kabupaten_kota: ''
+        });
+        setSearchTerm('');
+    };
+
     const openEditModal = (item) => {
         setSelectedItem(item);
         setEditForm({
-            no_urut_bangunan: item.no_urut_bangunan,
             nama_keluarga_bangunan_usaha: item.nama_keluarga_bangunan_usaha,
+            nama_pemilik: item.nama_pemilik || '',
             jenis_usaha: item.jenis_usaha,
+            platform_digital: item.platform_digital || '',
             alamat: item.alamat,
-            no_urut_keluarga: item.no_urut_keluarga,
             jumlah_usaha: item.jumlah_usaha,
             kode_pos: item.kode_pos || '',
             email: item.email || '',
             no_telp: item.no_telp || '',
+            kabupaten_kota: item.kabupaten_kota || '',
         });
         setShowEditModal(true);
     };
@@ -102,7 +193,7 @@ export default function TabelPrelist() {
         e.preventDefault();
         setIsSubmitting(true);
         try {
-            await axios.put(`/api/prelist/${selectedItem.id}`, editForm, {
+            await axios.put(`/api/crowdlisting/${selectedItem.id}`, editForm, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setShowEditModal(false);
@@ -118,7 +209,7 @@ export default function TabelPrelist() {
     const handleDelete = async () => {
         setIsSubmitting(true);
         try {
-            await axios.delete(`/api/prelist/${selectedItem.id}`, {
+            await axios.delete(`/api/crowdlisting/${selectedItem.id}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setShowDeleteModal(false);
@@ -144,25 +235,26 @@ export default function TabelPrelist() {
     const exportToExcel = () => {
         const worksheet = XLSX.utils.json_to_sheet(filteredData.map((item, index) => ({
             'No': index + 1,
-            'No. Urut Bangunan': item.no_urut_bangunan,
             'Nama Keluarga/Usaha': item.nama_keluarga_bangunan_usaha,
+            'Nama Pemilik': item.nama_pemilik || '',
             'Jenis Usaha': item.jenis_usaha,
+            'Platform Digital': item.platform_digital || '',
             'Alamat': item.alamat,
-            'No. Urut Keluarga': item.no_urut_keluarga,
             'Jumlah Unit Usaha': item.jumlah_usaha,
             'Kode Pos': item.kode_pos || '',
             'Email': item.email || '',
             'No. Telepon': item.no_telp || '',
+            'Kabupaten/Kota': item.kabupaten_kota || '',
             'Dibuat Oleh': item.creator?.name || '-',
             'Tanggal': new Date(item.created_at).toLocaleDateString('id-ID'),
         })));
         const workbook = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(workbook, worksheet, 'Data Prelist');
-        XLSX.writeFile(workbook, 'data_prelist.xlsx');
+        XLSX.utils.book_append_sheet(workbook, worksheet, 'Data Crowdlisting');
+        XLSX.writeFile(workbook, 'data_crowdlisting.xlsx');
     };
 
     return (
-        <SidebarLayout title="Tabel Data Prelist">
+        <SidebarLayout title="Tabel Data Crowdlisting">
             {/* Toast Notification */}
             {notification && (
                 <div className="fixed top-4 right-4 z-50 animate-slide-in-right">
@@ -193,31 +285,9 @@ export default function TabelPrelist() {
                 <div className="fixed inset-0 bg-white/30 backdrop-blur-sm flex items-center justify-center z-50">
                     <div className="bg-white rounded-xl shadow-2xl border-2 border-orange-200 w-full max-w-2xl mx-4 max-h-[90vh] overflow-y-auto">
                         <div className="p-6 border-b">
-                            <h3 className="text-xl font-bold">Edit Data Prelist</h3>
+                            <h3 className="text-xl font-bold">Edit Data Crowdlisting</h3>
                         </div>
                         <form onSubmit={handleUpdate} className="p-6 space-y-4">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div>
-                                    <label className="block text-sm font-medium text-slate-700 mb-1">No. Urut Bangunan</label>
-                                    <input
-                                        type="text"
-                                        value={editForm.no_urut_bangunan}
-                                        onChange={(e) => setEditForm({...editForm, no_urut_bangunan: e.target.value})}
-                                        className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-orange-500"
-                                        required
-                                    />
-                                </div>
-                                <div>
-                                    <label className="block text-sm font-medium text-slate-700 mb-1">No. Urut Keluarga</label>
-                                    <input
-                                        type="text"
-                                        value={editForm.no_urut_keluarga}
-                                        onChange={(e) => setEditForm({...editForm, no_urut_keluarga: e.target.value})}
-                                        className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-orange-500"
-                                        required
-                                    />
-                                </div>
-                            </div>
                             <div>
                                 <label className="block text-sm font-medium text-slate-700 mb-1">Nama Keluarga/Usaha</label>
                                 <input
@@ -229,6 +299,15 @@ export default function TabelPrelist() {
                                 />
                             </div>
                             <div>
+                                <label className="block text-sm font-medium text-slate-700 mb-1">Nama Pemilik</label>
+                                <input
+                                    type="text"
+                                    value={editForm.nama_pemilik || ''}
+                                    onChange={(e) => setEditForm({...editForm, nama_pemilik: e.target.value})}
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-orange-500"
+                                />
+                            </div>
+                            <div>
                                 <label className="block text-sm font-medium text-slate-700 mb-1">Jenis Usaha</label>
                                 <select
                                     value={editForm.jenis_usaha}
@@ -237,13 +316,26 @@ export default function TabelPrelist() {
                                     required
                                 >
                                     <option value="">Pilih Jenis Usaha</option>
-                                    <option value="toko offline">Toko Offline</option>
-                                    <option value="toko online">Toko Online</option>
-                                    <option value="marketplace">Marketplace</option>
-                                    <option value="kuliner">Usaha Kuliner</option>
-                                    <option value="jasa">Usaha Jasa</option>
-                                    <option value="manufacturing">Manufaktur/Produksi</option>
-                                    <option value="lainnya">Lainnya</option>
+                                    <option value="perdaganga online">Perdaganga Online</option>
+                                    <option value="jasa digital">Jasa Digital</option>
+                                    <option value="content creator">Content Creator</option>
+                                    <option value="usaha lainnya">Usaha Lainnya</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label className="block text-sm font-medium text-slate-700 mb-1">Platform Digital</label>
+                                <select
+                                    value={editForm.platform_digital || ''}
+                                    onChange={(e) => setEditForm({...editForm, platform_digital: e.target.value})}
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-orange-500"
+                                >
+                                    <option value="">Pilih Platform Digital</option>
+                                    <option value="Instagram">Instagram</option>
+                                    <option value="Facebook Marketplace">Facebook Marketplace</option>
+                                    <option value="Tiktok Shop">Tiktok Shop</option>
+                                    <option value="Shopee">Shopee</option>
+                                    <option value="Tokopedia">Tokopedia</option>
+                                    <option value="Google Maps">Google Maps</option>
                                 </select>
                             </div>
                             <div>
@@ -295,6 +387,20 @@ export default function TabelPrelist() {
                                     onChange={(e) => setEditForm({...editForm, no_telp: e.target.value})}
                                     className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-orange-500"
                                 />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-medium text-slate-700 mb-1">Kabupaten/Kota</label>
+                                <select
+                                    value={editForm.kabupaten_kota || ''}
+                                    onChange={(e) => setEditForm({...editForm, kabupaten_kota: e.target.value})}
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-orange-500"
+                                >
+                                    {KABUPATEN_KOTA_LAMPUNG.map((item) => (
+                                        <option key={item.value} value={item.value}>
+                                            {item.label}
+                                        </option>
+                                    ))}
+                                </select>
                             </div>
                             <div className="flex justify-end gap-3 pt-4">
                                 <button
@@ -355,8 +461,19 @@ export default function TabelPrelist() {
             <div className="max-w-7xl mx-auto px-4 py-8">
                 <div className="bg-white rounded-2xl shadow-lg border border-slate-100 p-6">
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
-                        <h2 className="text-2xl font-bold text-slate-900">Data Prelist</h2>
-                        <div className="flex gap-2 items-center w-full md:w-auto">
+                        <h2 className="text-2xl font-bold text-slate-900">Data Crowdlisting</h2>
+                        <div className="flex gap-2 items-center w-full md:w-auto flex-wrap">
+                            <button
+                                onClick={() => setShowFilters(!showFilters)}
+                                className={`flex items-center gap-2 px-4 py-2 rounded-lg cursor-pointer ${
+                                    showFilters ? 'bg-orange-600 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                                }`}
+                            >
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+                                </svg>
+                                Filter
+                            </button>
                             <button
                                 onClick={exportToExcel}
                                 className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 cursor-pointer"
@@ -381,6 +498,107 @@ export default function TabelPrelist() {
                         </div>
                     </div>
 
+                    {/* Filter Row */}
+                    {showFilters && (
+                        <div className="mb-4 p-4 bg-slate-50 rounded-lg border border-slate-200">
+                            <div className="flex justify-between items-center mb-3">
+                                <h3 className="font-semibold text-slate-700">Filter Kolom</h3>
+                                <button
+                                    onClick={clearAllFilters}
+                                    className="text-sm text-orange-600 hover:text-orange-700"
+                                >
+                                    Clear All Filters
+                                </button>
+                            </div>
+                            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
+                                <div>
+                                    <select
+                                        value={filters.jenis_usaha}
+                                        onChange={(e) => handleFilterChange('jenis_usaha', e.target.value)}
+                                        className="w-full px-3 py-1.5 text-sm border border-slate-300 rounded focus:border-orange-500"
+                                    >
+                                        <option value="">Jenis Usaha</option>
+                                        {filterOptions.jenis_usaha.map(option => (
+                                            <option key={option} value={option}>{option}</option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div>
+                                    <select
+                                        value={filters.platform_digital}
+                                        onChange={(e) => handleFilterChange('platform_digital', e.target.value)}
+                                        className="w-full px-3 py-1.5 text-sm border border-slate-300 rounded focus:border-orange-500"
+                                    >
+                                        <option value="">Platform Digital</option>
+                                        {filterOptions.platform_digital.map(option => (
+                                            <option key={option} value={option}>{option}</option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div>
+                                    <select
+                                        value={filters.jumlah_usaha}
+                                        onChange={(e) => handleFilterChange('jumlah_usaha', e.target.value)}
+                                        className="w-full px-3 py-1.5 text-sm border border-slate-300 rounded focus:border-orange-500"
+                                    >
+                                        <option value="">Jumlah Usaha</option>
+                                        {filterOptions.jumlah_usaha.map(option => (
+                                            <option key={option} value={option}>{option}</option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div>
+                                    <select
+                                        value={filters.kode_pos}
+                                        onChange={(e) => handleFilterChange('kode_pos', e.target.value)}
+                                        className="w-full px-3 py-1.5 text-sm border border-slate-300 rounded focus:border-orange-500"
+                                    >
+                                        <option value="">Kode Pos</option>
+                                        {filterOptions.kode_pos.map(option => (
+                                            <option key={option} value={option}>{option}</option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div>
+                                    <select
+                                        value={filters.kabupaten_kota}
+                                        onChange={(e) => handleFilterChange('kabupaten_kota', e.target.value)}
+                                        className="w-full px-3 py-1.5 text-sm border border-slate-300 rounded focus:border-orange-500"
+                                    >
+                                        <option value="">Kabupaten/Kota</option>
+                                        {filterOptions.kabupaten_kota.map(option => (
+                                            <option key={option} value={option}>{option}</option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div>
+                                    <select
+                                        value={filters.created_by}
+                                        onChange={(e) => handleFilterChange('created_by', e.target.value)}
+                                        className="w-full px-3 py-1.5 text-sm border border-slate-300 rounded focus:border-orange-500"
+                                    >
+                                        <option value="">Dibuat Oleh</option>
+                                        {filterOptions.created_by.map(option => (
+                                            <option key={option} value={option}>{option}</option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div>
+                                    <select
+                                        value={filters.created_at}
+                                        onChange={(e) => handleFilterChange('created_at', e.target.value)}
+                                        className="w-full px-3 py-1.5 text-sm border border-slate-300 rounded focus:border-orange-500"
+                                    >
+                                        <option value="">Tanggal</option>
+                                        {filterOptions.created_at.map(option => (
+                                            <option key={option} value={option}>{option}</option>
+                                        ))}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
                     {isLoading ? (
                         <div className="text-center py-8">
                             <p className="text-slate-500">Memuat data...</p>
@@ -401,20 +619,20 @@ export default function TabelPrelist() {
                                         <th className="px-4 py-3 cursor-pointer hover:bg-slate-100" onClick={() => handleSort('id')}>
                                             No {getSortIcon('id')}
                                         </th>
-                                        <th className="px-4 py-3 cursor-pointer hover:bg-slate-100" onClick={() => handleSort('no_urut_bangunan')}>
-                                            No. Urut Bangunan {getSortIcon('no_urut_bangunan')}
-                                        </th>
                                         <th className="px-4 py-3 cursor-pointer hover:bg-slate-100" onClick={() => handleSort('nama_keluarga_bangunan_usaha')}>
                                             Nama Keluarga/Usaha {getSortIcon('nama_keluarga_bangunan_usaha')}
+                                        </th>
+                                        <th className="px-4 py-3 cursor-pointer hover:bg-slate-100" onClick={() => handleSort('nama_pemilik')}>
+                                            Nama Pemilik {getSortIcon('nama_pemilik')}
                                         </th>
                                         <th className="px-4 py-3 cursor-pointer hover:bg-slate-100" onClick={() => handleSort('jenis_usaha')}>
                                             Jenis Usaha {getSortIcon('jenis_usaha')}
                                         </th>
+                                        <th className="px-4 py-3 cursor-pointer hover:bg-slate-100" onClick={() => handleSort('platform_digital')}>
+                                            Platform Digital {getSortIcon('platform_digital')}
+                                        </th>
                                         <th className="px-4 py-3 cursor-pointer hover:bg-slate-100" onClick={() => handleSort('alamat')}>
                                             Alamat {getSortIcon('alamat')}
-                                        </th>
-                                        <th className="px-4 py-3 cursor-pointer hover:bg-slate-100" onClick={() => handleSort('no_urut_keluarga')}>
-                                            No. Urut Keluarga {getSortIcon('no_urut_keluarga')}
                                         </th>
                                         <th className="px-4 py-3 cursor-pointer hover:bg-slate-100" onClick={() => handleSort('jumlah_usaha')}>
                                             Jumlah {getSortIcon('jumlah_usaha')}
@@ -427,6 +645,9 @@ export default function TabelPrelist() {
                                         </th>
                                         <th className="px-4 py-3 cursor-pointer hover:bg-slate-100" onClick={() => handleSort('no_telp')}>
                                             No. Telepon {getSortIcon('no_telp')}
+                                        </th>
+                                        <th className="px-4 py-3 cursor-pointer hover:bg-slate-100" onClick={() => handleSort('kabupaten_kota')}>
+                                            Kabupaten/Kota {getSortIcon('kabupaten_kota')}
                                         </th>
                                         <th className="px-4 py-3 cursor-pointer hover:bg-slate-100" onClick={() => handleSort('created_by')}>
                                             Dibuat Oleh {getSortIcon('created_by')}
@@ -441,15 +662,16 @@ export default function TabelPrelist() {
                                     {filteredData.map((item, index) => (
                                         <tr key={item.id} className="bg-white border-b hover:bg-slate-50">
                                             <td className="px-4 py-3">{index + 1}</td>
-                                            <td className="px-4 py-3">{item.no_urut_bangunan}</td>
                                             <td className="px-4 py-3 font-medium">{item.nama_keluarga_bangunan_usaha}</td>
+                                            <td className="px-4 py-3">{item.nama_pemilik || '-'}</td>
                                             <td className="px-4 py-3">{item.jenis_usaha}</td>
+                                            <td className="px-4 py-3">{item.platform_digital || '-'}</td>
                                             <td className="px-4 py-3 max-w-xs truncate" title={item.alamat}>{item.alamat}</td>
-                                            <td className="px-4 py-3">{item.no_urut_keluarga}</td>
                                             <td className="px-4 py-3">{item.jumlah_usaha}</td>
                                             <td className="px-4 py-3">{item.kode_pos || '-'}</td>
                                             <td className="px-4 py-3">{item.email || '-'}</td>
                                             <td className="px-4 py-3">{item.no_telp || '-'}</td>
+                                            <td className="px-4 py-3">{item.kabupaten_kota || '-'}</td>
                                             <td className="px-4 py-3">{item.creator?.name || '-'}</td>
                                             <td className="px-4 py-3">{new Date(item.created_at).toLocaleDateString('id-ID')}</td>
                                             <td className="px-4 py-3">

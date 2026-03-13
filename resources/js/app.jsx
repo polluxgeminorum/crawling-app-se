@@ -7,7 +7,7 @@ import { createInertiaApp } from "@inertiajs/react";
 import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 import useAuthStore from "./stores/authStore";
 
-const appName = import.meta.env.VITE_APP_NAME || "Sensus Ekonomi Crawling";
+const appName = import.meta.env.VITE_APP_NAME || "DIGI-TRACE SE26";
 
 // Check authentication on app load
 const { checkAuth } = useAuthStore.getState();

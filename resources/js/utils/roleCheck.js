@@ -3,8 +3,8 @@
  * 
  * Role permissions:
  * - Guest (not authenticated): Beranda, SensusEkonomi, Panduan
- * - PelakuUsaha: Beranda, SensusEkonomi, Panduan, FormPrelist, FormSnowball
- * - Pegawai: Beranda, SensusEkonomi, Panduan, Crawl, TabelPrelist, TabelSnowball, FormPrelist, FormSnowball
+ * - PelakuUsaha: Beranda, SensusEkonomi, Panduan, FormCrowdlisting, FormSnowball
+ * - Pegawai: Beranda, SensusEkonomi, Panduan, Crawl, TabelCrowdlisting, TabelSnowball, FormCrowdlisting, FormSnowball
  * - Admin: All pages + ActivityLog
  */
 
@@ -18,13 +18,15 @@ export const PAGE_ROLES = {
     '/tentang': ['guest', 'pelaku_usaha', 'pegawai', 'admin'],
     
     // Pages accessible by authenticated users (pelaku_usaha, pegawai, admin)
-    '/form-prelist': ['pelaku_usaha', 'pegawai', 'admin'],
+    '/form-crowdlisting': ['pelaku_usaha', 'pegawai', 'admin'],
     '/form-snowball': ['pelaku_usaha', 'pegawai', 'admin'],
     
     // Pages accessible by Pegawai and Admin only
     '/crawling': ['pegawai', 'admin'],
-    '/tabel-prelist': ['pegawai', 'admin'],
+    '/tabel-crowdlisting': ['pegawai', 'admin'],
     '/tabel-snowball': ['pegawai', 'admin'],
+    '/tabel-dtsen': ['pegawai', 'admin'],
+    '/form-dtsen': ['pegawai', 'admin'],
     
     // Pages accessible by Admin only
     '/activity-log': ['admin'],
@@ -90,14 +92,15 @@ export const getNavLinksByRole = () => {
     
     // Add role-specific links
     if (userRole === 'pelaku_usaha' || userRole === 'pegawai' || userRole === 'admin') {
-        links.push({ name: 'Form Prelist', href: '/form-prelist', active: false });
+        links.push({ name: 'Form Crowdlisting', href: '/form-crowdlisting', active: false });
         links.push({ name: 'Form Snowball', href: '/form-snowball', active: false });
     }
     
     if (userRole === 'pegawai' || userRole === 'admin') {
         links.push({ name: 'Crawling', href: '/crawling', active: false });
-        links.push({ name: 'Tabel Prelist', href: '/tabel-prelist', active: false });
+        links.push({ name: 'Tabel Crowdlisting', href: '/tabel-crowdlisting', active: false });
         links.push({ name: 'Tabel Snowball', href: '/tabel-snowball', active: false });
+        links.push({ name: 'Tabel DTSEN', href: '/tabel-dtsen', active: false });
     }
     
     if (userRole === 'admin') {
@@ -124,9 +127,9 @@ export const getBreadcrumbs = (pathname) => {
             { name: 'Beranda', href: '/' },
             { name: 'Panduan', href: '/panduan' }
         ],
-        '/form-prelist': [
+        '/form-crowdlisting': [
             { name: 'Beranda', href: '/' },
-            { name: 'Form Prelist', href: '/form-prelist' }
+            { name: 'Form Crowdlisting', href: '/form-crowdlisting' }
         ],
         '/form-snowball': [
             { name: 'Beranda', href: '/' },
@@ -136,13 +139,21 @@ export const getBreadcrumbs = (pathname) => {
             { name: 'Beranda', href: '/' },
             { name: 'Crawling', href: '/crawling' }
         ],
-        '/tabel-prelist': [
+        '/tabel-crowdlisting': [
             { name: 'Beranda', href: '/' },
-            { name: 'Tabel Prelist', href: '/tabel-prelist' }
+            { name: 'Tabel Crowdlisting', href: '/tabel-crowdlisting' }
         ],
         '/tabel-snowball': [
             { name: 'Beranda', href: '/' },
             { name: 'Tabel Snowball', href: '/tabel-snowball' }
+        ],
+        '/tabel-dtsen': [
+            { name: 'Beranda', href: '/' },
+            { name: 'Tabel DTSEN', href: '/tabel-dtsen' }
+        ],
+        '/form-dtsen': [
+            { name: 'Beranda', href: '/' },
+            { name: 'Form DTSEN', href: '/form-dtsen' }
         ],
         '/activity-log': [
             { name: 'Beranda', href: '/' },
@@ -172,6 +183,10 @@ export const canAccess = {
     form: () => {
         const { isAuthenticated, user } = useAuthStore.getState();
         return isAuthenticated && user && ['pelaku_usaha', 'pegawai', 'admin'].includes(user.role);
+    },
+    dtsen: () => {
+        const { isAuthenticated, user } = useAuthStore.getState();
+        return isAuthenticated && user && ['pegawai', 'admin'].includes(user.role);
     },
     logActivity: () => {
         const { isAuthenticated, user } = useAuthStore.getState();

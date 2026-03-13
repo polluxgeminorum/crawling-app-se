@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('prelist', function (Blueprint $table) {
+        Schema::create('crowdlisting', function (Blueprint $table) {
             $table->id();
             $table->string('no_urut_bangunan');
             $table->string('nama_keluarga_bangunan_usaha');
@@ -35,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('prelist');
+        Schema::dropIfExists('crowdlisting');
     }
 };

@@ -4,6 +4,26 @@ import * as XLSX from 'xlsx';
 import useAuthStore from '../stores/authStore';
 import SidebarLayout from '../Layouts/SidebarLayout';
 
+// List of Lampung Regency/City
+const KABUPATEN_KOTA_LAMPUNG = [
+    { value: '', label: 'Pilih Kabupaten/Kota' },
+    { value: 'Lampung Barat', label: 'Lampung Barat' },
+    { value: 'Tanggamus', label: 'Tanggamus' },
+    { value: 'Lampung Selatan', label: 'Lampung Selatan' },
+    { value: 'Lampung Timur', label: 'Lampung Timur' },
+    { value: 'Lampung Tengah', label: 'Lampung Tengah' },
+    { value: 'Lampung Utara', label: 'Lampung Utara' },
+    { value: 'Way Kanan', label: 'Way Kanan' },
+    { value: 'Tulang Bawang', label: 'Tulang Bawang' },
+    { value: 'Pesawaran', label: 'Pesawaran' },
+    { value: 'Pringsewu', label: 'Pringsewu' },
+    { value: 'Mesuji', label: 'Mesuji' },
+    { value: 'Tulang Bawang Barat', label: 'Tulang Bawang Barat' },
+    { value: 'Pesisir Barat', label: 'Pesisir Barat' },
+    { value: 'Kota Bandar Lampung', label: 'Kota Bandar Lampung' },
+    { value: 'Kota Metro', label: 'Kota Metro' },
+];
+
 export default function TabelSnowball() {
     const { token } = useAuthStore();
     const [data, setData] = useState([]);
@@ -12,6 +32,23 @@ export default function TabelSnowball() {
     const [error, setError] = useState(null);
     const [searchTerm, setSearchTerm] = useState('');
     const [sortConfig, setSortConfig] = useState({ key: null, direction: 'asc' });
+    
+    // Filter states for each column
+    const [filters, setFilters] = useState({
+        is_input: '',
+        created_by: '',
+        created_at: '',
+        kabupaten_kota: ''
+    });
+    
+    // Get unique values for dropdown filters
+    const [filterOptions, setFilterOptions] = useState({
+        is_input: [],
+        created_by: [],
+        created_at: [],
+        kabupaten_kota: []
+    });
+    const [showFilters, setShowFilters] = useState(false);
     
     // Modal states
     const [showEditModal, setShowEditModal] = useState(false);
@@ -41,6 +78,27 @@ export default function TabelSnowball() {
             );
         }
         
+        // Filter by column-specific filters
+        const filterKeys = ['is_input', 'created_by', 'created_at', 'kabupaten_kota'];
+        filterKeys.forEach(key => {
+            if (filters[key]) {
+                result = result.filter(item => {
+                    let value;
+                    if (key === 'created_by') {
+                        value = item.creator?.name;
+                    } else if (key === 'created_at') {
+                        value = new Date(item.created_at).toLocaleDateString('id-ID');
+                    } else if (key === 'is_input') {
+                        value = item.is_input === 1 ? 'sudah' : 'belum';
+                    } else {
+                        value = item[key];
+                    }
+                    if (value === null || value === undefined) return false;
+                    return String(value).toLowerCase().includes(filters[key].toLowerCase());
+                });
+            }
+        });
+        
         // Sort
         if (sortConfig.key) {
             result.sort((a, b) => {
@@ -55,7 +113,7 @@ export default function TabelSnowball() {
         }
         
         setFilteredData(result);
-    }, [data, searchTerm, sortConfig]);
+    }, [data, searchTerm, sortConfig, filters]);
 
     const fetchData = async () => {
         try {
@@ -63,6 +121,16 @@ export default function TabelSnowball() {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setData(response.data.data);
+            
+            // Extract unique options for all dropdown filters
+            const extractUnique = (arr) => [...new Set(arr.filter(Boolean))].sort();
+            
+            setFilterOptions({
+                is_input: ['Sudah', 'Belum'],
+                created_by: extractUnique(response.data.data.map(item => item.creator?.name)),
+                created_at: extractUnique(response.data.data.map(item => new Date(item.created_at).toLocaleDateString('id-ID'))),
+                kabupaten_kota: extractUnique(response.data.data.map(item => item.kabupaten_kota))
+            });
         } catch (err) {
             setError('Gagal memuat data');
         } finally {
@@ -78,6 +146,20 @@ export default function TabelSnowball() {
         setSortConfig({ key, direction });
     };
 
+    const handleFilterChange = (key, value) => {
+        setFilters(prev => ({ ...prev, [key]: value }));
+    };
+
+    const clearAllFilters = () => {
+        setFilters({
+            is_input: '',
+            created_by: '',
+            created_at: '',
+            kabupaten_kota: ''
+        });
+        setSearchTerm('');
+    };
+
     const openEditModal = (item) => {
         setSelectedItem(item);
         setEditForm({
@@ -85,6 +167,8 @@ export default function TabelSnowball() {
             nama_pengisi: item.nama_pengisi,
             no_telp: item.no_telp || '',
             email: item.email || '',
+            link_toko_online: item.link_toko_online || '',
+            kabupaten_kota: item.kabupaten_kota || '',
         });
         setShowEditModal(true);
     };
@@ -159,6 +243,8 @@ export default function TabelSnowball() {
             'Nama Pengisi': item.nama_pengisi,
             'No. Telepon': item.no_telp || '',
             'Email': item.email || '',
+            'Link Toko Online': item.link_toko_online || '',
+            'Kabupaten/Kota': item.kabupaten_kota || '',
             'Dibuat Oleh': item.creator?.name || '-',
             'Tanggal': new Date(item.created_at).toLocaleDateString('id-ID'),
         })));
@@ -240,6 +326,30 @@ export default function TabelSnowball() {
                                     className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-orange-500"
                                 />
                             </div>
+                            <div>
+                                <label className="block text-sm font-medium text-slate-700 mb-1">Link Toko Online</label>
+                                <input
+                                    type="url"
+                                    value={editForm.link_toko_online || ''}
+                                    onChange={(e) => setEditForm({...editForm, link_toko_online: e.target.value})}
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-orange-500"
+                                    placeholder="Masukkan link toko online"
+                                />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-medium text-slate-700 mb-1">Kabupaten/Kota</label>
+                                <select
+                                    value={editForm.kabupaten_kota || ''}
+                                    onChange={(e) => setEditForm({...editForm, kabupaten_kota: e.target.value})}
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-orange-500"
+                                >
+                                    {KABUPATEN_KOTA_LAMPUNG.map((item) => (
+                                        <option key={item.value} value={item.value}>
+                                            {item.label}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
                             <div className="flex justify-end gap-3 pt-4">
                                 <button
                                     type="button"
@@ -300,7 +410,18 @@ export default function TabelSnowball() {
                 <div className="bg-white rounded-2xl shadow-lg border border-slate-100 p-6">
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
                         <h2 className="text-2xl font-bold text-slate-900">Data Snowball</h2>
-                        <div className="flex gap-2 items-center w-full md:w-auto">
+                        <div className="flex gap-2 items-center w-full md:w-auto flex-wrap">
+                            <button
+                                onClick={() => setShowFilters(!showFilters)}
+                                className={`flex items-center gap-2 px-4 py-2 rounded-lg cursor-pointer ${
+                                    showFilters ? 'bg-orange-600 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                                }`}
+                            >
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+                                </svg>
+                                Filter
+                            </button>
                             <button
                                 onClick={handleSync}
                                 disabled={isSyncing}
@@ -335,6 +456,71 @@ export default function TabelSnowball() {
                         </div>
                     </div>
 
+                    {/* Filter Row */}
+                    {showFilters && (
+                        <div className="mb-4 p-4 bg-slate-50 rounded-lg border border-slate-200">
+                            <div className="flex justify-between items-center mb-3">
+                                <h3 className="font-semibold text-slate-700">Filter Kolom</h3>
+                                <button
+                                    onClick={clearAllFilters}
+                                    className="text-sm text-orange-600 hover:text-orange-700"
+                                >
+                                    Clear All Filters
+                                </button>
+                            </div>
+                            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                <div>
+                                    <select
+                                        value={filters.kabupaten_kota}
+                                        onChange={(e) => handleFilterChange('kabupaten_kota', e.target.value)}
+                                        className="w-full px-3 py-1.5 text-sm border border-slate-300 rounded focus:border-orange-500"
+                                    >
+                                        <option value="">Kabupaten/Kota</option>
+                                        {filterOptions.kabupaten_kota.map(option => (
+                                            <option key={option} value={option}>{option}</option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div>
+                                    <select
+                                        value={filters.is_input}
+                                        onChange={(e) => handleFilterChange('is_input', e.target.value)}
+                                        className="w-full px-3 py-1.5 text-sm border border-slate-300 rounded focus:border-orange-500"
+                                    >
+                                        <option value="">Sudah Mengisi Prelist?</option>
+                                        {filterOptions.is_input.map(option => (
+                                            <option key={option} value={option.toLowerCase()}>{option}</option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div>
+                                    <select
+                                        value={filters.created_by}
+                                        onChange={(e) => handleFilterChange('created_by', e.target.value)}
+                                        className="w-full px-3 py-1.5 text-sm border border-slate-300 rounded focus:border-orange-500"
+                                    >
+                                        <option value="">Dibuat Oleh</option>
+                                        {filterOptions.created_by.map(option => (
+                                            <option key={option} value={option}>{option}</option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div>
+                                    <select
+                                        value={filters.created_at}
+                                        onChange={(e) => handleFilterChange('created_at', e.target.value)}
+                                        className="w-full px-3 py-1.5 text-sm border border-slate-300 rounded focus:border-orange-500"
+                                    >
+                                        <option value="">Tanggal</option>
+                                        {filterOptions.created_at.map(option => (
+                                            <option key={option} value={option}>{option}</option>
+                                        ))}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
                     {isLoading ? (
                         <div className="text-center py-8">
                             <p className="text-slate-500">Memuat data...</p>
@@ -367,6 +553,12 @@ export default function TabelSnowball() {
                                         <th className="px-4 py-3 cursor-pointer hover:bg-slate-100" onClick={() => handleSort('email')}>
                                             Email {getSortIcon('email')}
                                         </th>
+                                        <th className="px-4 py-3 cursor-pointer hover:bg-slate-100" onClick={() => handleSort('link_toko_online')}>
+                                            Link Toko Online {getSortIcon('link_toko_online')}
+                                        </th>
+                                        <th className="px-4 py-3 cursor-pointer hover:bg-slate-100" onClick={() => handleSort('kabupaten_kota')}>
+                                            Kabupaten/Kota {getSortIcon('kabupaten_kota')}
+                                        </th>
                                         <th className="px-4 py-3 cursor-pointer hover:bg-slate-100" onClick={() => handleSort('is_input')}>
                                             Sudah Mengisi Prelist? {getSortIcon('is_input')}
                                         </th>
@@ -387,6 +579,19 @@ export default function TabelSnowball() {
                                             <td className="px-4 py-3">{item.nama_pengisi}</td>
                                             <td className="px-4 py-3">{item.no_telp || '-'}</td>
                                             <td className="px-4 py-3">{item.email || '-'}</td>
+                                            <td className="px-4 py-3">
+                                                {item.link_toko_online ? (
+                                                    <a 
+                                                        href={item.link_toko_online} 
+                                                        target="_blank" 
+                                                        rel="noopener noreferrer"
+                                                        className="text-orange-600 hover:text-orange-700 underline"
+                                                    >
+                                                        Buka Link
+                                                    </a>
+                                                ) : '-'}
+                                            </td>
+                                            <td className="px-4 py-3">{item.kabupaten_kota || '-'}</td>
                                             <td className="px-4 py-3">
                                                 {item.is_input === 1 ? (
                                                     <span className="px-2 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded">Sudah</span>

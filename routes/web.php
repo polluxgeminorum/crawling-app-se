@@ -29,13 +29,16 @@ Route::get('/register', fn() => Inertia::render('Register'))->name('register');
 /*
 | Protected pages - requires authentication (handled by client-side)
 */
-Route::get('/form-prelist', fn() => Inertia::render('FormPrelist'))->name('form-prelist');
+Route::get('/form-crowdlisting', fn() => Inertia::render('FormCrowdlisting'))->name('form-crowdlisting');
 Route::get('/form-snowball', fn() => Inertia::render('FormSnowball'))->name('form-snowball');
 Route::get('/crawling', fn() => Inertia::render('Crawling'))->name('crawling');
-Route::get('/tabel-prelist', fn() => Inertia::render('TabelPrelist'))->name('tabel-prelist');
+Route::get('/tabel-crowdlisting', fn() => Inertia::render('TabelCrowdlisting'))->name('tabel-crowdlisting');
 Route::get('/tabel-snowball', fn() => Inertia::render('TabelSnowball'))->name('tabel-snowball');
 Route::get('/tabel-user', fn() => Inertia::render('TabelUser'))->name('tabel-user');
 Route::get('/activity-log', fn() => Inertia::render('ActivityLog'))->name('activity-log');
+Route::get('/form-dtsen', fn() => Inertia::render('FormDTSEN'))->name('form-dtsen');
+Route::get('/tabel-dtsen', fn() => Inertia::render('TabelDTSEN'))->name('tabel-dtsen');
+Route::get('/dashboard-monitoring', fn() => Inertia::render('DashboardMonitoring'))->name('dashboard-monitoring');
 
 /*
 | 404 - Catch all unmatched routes

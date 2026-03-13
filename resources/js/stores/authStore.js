@@ -105,6 +105,11 @@ const useAuthStore = create((set, get) => ({
         return isAuthenticated && (user?.role === 'admin' || user?.role === 'pegawai');
     },
 
+    canAccessDtsen: () => {
+        const { user, isAuthenticated } = get();
+        return isAuthenticated && (user?.role === 'admin' || user?.role === 'pegawai');
+    },
+
     canAccessTable: () => {
         const { user, isAuthenticated } = get();
         return isAuthenticated && (user?.role === 'admin' || user?.role === 'pegawai');

@@ -10,18 +10,24 @@ import {
     ArrowLeftOnRectangleIcon,
     ChevronDownIcon,
     ClockIcon,
+    ChartPieIcon,
 } from '@heroicons/react/24/outline';
 import useAuthStore from '../stores/authStore';
 import { checkPageAccess } from '../utils/roleCheck';
 
-const prelistMenu = [
-    { name: 'Form Prelist', href: '/form-prelist' },
-    { name: 'Tabel Prelist', href: '/tabel-prelist' },
+const crowdlistingMenu = [
+    { name: 'Form Crowdlisting', href: '/form-crowdlisting' },
+    { name: 'Tabel Crowdlisting', href: '/tabel-crowdlisting' },
 ];
 
 const snowballMenu = [
     { name: 'Form Snowball', href: '/form-snowball' },
     { name: 'Tabel Snowball', href: '/tabel-snowball' },
+];
+
+const dtsenMenu = [
+    { name: 'Form DTSEN', href: '/form-dtsen' },
+    { name: 'Tabel DTSEN', href: '/tabel-dtsen' },
 ];
 
 const navigation = [
@@ -34,12 +40,14 @@ const navigation = [
     { name: 'Kelola User', href: '/tabel-user', icon: Cog6ToothIcon },
 ];
 
-export default function SidebarLayout({ children, title = 'Sensus Ekonomi' }) {
-    const { user, isAuthenticated, logout, checkAuth, token, canAccessCrawl, canAccessLogActivity, canAccessUserManagement, canAccessTable, canAccessForm } = useAuthStore();
+export default function SidebarLayout({ children, title = 'DIGI-TRACE SE26' }) {
+    const { user, isAuthenticated, logout, checkAuth, token, canAccessCrawl, canAccessLogActivity, canAccessUserManagement, canAccessTable, canAccessForm, canAccessDtsen } = useAuthStore();
+    const isAdmin = useAuthStore.getState().isAdmin;
     const [sidebarOpen, setSidebarOpen] = useState(true);
     const [mobileOpen, setMobileOpen] = useState(false);
-    const [prelistOpen, setPrelistOpen] = useState(false);
+    const [crowdlistingOpen, setCrowdlistingOpen] = useState(false);
     const [snowballOpen, setSnowballOpen] = useState(false);
+    const [dtsenOpen, setDtsenOpen] = useState(false);
     const currentPath = window.location.pathname;
 
     // Only check auth on mount if token exists, but don't clear on failure
@@ -87,7 +95,7 @@ export default function SidebarLayout({ children, title = 'Sensus Ekonomi' }) {
                             <div className="w-8 h-8 bg-gradient-to-br from-orange-600 to-orange-700 rounded-lg flex items-center justify-center">
                                 <ChartBarIcon className="w-5 h-5 text-white" />
                             </div>
-                            <span className="text-sm font-semibold text-gray-900">Sensus Ekonomi</span>
+                            <span className="text-sm font-semibold text-gray-900">DIGI-TRACE SE26</span>
                         </div>
                         <button 
                             onClick={() => setMobileOpen(false)}
@@ -159,47 +167,47 @@ export default function SidebarLayout({ children, title = 'Sensus Ekonomi' }) {
                                     </p>
                                 </div>
 
-                                {/* Prelist Dropdown */}
+                                {/* Crowdlisting Dropdown */}
                                 {canAccessForm() && (
                                     <div>
                                         <button
-                                            onClick={() => setPrelistOpen(!prelistOpen)}
+                                            onClick={() => setCrowdlistingOpen(!crowdlistingOpen)}
                                             className={`w-full flex items-center justify-between px-3 py-2.5 text-sm font-medium rounded-lg transition-colors ${
-                                                currentPath.startsWith('/form-prelist') || currentPath.startsWith('/tabel-prelist')
+                                                currentPath.startsWith('/form-crowdlisting') || currentPath.startsWith('/tabel-crowdlisting')
                                                     ? 'bg-orange-50 text-orange-600'
                                                     : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
                                             }`}
                                         >
                                             <span className="flex items-center">
                                                 <DocumentTextIcon className="w-5 h-5 mr-3 text-gray-400" />
-                                                Prelist
+                                                Crowdlisting
                                             </span>
-                                            <ChevronDownIcon className={`w-4 h-4 transition-transform ${prelistOpen ? 'rotate-180' : ''}`} />
+                                            <ChevronDownIcon className={`w-4 h-4 transition-transform ${crowdlistingOpen ? 'rotate-180' : ''}`} />
                                         </button>
-                                        {prelistOpen && (
+                                        {crowdlistingOpen && (
                                             <div className="ml-8 mt-1 space-y-1">
                                                 <Link
-                                                    href="/form-prelist"
+                                                    href="/form-crowdlisting"
                                                     className={`block px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
-                                                        currentPath === '/form-prelist'
+                                                        currentPath === '/form-crowdlisting'
                                                             ? 'bg-orange-50 text-orange-600'
                                                             : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                                                     }`}
                                                     onClick={() => setMobileOpen(false)}
                                                 >
-                                                    Form Prelist
+                                                    Form Crowdlisting
                                                 </Link>
                                                 {canAccessTable() && (
                                                     <Link
-                                                        href="/tabel-prelist"
+                                                        href="/tabel-crowdlisting"
                                                         className={`block px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
-                                                            currentPath === '/tabel-prelist'
+                                                            currentPath === '/tabel-crowdlisting'
                                                                 ? 'bg-orange-50 text-orange-600'
                                                                 : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                                                         }`}
                                                         onClick={() => setMobileOpen(false)}
                                                     >
-                                                        Tabel Prelist
+                                                        Tabel Crowdlisting
                                                     </Link>
                                                 )}
                                             </div>
@@ -255,6 +263,58 @@ export default function SidebarLayout({ children, title = 'Sensus Ekonomi' }) {
                                     </div>
                                 )}
 
+                                {/* DTSEN Dropdown - only for Admin and Pegawai */}
+                                {canAccessDtsen() && (
+                                    <div className="mt-1">
+                                        <button
+                                            onClick={() => setDtsenOpen(!dtsenOpen)}
+                                            className={`w-full flex items-center justify-between px-3 py-2.5 text-sm font-medium rounded-lg transition-colors ${
+                                                dtsenOpen || currentPath.startsWith('/form-dtsen') || currentPath.startsWith('/tabel-dtsen')
+                                                    ? 'bg-orange-50 text-orange-600'
+                                                    : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                                            }`}
+                                        >
+                                            <span className="flex items-center">
+                                                <DocumentTextIcon className="w-5 h-5 mr-3 text-gray-400" />
+                                                DTSEN
+                                            </span>
+                                            <svg className={`w-4 h-4 transition-transform ${dtsenOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </button>
+                                        {dtsenOpen && (
+                                            <div className="mt-1 ml-4 space-y-1">
+                                                {canAccessForm() && (
+                                                    <Link
+                                                        href="/form-dtsen"
+                                                        className={`block px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                                                            currentPath === '/form-dtsen'
+                                                                ? 'bg-orange-50 text-orange-600'
+                                                                : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                                                        }`}
+                                                        onClick={() => setMobileOpen(false)}
+                                                    >
+                                                        Form DTSEN
+                                                    </Link>
+                                                )}
+                                                {canAccessTable() && (
+                                                    <Link
+                                                        href="/tabel-dtsen"
+                                                        className={`block px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                                                            currentPath === '/tabel-dtsen'
+                                                                ? 'bg-orange-50 text-orange-600'
+                                                                : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                                                        }`}
+                                                        onClick={() => setMobileOpen(false)}
+                                                    >
+                                                        Tabel DTSEN
+                                                    </Link>
+                                                )}
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
+
                                 {/* Crawling - only for Admin and Pegawai */}
                                 {canAccessCrawl() && (
                                     <Link
@@ -271,6 +331,23 @@ export default function SidebarLayout({ children, title = 'Sensus Ekonomi' }) {
                                         Crawling
                                     </Link>
                                 )}
+
+                                 {/* Dashboard Monitoring - only for Admin */}
+                                 {isAdmin() && (
+                                     <Link
+                                         href="/dashboard-monitoring"
+                                         className={`flex items-center px-3 py-2.5 text-sm font-medium rounded-lg transition-colors mt-1
+                                             ${currentPath.startsWith('/dashboard-monitoring') 
+                                                 ? 'bg-orange-50 text-orange-600' 
+                                                 : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                                             }
+                                         `}
+                                         onClick={() => setMobileOpen(false)}
+                                     >
+                                         <ChartPieIcon className={`w-5 h-5 mr-3 ${currentPath.startsWith('/dashboard-monitoring') ? 'text-orange-600' : 'text-gray-400'}`} />
+                                         Dashboard Monitoring
+                                     </Link>
+                                 )}
 
                                 {/* ADMINISTRASI Section - only for Admin */}
                                 {canAccessLogActivity() && (

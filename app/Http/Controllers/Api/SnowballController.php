@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\LogActivity;
 use App\Models\Snowball;
-use App\Models\Prelist;
+use App\Models\Crowdlisting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -21,6 +21,7 @@ class SnowballController extends Controller
             'nama_pengisi' => 'required|string|max:255',
             'no_telp' => 'nullable|string|max:255',
             'email' => 'nullable|string|max:255',
+            'kabupaten_kota' => 'nullable|string|max:255',
         ]);
 
         $user = $request->user();
@@ -30,6 +31,8 @@ class SnowballController extends Controller
             'nama_pengisi' => $request->nama_pengisi,
             'no_telp' => $request->no_telp,
             'email' => $request->email,
+            'link_toko_online' => $request->link_toko_online,
+            'kabupaten_kota' => $request->kabupaten_kota,
             'created_by' => $user->id,
             'updated_by' => $user->id,
         ]);
@@ -101,6 +104,8 @@ class SnowballController extends Controller
             'nama_pengisi' => 'required|string|max:255',
             'no_telp' => 'nullable|string|max:255',
             'email' => 'nullable|string|max:255',
+            'link_toko_online' => 'nullable|string|max:255',
+            'kabupaten_kota' => 'nullable|string|max:255',
         ]);
 
         $user = $request->user();
@@ -110,6 +115,8 @@ class SnowballController extends Controller
             'nama_pengisi' => $request->nama_pengisi,
             'no_telp' => $request->no_telp,
             'email' => $request->email,
+            'link_toko_online' => $request->link_toko_online,
+            'kabupaten_kota' => $request->kabupaten_kota,
             'updated_by' => $user->id,
         ]);
 
@@ -171,8 +178,8 @@ class SnowballController extends Controller
         $updatedCount = 0;
 
         foreach ($snowballData as $snowball) {
-            // Check if email or no_telp exists in prelist
-            $existsInPrelist = Prelist::where(function($query) use ($snowball) {
+            // Check if email or no_telp exists in crowdlisting
+            $existsInCrowdlisting = Crowdlisting::where(function($query) use ($snowball) {
                     if ($snowball->email) {
                         $query->orWhere('email', $snowball->email);
                     }
@@ -182,10 +189,10 @@ class SnowballController extends Controller
                 })->exists();
 
             $snowball->update([
-                'is_input' => $existsInPrelist ? 1 : 0
+                'is_input' => $existsInCrowdlisting ? 1 : 0
             ]);
 
-            if ($existsInPrelist) {
+            if ($existsInCrowdlisting) {
                 $updatedCount++;
             }
         }
@@ -194,13 +201,13 @@ class SnowballController extends Controller
         LogActivity::create([
             'name' => $user->name,
             'email' => $user->email,
-            'activity_log' => 'Sinkronisasi data snowball: ' . $updatedCount . ' data ditemukan di prelist',
+            'activity_log' => 'Sinkronisasi data snowball: ' . $updatedCount . ' data ditemukan di crowdlisting',
             'timestamp' => now(),
         ]);
 
         return response()->json([
             'success' => true,
-            'message' => 'Sinkronisasi berhasil. ' . $updatedCount . ' data snowball ditemukan di prelist.',
+            'message' => 'Sinkronisasi berhasil. ' . $updatedCount . ' data snowball ditemukan di crowdlisting.',
         ]);
     }
 

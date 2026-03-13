@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Prelist extends Model
+class Crowdlisting extends Model
 {
     use HasFactory;
 
@@ -15,7 +15,7 @@ class Prelist extends Model
      *
      * @var string
      */
-    protected $table = 'prelist';
+    protected $table = 'crowdlisting';
 
     /**
      * The attributes that are mass assignable.
@@ -23,21 +23,22 @@ class Prelist extends Model
      * @var list<string>
      */
     protected $fillable = [
-        'no_urut_bangunan',
         'nama_keluarga_bangunan_usaha',
+        'nama_pemilik',
         'jenis_usaha',
+        'platform_digital',
         'alamat',
-        'no_urut_keluarga',
         'jumlah_usaha',
         'kode_pos',
         'email',
         'no_telp',
+        'kabupaten_kota',
         'created_by',
         'updated_by',
     ];
 
     /**
-     * Get the user who created this prelist.
+     * Get the user who created this crowdlisting.
      */
     public function creator(): BelongsTo
     {
@@ -45,7 +46,7 @@ class Prelist extends Model
     }
 
     /**
-     * Get the user who last updated this prelist.
+     * Get the user who last updated this crowdlisting.
      */
     public function updater(): BelongsTo
     {

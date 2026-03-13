@@ -27,6 +27,8 @@ class Snowball extends Model
         'nama_pengisi',
         'no_telp',
         'email',
+        'link_toko_online',
+        'kabupaten_kota',
         'is_input',
         'created_by',
         'updated_by',

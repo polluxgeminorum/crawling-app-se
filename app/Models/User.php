@@ -52,19 +52,19 @@ class User extends Authenticatable
     }
 
     /**
-     * Get the prelist records created by this user.
+     * Get the crowdlisting records created by this user.
      */
-    public function prelistsCreated(): HasMany
+    public function crowdlistingsCreated(): HasMany
     {
-        return $this->hasMany(Prelist::class, 'created_by');
+        return $this->hasMany(Crowdlisting::class, 'created_by');
     }
 
     /**
-     * Get the prelist records updated by this user.
+     * Get the crowdlisting records updated by this user.
      */
-    public function prelistsUpdated(): HasMany
+    public function crowdlistingsUpdated(): HasMany
     {
-        return $this->hasMany(Prelist::class, 'updated_by');
+        return $this->hasMany(Crowdlisting::class, 'updated_by');
     }
 
     /**

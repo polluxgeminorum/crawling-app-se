@@ -4,18 +4,39 @@ import axios from 'axios';
 import useAuthStore from '../stores/authStore';
 import SidebarLayout from '../Layouts/SidebarLayout';
 
-export default function FormPrelist() {
+// List of Lampung Regency/City
+const KABUPATEN_KOTA_LAMPUNG = [
+    { value: '', label: 'Pilih Kabupaten/Kota' },
+    { value: 'Lampung Barat', label: 'Lampung Barat' },
+    { value: 'Tanggamus', label: 'Tanggamus' },
+    { value: 'Lampung Selatan', label: 'Lampung Selatan' },
+    { value: 'Lampung Timur', label: 'Lampung Timur' },
+    { value: 'Lampung Tengah', label: 'Lampung Tengah' },
+    { value: 'Lampung Utara', label: 'Lampung Utara' },
+    { value: 'Way Kanan', label: 'Way Kanan' },
+    { value: 'Tulang Bawang', label: 'Tulang Bawang' },
+    { value: 'Pesawaran', label: 'Pesawaran' },
+    { value: 'Pringsewu', label: 'Pringsewu' },
+    { value: 'Mesuji', label: 'Mesuji' },
+    { value: 'Tulang Bawang Barat', label: 'Tulang Bawang Barat' },
+    { value: 'Pesisir Barat', label: 'Pesisir Barat' },
+    { value: 'Kota Bandar Lampung', label: 'Kota Bandar Lampung' },
+    { value: 'Kota Metro', label: 'Kota Metro' },
+];
+
+export default function FormCrowdlisting() {
     const { token, isAuthenticated } = useAuthStore();
     const [formData, setFormData] = useState({
-        no_urut_bangunan: '',
         nama_keluarga_bangunan_usaha: '',
+        nama_pemilik: '',
         jenis_usaha: '',
+        platform_digital: '',
         alamat: '',
-        no_urut_keluarga: '',
         jumlah_usaha: 1,
         kode_pos: '',
         email: '',
         no_telp: '',
+        kabupaten_kota: '',
     });
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -53,7 +74,7 @@ export default function FormPrelist() {
         setSuccess(false);
 
         try {
-            const response = await axios.post('/api/prelist', formData, {
+            const response = await axios.post('/api/crowdlisting', formData, {
                 headers: { Authorization: `Bearer ${token}` }
             });
 
@@ -61,15 +82,16 @@ export default function FormPrelist() {
                 setSuccess(true);
                 // Reset form
                 setFormData({
-                    no_urut_bangunan: '',
                     nama_keluarga_bangunan_usaha: '',
+                    nama_pemilik: '',
                     jenis_usaha: '',
+                    platform_digital: '',
                     alamat: '',
-                    no_urut_keluarga: '',
                     jumlah_usaha: 1,
                     kode_pos: '',
                     email: '',
                     no_telp: '',
+                    kabupaten_kota: '',
                 });
             }
         } catch (err) {
@@ -87,7 +109,7 @@ export default function FormPrelist() {
     };
 
     return (
-        <SidebarLayout title="Form Data Prelist">
+        <SidebarLayout title="Form Data Crowdlisting">
             {/* Toast Notification - Top Right */}
             {success && (
                 <div className="fixed top-4 right-4 z-50 animate-slide-in-right">
@@ -97,7 +119,7 @@ export default function FormPrelist() {
                         </svg>
                         <div className="flex-1">
                             <p className="font-semibold">Berhasil!</p>
-                            <p className="text-sm text-green-100">Data prelist berhasil disimpan</p>
+                            <p className="text-sm text-green-100">Data crowdlisting berhasil disimpan</p>
                         </div>
                         <button 
                             onClick={() => setSuccess(false)}
@@ -125,38 +147,6 @@ export default function FormPrelist() {
                     )}
 
                     <form onSubmit={handleSubmit} className="space-y-6">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label className="block text-sm font-medium text-slate-700 mb-2">
-                                    No. Urut Bangunan *
-                                </label>
-                                <input
-                                    type="text"
-                                    name="no_urut_bangunan"
-                                    value={formData.no_urut_bangunan}
-                                    onChange={handleChange}
-                                    required
-                                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
-                                    placeholder="Contoh: 001"
-                                />
-                            </div>
-
-                            <div>
-                                <label className="block text-sm font-medium text-slate-700 mb-2">
-                                    No. Urut Keluarga *
-                                </label>
-                                <input
-                                    type="text"
-                                    name="no_urut_keluarga"
-                                    value={formData.no_urut_keluarga}
-                                    onChange={handleChange}
-                                    required
-                                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
-                                    placeholder="Contoh: 001"
-                                />
-                            </div>
-                        </div>
-
                         <div>
                             <label className="block text-sm font-medium text-slate-700 mb-2">
                                 Nama Keluarga / Nama Usaha *
@@ -174,6 +164,20 @@ export default function FormPrelist() {
 
                         <div>
                             <label className="block text-sm font-medium text-slate-700 mb-2">
+                                Nama Pemilik
+                            </label>
+                            <input
+                                type="text"
+                                name="nama_pemilik"
+                                value={formData.nama_pemilik}
+                                onChange={handleChange}
+                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
+                                placeholder="Nama pemilik usaha"
+                            />
+                        </div>
+
+                        <div>
+                            <label className="block text-sm font-medium text-slate-700 mb-2">
                                 Jenis Usaha *
                             </label>
                             <select
@@ -184,13 +188,30 @@ export default function FormPrelist() {
                                 className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                             >
                                 <option value="">Pilih Jenis Usaha</option>
-                                <option value="toko offline">Toko Offline</option>
-                                <option value="toko online">Toko Online</option>
-                                <option value="marketplace">Marketplace (Tokopedia, Shopee, dll)</option>
-                                <option value="kuliner">Usaha Kuliner</option>
-                                <option value="jasa">Usaha Jasa</option>
-                                <option value="manufacturing">Manufaktur/Produksi</option>
-                                <option value="lainnya">Lainnya</option>
+                                <option value="Perdagangan Online">Perdagangan Online</option>
+                                <option value="Jasa Digital">Jasa Digital</option>
+                                <option value="Content Creator">Content Creator</option>
+                                <option value="Usaha Lainnya">Usaha Lainnya</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label className="block text-sm font-medium text-slate-700 mb-2">
+                                Platform Digital
+                            </label>
+                            <select
+                                name="platform_digital"
+                                value={formData.platform_digital}
+                                onChange={handleChange}
+                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
+                            >
+                                <option value="">Pilih Platform Digital</option>
+                                <option value="Instagram">Instagram</option>
+                                <option value="Facebook Marketplace">Facebook Marketplace</option>
+                                <option value="Tiktok Shop">Tiktok Shop</option>
+                                <option value="Shopee">Shopee</option>
+                                <option value="Tokopedia">Tokopedia</option>
+                                <option value="Google Maps">Google Maps</option>
                             </select>
                         </div>
 
@@ -266,6 +287,24 @@ export default function FormPrelist() {
                                 className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
                                 placeholder="Contoh: 081234567890"
                             />
+                        </div>
+
+                        <div>
+                            <label className="block text-sm font-medium text-slate-700 mb-2">
+                                Kabupaten/Kota
+                            </label>
+                            <select
+                                name="kabupaten_kota"
+                                value={formData.kabupaten_kota}
+                                onChange={handleChange}
+                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
+                            >
+                                {KABUPATEN_KOTA_LAMPUNG.map((item) => (
+                                    <option key={item.value} value={item.value}>
+                                        {item.label}
+                                    </option>
+                                ))}
+                            </select>
                         </div>
 
                         <div className="pt-4">

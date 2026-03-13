@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>{{ config('app.name', 'Sensus Ekonomi Crawling') }}</title>
+        <title>{{ config('app.name', 'DIGI-TRACE SE26') }}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -18,10 +18,10 @@
                     '/': ['guest', 'pelaku_usaha', 'pegawai', 'admin'],
                     '/sensus-ekonomi': ['guest', 'pelaku_usaha', 'pegawai', 'admin'],
                     '/panduan': ['guest', 'pelaku_usaha', 'pegawai', 'admin'],
-                    '/form-prelist': ['pelaku_usaha', 'pegawai', 'admin'],
+                    '/form-crowdlisting': ['pelaku_usaha', 'pegawai', 'admin'],
                     '/form-snowball': ['pelaku_usaha', 'pegawai', 'admin'],
                     '/crawling': ['pegawai', 'admin'],
-                    '/tabel-prelist': ['pegawai', 'admin'],
+                    '/tabel-crowdlisting': ['pegawai', 'admin'],
                     '/tabel-snowball': ['pegawai', 'admin'],
                     '/activity-log': ['admin'],
                     '/tabel-user': ['admin'],

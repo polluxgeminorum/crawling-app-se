@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('prelist', function (Blueprint $table) {
-            $table->string('no_telp')->nullable()->after('email');
+        Schema::table('snowball', function (Blueprint $table) {
+            $table->string('kabupaten_kota')->nullable()->after('email');
         });
     }
 
@@ -21,8 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('prelist', function (Blueprint $table) {
-            $table->dropColumn('no_telp');
+        Schema::table('snowball', function (Blueprint $table) {
+            $table->dropColumn('kabupaten_kota');
         });
     }
 };

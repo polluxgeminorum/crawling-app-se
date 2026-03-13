@@ -4,6 +4,26 @@ import axios from 'axios';
 import useAuthStore from '../stores/authStore';
 import SidebarLayout from '../Layouts/SidebarLayout';
 
+// List of Lampung Regency/City
+const KABUPATEN_KOTA_LAMPUNG = [
+    { value: '', label: 'Pilih Kabupaten/Kota' },
+    { value: 'Lampung Barat', label: 'Lampung Barat' },
+    { value: 'Tanggamus', label: 'Tanggamus' },
+    { value: 'Lampung Selatan', label: 'Lampung Selatan' },
+    { value: 'Lampung Timur', label: 'Lampung Timur' },
+    { value: 'Lampung Tengah', label: 'Lampung Tengah' },
+    { value: 'Lampung Utara', label: 'Lampung Utara' },
+    { value: 'Way Kanan', label: 'Way Kanan' },
+    { value: 'Tulang Bawang', label: 'Tulang Bawang' },
+    { value: 'Pesawaran', label: 'Pesawaran' },
+    { value: 'Pringsewu', label: 'Pringsewu' },
+    { value: 'Mesuji', label: 'Mesuji' },
+    { value: 'Tulang Bawang Barat', label: 'Tulang Bawang Barat' },
+    { value: 'Pesisir Barat', label: 'Pesisir Barat' },
+    { value: 'Kota Bandar Lampung', label: 'Kota Bandar Lampung' },
+    { value: 'Kota Metro', label: 'Kota Metro' },
+];
+
 export default function FormSnowball() {
     const { token, isAuthenticated } = useAuthStore();
     const [formData, setFormData] = useState({
@@ -11,6 +31,8 @@ export default function FormSnowball() {
         nama_pengisi: '',
         no_telp: '',
         email: '',
+        link_toko_online: '',
+        kabupaten_kota: '',
     });
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -60,6 +82,8 @@ export default function FormSnowball() {
                     nama_pengisi: '',
                     no_telp: '',
                     email: '',
+                    link_toko_online: '',
+                    kabupaten_kota: '',
                 });
             }
         } catch (err) {
@@ -173,6 +197,37 @@ export default function FormSnowball() {
                             />
                         </div>
 
+                        <div>
+                            <label className="block text-sm font-medium text-slate-700 mb-2">
+                                Link Toko Online
+                            </label>
+                            <input
+                                type="url"
+                                name="link_toko_online"
+                                value={formData.link_toko_online}
+                                onChange={handleChange}
+                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
+                                placeholder="Masukkan link toko online"/>
+                        </div>
+
+                        <div>
+                            <label className="block text-sm font-medium text-slate-700 mb-2">
+                                Kabupaten/Kota
+                            </label>
+                            <select
+                                name="kabupaten_kota"
+                                value={formData.kabupaten_kota}
+                                onChange={handleChange}
+                                className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
+                            >
+                                {KABUPATEN_KOTA_LAMPUNG.map((item) => (
+                                    <option key={item.value} value={item.value}>
+                                        {item.label}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+
                         <div className="pt-4">
                             <button
                                 type="submit"
@@ -187,7 +242,7 @@ export default function FormSnowball() {
                     <div className="mt-8 pt-6 border-t border-slate-200">
                         <div className="text-center">
                             <Link
-                                href="/form-prelist"
+                                href="/form-crowdlisting"
                                 className="text-orange-600 hover:text-orange-700 font-medium"
                             >
                                 ← Kembali ke Form Data Pelaku Usaha
