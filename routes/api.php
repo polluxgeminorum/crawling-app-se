@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\LogActivityController;
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\DtsenController;
 use App\Http\Controllers\Api\DashboardController;
+use App\Http\Controllers\Api\DigitalTracingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,4 +62,12 @@ Route::middleware('auth:sanctum')->group(function () {
     // Dashboard route
     Route::get('/dashboard', [DashboardController::class, 'index']);
     Route::get('/dashboard/statistik-kabupaten-kota', [DashboardController::class, 'statistikKabupatenKota']);
+    
+    // Digital Tracing routes (CRUD)
+    Route::get('/digital-tracing', [DigitalTracingController::class, 'index']);
+    Route::post('/digital-tracing', [DigitalTracingController::class, 'store']);
+    Route::get('/digital-tracing/{id}', [DigitalTracingController::class, 'show']);
+    Route::put('/digital-tracing/{id}', [DigitalTracingController::class, 'update']);
+    Route::delete('/digital-tracing/{id}', [DigitalTracingController::class, 'destroy']);
+    Route::post('/digital-tracing/import', [DigitalTracingController::class, 'import']);
 });

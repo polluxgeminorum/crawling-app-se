@@ -83,7 +83,7 @@ export default function DashboardMonitoring() {
                 {/* Header */}
                 <div className="mb-8">
                     <h1 className="text-3xl font-bold text-slate-900">Dashboard Monitoring</h1>
-                    <p className="text-slate-500 mt-2">Ringkasan data sensus ekonomi 2026</p>
+                    <p className="text-slate-500 mt-2">Ringkasan data Sensus Ekonomi 2026</p>
                 </div>
 
                 {/* Stats Cards */}
@@ -122,7 +122,7 @@ export default function DashboardMonitoring() {
                         </div>
                     </div>
 
-                    {/* Crawling Card */}
+                    {/* Digital Tracing Card */}
                     <div className="group relative overflow-hidden bg-white rounded-2xl shadow-lg border border-slate-100 p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                         <div className="absolute top-0 right-0 w-24 h-24 bg-purple-100 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
                         <div className="relative">
@@ -132,10 +132,10 @@ export default function DashboardMonitoring() {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                                     </svg>
                                 </div>
-                                <span className="text-sm font-medium text-slate-500">Crawling</span>
+                                <span className="text-sm font-medium text-slate-500">Digital Tracing</span>
                             </div>
-                            <div className="text-4xl font-bold text-slate-900 mb-1">{counts.crawling}</div>
-                            <p className="text-xs text-slate-400">Data Crawling (Snowball)</p>
+                            <div className="text-4xl font-bold text-slate-900 mb-1">{counts.digital_tracing}</div>
+                            <p className="text-xs text-slate-400">Data Digital Tracing</p>
                         </div>
                     </div>
 
@@ -151,7 +151,7 @@ export default function DashboardMonitoring() {
                                 </div>
                                 <span className="text-sm font-medium text-orange-100">Total</span>
                             </div>
-                            <div className="text-4xl font-bold text-white mb-1">{counts.total}</div>
+                            <div className="text-4xl font-bold text-white mb-1">{counts.dtsen + counts.crowdlisting + counts.digital_tracing}</div>
                             <p className="text-xs text-orange-100">Total Semua Data</p>
                         </div>
                     </div>
@@ -269,57 +269,6 @@ export default function DashboardMonitoring() {
                         )}
                     </div>
                 </div>
-
-                {/* Summary Table */}
-                <div className="bg-white rounded-2xl shadow-lg border border-slate-100 p-6">
-                    <h3 className="text-lg font-bold text-slate-900 mb-6">Ringkasan Data</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {/* Jenis Usaha Summary */}
-                        <div>
-                            <h4 className="font-semibold text-slate-700 mb-4 flex items-center gap-2">
-                                <span className="w-3 h-3 bg-indigo-500 rounded-full"></span>
-                                Jenis Usaha
-                            </h4>
-                            <div className="space-y-3">
-                                {jenis_usaha && jenis_usaha.map((item, index) => (
-                                    <div key={index} className="flex items-center justify-between p-3 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
-                                        <div className="flex items-center gap-3">
-                                            <div 
-                                                className="w-3 h-3 rounded-full" 
-                                                style={{ backgroundColor: COLORS[index % COLORS.length] }}
-                                            />
-                                            <span className="text-sm text-slate-700">{item.name}</span>
-                                        </div>
-                                        <span className="font-semibold text-slate-900 bg-white px-3 py-1 rounded-lg text-sm">{item.value}</span>
-                                    </div>
-                                ))}
-                                {(!jenis_usaha || jenis_usaha.length === 0) && (
-                                    <p className="text-sm text-slate-400 text-center py-4">Tidak ada data</p>
-                                )}
-                            </div>
-                        </div>
-
-                        {/* Platform Summary */}
-                        <div>
-                            <h4 className="font-semibold text-slate-700 mb-4 flex items-center gap-2">
-                                <span className="w-3 h-3 bg-orange-500 rounded-full"></span>
-                                Platform Digital
-                            </h4>
-                            <div className="space-y-3">
-                                {platform && platform.map((item, index) => (
-                                    <div key={index} className="flex items-center justify-between p-3 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
-                                        <span className="text-sm text-slate-700">{item.name}</span>
-                                        <span className="font-semibold text-slate-900 bg-white px-3 py-1 rounded-lg text-sm">{item.value}</span>
-                                    </div>
-                                ))}
-                                {(!platform || platform.length === 0) && (
-                                    <p className="text-sm text-slate-400 text-center py-4">Tidak ada data</p>
-                                )}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
 
             </div>
         </SidebarLayout>

@@ -35,7 +35,6 @@ export default function TabelSnowball() {
     
     // Filter states for each column
     const [filters, setFilters] = useState({
-        is_input: '',
         created_by: '',
         created_at: '',
         kabupaten_kota: ''
@@ -43,7 +42,6 @@ export default function TabelSnowball() {
     
     // Get unique values for dropdown filters
     const [filterOptions, setFilterOptions] = useState({
-        is_input: [],
         created_by: [],
         created_at: [],
         kabupaten_kota: []
@@ -79,7 +77,7 @@ export default function TabelSnowball() {
         }
         
         // Filter by column-specific filters
-        const filterKeys = ['is_input', 'created_by', 'created_at', 'kabupaten_kota'];
+        const filterKeys = ['created_by', 'created_at', 'kabupaten_kota'];
         filterKeys.forEach(key => {
             if (filters[key]) {
                 result = result.filter(item => {
@@ -88,8 +86,6 @@ export default function TabelSnowball() {
                         value = item.creator?.name;
                     } else if (key === 'created_at') {
                         value = new Date(item.created_at).toLocaleDateString('id-ID');
-                    } else if (key === 'is_input') {
-                        value = item.is_input === 1 ? 'sudah' : 'belum';
                     } else {
                         value = item[key];
                     }
@@ -126,7 +122,6 @@ export default function TabelSnowball() {
             const extractUnique = (arr) => [...new Set(arr.filter(Boolean))].sort();
             
             setFilterOptions({
-                is_input: ['Sudah', 'Belum'],
                 created_by: extractUnique(response.data.data.map(item => item.creator?.name)),
                 created_at: extractUnique(response.data.data.map(item => new Date(item.created_at).toLocaleDateString('id-ID'))),
                 kabupaten_kota: extractUnique(response.data.data.map(item => item.kabupaten_kota))
@@ -152,7 +147,6 @@ export default function TabelSnowball() {
 
     const clearAllFilters = () => {
         setFilters({
-            is_input: '',
             created_by: '',
             created_at: '',
             kabupaten_kota: ''
@@ -422,7 +416,7 @@ export default function TabelSnowball() {
                                 </svg>
                                 Filter
                             </button>
-                            <button
+                            {/* <button
                                 onClick={handleSync}
                                 disabled={isSyncing}
                                 className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 disabled:bg-purple-400 cursor-pointer"
@@ -431,7 +425,7 @@ export default function TabelSnowball() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                                 </svg>
                                 {isSyncing ? 'Menyinkronkan...' : 'Sinkronisasi'}
-                            </button>
+                            </button> */}
                             <button
                                 onClick={exportToExcel}
                                 className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 cursor-pointer"
@@ -478,18 +472,6 @@ export default function TabelSnowball() {
                                         <option value="">Kabupaten/Kota</option>
                                         {filterOptions.kabupaten_kota.map(option => (
                                             <option key={option} value={option}>{option}</option>
-                                        ))}
-                                    </select>
-                                </div>
-                                <div>
-                                    <select
-                                        value={filters.is_input}
-                                        onChange={(e) => handleFilterChange('is_input', e.target.value)}
-                                        className="w-full px-3 py-1.5 text-sm border border-slate-300 rounded focus:border-orange-500"
-                                    >
-                                        <option value="">Sudah Mengisi Prelist?</option>
-                                        {filterOptions.is_input.map(option => (
-                                            <option key={option} value={option.toLowerCase()}>{option}</option>
                                         ))}
                                     </select>
                                 </div>
@@ -559,9 +541,6 @@ export default function TabelSnowball() {
                                         <th className="px-4 py-3 cursor-pointer hover:bg-slate-100" onClick={() => handleSort('kabupaten_kota')}>
                                             Kabupaten/Kota {getSortIcon('kabupaten_kota')}
                                         </th>
-                                        <th className="px-4 py-3 cursor-pointer hover:bg-slate-100" onClick={() => handleSort('is_input')}>
-                                            Sudah Mengisi Prelist? {getSortIcon('is_input')}
-                                        </th>
                                         <th className="px-4 py-3 cursor-pointer hover:bg-slate-100" onClick={() => handleSort('created_by')}>
                                             Dibuat Oleh {getSortIcon('created_by')}
                                         </th>
@@ -592,13 +571,6 @@ export default function TabelSnowball() {
                                                 ) : '-'}
                                             </td>
                                             <td className="px-4 py-3">{item.kabupaten_kota || '-'}</td>
-                                            <td className="px-4 py-3">
-                                                {item.is_input === 1 ? (
-                                                    <span className="px-2 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded">Sudah</span>
-                                                ) : (
-                                                    <span className="px-2 py-1 bg-red-100 text-red-800 text-xs font-semibold rounded">Belum</span>
-                                                )}
-                                            </td>
                                             <td className="px-4 py-3">{item.creator?.name || '-'}</td>
                                             <td className="px-4 py-3">{new Date(item.created_at).toLocaleDateString('id-ID')}</td>
                                             <td className="px-4 py-3">

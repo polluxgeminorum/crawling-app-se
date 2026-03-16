@@ -38,6 +38,7 @@ Route::get('/tabel-user', fn() => Inertia::render('TabelUser'))->name('tabel-use
 Route::get('/activity-log', fn() => Inertia::render('ActivityLog'))->name('activity-log');
 Route::get('/form-dtsen', fn() => Inertia::render('FormDTSEN'))->name('form-dtsen');
 Route::get('/tabel-dtsen', fn() => Inertia::render('TabelDTSEN'))->name('tabel-dtsen');
+Route::get('/tabel-digital-tracing', fn() => Inertia::render('TabelDigitalTracing'))->name('tabel-digital-tracing');
 Route::get('/dashboard-monitoring', fn() => Inertia::render('DashboardMonitoring'))->name('dashboard-monitoring');
 
 /*

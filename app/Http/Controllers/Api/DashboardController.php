@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Dtsen;
 use App\Models\Crowdlisting;
 use App\Models\Snowball;
+use App\Models\DigitalTracing;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -18,7 +19,8 @@ class DashboardController extends Controller
         // Get counts for each table
         $dtsenCount = Dtsen::count();
         $crowdlistingCount = Crowdlisting::count();
-        $crawlingCount = Snowball::count(); // Using Snowball as Crawling
+        $digitalTracingCount = DigitalTracing::count();
+        $snowballCount = Snowball::count();
 
         // Get all data for charts
         $dtsenData = Dtsen::all();
@@ -69,8 +71,9 @@ class DashboardController extends Controller
                 'counts' => [
                     'dtsen' => $dtsenCount,
                     'crowdlisting' => $crowdlistingCount,
-                    'crawling' => $crawlingCount,
-                    'total' => $dtsenCount + $crowdlistingCount + $crawlingCount,
+                    'digital_tracing' => $digitalTracingCount,
+                    'snowball' => $snowballCount,
+                    'total' => $dtsenCount + $crowdlistingCount + $digitalTracingCount + $snowballCount,
                 ],
                 'jenis_usaha' => array_map(function($key, $value) {
                     return ['name' => $key, 'value' => $value];
@@ -119,7 +122,7 @@ class DashboardController extends Controller
                 'nama' => $kabKota,
                 'dtsen' => $dtsenCount,
                 'crowdlisting' => $crowdlistingCount,
-                'crawling' => $snowballCount,
+                'snowball' => $snowballCount,
                 'total' => $total,
             ];
         }

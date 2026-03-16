@@ -1,0 +1,598 @@
+﻿id;link;nama_usaha;kategori;alamat;no_telp;jenis_platform
+1;https://www.google.com/maps/place/Sentral+Tapis/data=!4m7!3m6!1s0x2e40da5774fdf169:0x367b0bae98e615a8!8m2!3d-5.4101599!4d105.2558959!16s%2Fg%2F11bw4t_pfw!19sChIJafH9dFfaQC4RqBXmmK4LezY?authuser=0&hl=id&rclk=1;Sentral Tapis;Toko Pakaian;Pasar Bambu Kuning Plaza Blok C. 22 - 23, Blok D.08, Jalan Imam Bonjol, Klp. Tiga, Kec. Tj. Karang Pusat, Kota Bandar Lampung, Lampung 35111;0852-7988-2963;Google Maps
+2;https://www.google.com/maps/place/Adian+Tapis/data=!4m7!3m6!1s0x2e40db2f66833475:0x557b4aa2d646eda5!8m2!3d-5.3824913!4d105.2448139!16s%2Fg%2F11hdy6vfd4!19sChIJdTSDZi_bQC4Rpe1G1qJKe1U?authuser=0&hl=id&rclk=1;Adian Tapis;Toko Suvenir;J69V+2W4 Adian Tapis, Palapa 10/D, Gunung Terang, Tanjungkarang Barat, Bandar Lampung City, Lampung 35147;;Google Maps
+3;https://www.google.com/maps/place/Tapis+Lampung+ALYN+TAPIS+Kain+Tapis+Toko+Tapis+di+Bandar+Lampung+Pengrajin+Tapis+Lampung/data=!4m7!3m6!1s0x2e40dadd326645a7:0x2bee8dc8d864e773!8m2!3d-5.3853866!4d105.2548722!16s%2Fg%2F11g9vvdzsg!19sChIJp0VmMt3aQC4Rc-dk2MiN7is?authuser=0&hl=id&rclk=1;Tapis Lampung ALYN TAPIS Kain Tapis Toko Tapis di Bandar Lampung Pengrajin Tapis Lampung;Toko Suvenir;Jl. Pagar Alam No.23/171, Kedaton, Kec. Kedaton, Kota Bandar Lampung, Lampung 35141;0896-6655-1920;Google Maps
+4;https://www.google.com/maps/place/Tenun+Lampung+Puteri+Tapis/data=!4m7!3m6!1s0x2e40dbdfaa5cfb65:0x5d9f83ff62d0004c!8m2!3d-5.3794482!4d105.2354415!16s%2Fg%2F11n5w3xj8z!19sChIJZftcqt_bQC4RTADQYv-Dn10?authuser=0&hl=id&rclk=1;Tenun Lampung Puteri Tapis;Toko Suvenir;Jl. Purnawirawan Raya No.105, Gn. Terang, Kec. Langkapura, Kota Bandar Lampung, Lampung 35146;0813-7330-0938;Google Maps
+5;https://www.google.com/maps/place/Galeri+Tapis+Lampung/data=!4m7!3m6!1s0x2e40dbeb2b7df6b7:0x724e225f838f54d6!8m2!3d-5.3960543!4d105.2369834!16s%2Fg%2F11gtcrv358!19sChIJt_Z9K-vbQC4R1lSPg18iTnI?authuser=0&hl=id&rclk=1;Galeri Tapis Lampung;Pusat Perbelanjaan;J63P+HQH Galeri Tapis Lampung, Jl. Sam Ratulangi, Gedong Air, Kec. Tj. Karang Bar., Kota Bandar Lampung, Lampung 35118;0857-6416-8188;Google Maps
+6;https://www.google.com/maps/place/Kinan+Tapis/data=!4m7!3m6!1s0x2e40db840e03d59b:0x890c26a8b1b8b276!8m2!3d-5.3949812!4d105.2658448!16s%2Fg%2F11mp5z3r6l!19sChIJm9UDDoTbQC4RdrK4sagmDIk?authuser=0&hl=id&rclk=1;Kinan Tapis;Toko;J748+285 Kinan Tapis, Jagabaya II, Kec. Sukabumi, Kota Bandar Lampung, Lampung 35122;0823-7703-5728;Google Maps
+7;https://www.google.com/maps/place/Griya+Aisyah+Tapis+Lampung,+Toko+Tapis,+Produsen+Tapis,+Pengrajin+Tapis,+Souvenir+%26+Oleh+oleh+Lampung/data=!4m7!3m6!1s0x2e40da9ad2218909:0xb4bc2c959708426c!8m2!3d-5.397638!4d105.2288475!16s%2Fg%2F11hbn3ztcj!19sChIJCYkh0praQC4RbEIIl5UsvLQ?authuser=0&hl=id&rclk=1;Griya Aisyah Tapis Lampung, Toko Tapis, Produsen Tapis, Pengrajin Tapis, Souvenir & Oleh oleh Lampung;Toko Kerajinan Tangan;Komplek Puri Dwita, Gg. Langgar Blok.A10, Baru, Kec. Langkapura, Kota Bandar Lampung, Lampung 35154;0852-6614-6368;Google Maps
+8;https://www.google.com/maps/place/Pusat+Oleholeh+Lampung,+Kerajinan+Tapis+Lampung+Sambordir/data=!4m7!3m6!1s0x2e40da57744ce7df:0x9d84fe6d2565b9a3!8m2!3d-5.409863!4d105.2563653!16s%2Fg%2F11b8zy99_0!19sChIJ3-dMdFfaQC4Ro7llJW3-hJ0?authuser=0&hl=id&rclk=1;Pusat Oleholeh Lampung, Kerajinan Tapis Lampung Sambordir;Toko Suvenir;Jl. Imam Bonjol No.24, Bambu kuning, Kec. Tj. Karang Pusat, Kota Bandar Lampung, Lampung;0852-7988-2963;Google Maps
+9;https://www.google.com/maps/place/Toko+Tapis+Aneka+Safari/data=!4m7!3m6!1s0x2e40da56f4de41af:0xf4dce5dbff156818!8m2!3d-5.410096!4d105.258893!16s%2Fg%2F1pzyl1jl_!19sChIJr0He9FbaQC4RGGgV_9vl3PQ?authuser=0&hl=id&rclk=1;Toko Tapis Aneka Safari;Toko Suvenir;JL. Raden Intan, Blok B No. 1, Pasar Tengah, Tanjung Karang Pusat, Gn. Sari, Engal, Kota Bandar Lampung, Lampung 35128;0858-4190-3257;Google Maps
+10;https://www.google.com/maps/place/Sami+Sutra/data=!4m7!3m6!1s0x2e40da57989f847f:0xbcdaa15610bdb94a!8m2!3d-5.4096355!4d105.2560847!16s%2Fg%2F11b7xp0gf_!19sChIJf4SfmFfaQC4RSrm9EFah2rw?authuser=0&hl=id&rclk=1;Sami Sutra;Grosir Kain;Jl. Imam Bonjol No.38, Pasir Gintung, Kec. Tj. Karang Pusat, Kota Bandar Lampung, Lampung 35127;(0721) 264423;Google Maps
+11;https://www.google.com/maps/place/%28Pusat+Souvenir+Lampung%29+Kaway+Rajabasa/data=!4m7!3m6!1s0x2e40dac8c62522b3:0x99ed37e61e159a6c!8m2!3d-5.375913!4d105.248177!16s%2Fg%2F11h9x9lpdx!19sChIJsyIlxsjaQC4RbJoVHuY37Zk?authuser=0&hl=id&rclk=1;(Pusat Souvenir Lampung) Kaway Rajabasa;Toko Pakaian;Jl. ZA. Pagar Alam No.12 D, Gedong Meneng, Kec. Rajabasa, Kota Bandar Lampung, Lampung 35148;(0721) 772198;Google Maps
+12;https://www.google.com/maps/place/House+tapis+citra/data=!4m7!3m6!1s0x2e40dbd0f958de83:0xc9ff7f8a42931483!8m2!3d-5.4114904!4d105.2660128!16s%2Fg%2F11h4lkkm23!19sChIJg95Y-dDbQC4RgxSTQop__8k?authuser=0&hl=id&rclk=1;House tapis citra;Toko Kerajinan Tangan;Jl. Cendrawasih 1 No.07, Tj. Agung Raya, Kec. Kedamaian, Kota Bandar Lampung, Lampung 35126;0813-1873-1455;Google Maps
+13;https://www.google.com/maps/place/Toko+Tapis+Sekelik+Sikam/data=!4m7!3m6!1s0x2e40db56c57f6f73:0xa5bf2804148eec88!8m2!3d-5.4128982!4d105.255686!16s%2Fg%2F11s7kq_cg1!19sChIJc29_xVbbQC4RiOyOFAQov6U?authuser=0&hl=id&rclk=1;Toko Tapis Sekelik Sikam;Pusat Perbelanjaan;Jl. Kartini No.181, Palapa, Kec. Tj. Karang Pusat, Kota Bandar Lampung, Lampung 35127;0895-2194-0253;Google Maps
+14;https://www.google.com/maps/place/Shanggie+Tapis/data=!4m7!3m6!1s0x2e40daf93a137f5d:0x55293b14efaadd5b!8m2!3d-5.4040126!4d105.2597442!16s%2Fg%2F1pzw1f5g_!19sChIJXX8TOvnaQC4RW92q7xQ7KVU?authuser=0&hl=id&rclk=1;Shanggie Tapis;Toko Suvenir;Jl. Teuku Umar No.60, Pasir Gintung, Kec. Tj. Karang Pusat, Kota Bandar Lampung, Lampung 35121;(0721) 254747;Google Maps
+15;https://www.google.com/maps/place/Ninda+Tapis+Lampung/data=!4m7!3m6!1s0x2e40dbaeb1a2064d:0x6184236001b8e740!8m2!3d-5.4225672!4d105.2644478!16s%2Fg%2F11f609rxw5!19sChIJTQaisa7bQC4RQOe4AWAjhGE?authuser=0&hl=id&rclk=1;Ninda Tapis Lampung;Butik;Rw. Laut, Kec. Tanjungkarang Timur, Kota Bandar Lampung, Lampung 35213;0822-8118-3444;Google Maps
+16;https://www.google.com/maps/place/Desi+Tapis/data=!4m7!3m6!1s0x2e40db000321430b:0x370b5c24f161c98b!8m2!3d-5.4114669!4d105.2658949!16s%2Fg%2F11yrj4n8rv!19sChIJC0MhAwDbQC4Ri8lh8SRcCzc?authuser=0&hl=id&rclk=1;Desi Tapis;Toko Kerajinan Tangan;Jl. Cendrawasih 1 No.07, Tj. Agung Raya, Kec. Kedamaian, Kota Bandar Lampung, Lampung 35126;;Google Maps
+17;https://www.google.com/maps/place/Toko+Tapis+%26+Songket+Reza/data=!4m7!3m6!1s0x2e40da577ac51081:0x6c3ed7bb34637094!8m2!3d-5.4106049!4d105.255191!16s%2Fg%2F11ckqqr53k!19sChIJgRDFelfaQC4RlHBjNLvXPmw?authuser=0&hl=id&rclk=1;Toko Tapis & Songket Reza;Grosir Kain;Pasar Semep / Smep unit 4E, Jalan Bukit Tinggi, Klp. Tiga, Kec. Tj. Karang Pusat, Kota Bandar Lampung, Lampung 35111;0812-7955-030;Google Maps
+18;https://www.google.com/maps/place/Tapis+Helau/data=!4m7!3m6!1s0x2e40dafb0a51f6d3:0x875b04e2692499e3!8m2!3d-5.3997544!4d105.2596147!16s%2Fg%2F1ptzpmks6!19sChIJ0_ZRCvvaQC4R45kkaeIEW4c?authuser=0&hl=id&rclk=1;Tapis Helau;Toko Bahan Bangunan;Jl. Dr. Sutomo No.26, Penengahan, Tanjungkarung Pusat, Bandar Lampung City, Lampung 35126;(0721) 704871;Google Maps
+19;https://www.google.com/maps/place/THASYA+ETHNIC/data=!4m7!3m6!1s0x2e40dab8425b18c9:0xc52c0aa0183871ca!8m2!3d-5.3790298!4d105.2414257!16s%2Fg%2F11f15cyw_5!19sChIJyRhbQrjaQC4RynE4GKAKLMU?authuser=0&hl=id&rclk=1;THASYA ETHNIC;Toko Pakaian;Purnawirawan IX, Gn. Terang, Kec. Tj. Karang Bar., Kota Bandar Lampung, Lampung 35147;0813-6970-4950;Google Maps
+20;https://www.google.com/maps/place/Erwin+Tapis+Lampung/data=!4m7!3m6!1s0x2e40db0d1435cbaf:0xf59e5c70369cdf1e!8m2!3d-5.3918514!4d105.2256623!16s%2Fg%2F11srlw65sk!19sChIJr8s1FA3bQC4RHt-cNnBcnvU?authuser=0&hl=id&rclk=1;Erwin Tapis Lampung;Toko;J65G+773 Erwin Tapis Lampung, Jl. Madu, Langkapura, Kec. Langkapura, Kota Bandar Lampung, Lampung 35151;0819-1184-3607;Google Maps
+21;https://www.google.com/maps/place/Tupperware+Tapis+Adi+Tri/data=!4m7!3m6!1s0x2e40db7cec731113:0xc53832d9fed663ad!8m2!3d-5.3774489!4d105.2683675!16s%2Fg%2F11g1gq5d11!19sChIJExFz7HzbQC4RrWPW_tkyOMU?authuser=0&hl=id&rclk=1;Tupperware Tapis Adi Tri;Toko Perlengkapan Rumah;Jl. Moh. Nur 3 No.38, Sepang Jaya, Kec. Way Halim, Kota Bandar Lampung, Lampung 35132;0821-8053-3555;Google Maps
+22;https://www.google.com/maps/place/Zama+Tapis+Dan+Sulam+Usus/data=!4m7!3m6!1s0x2e40da8a4efbc69b:0xfc3150c6f550eaab!8m2!3d-5.405808!4d105.239018!16s%2Fg%2F1pztqj5nw!19sChIJm8b7ToraQC4Rq-pQ9cZQMfw?authuser=0&hl=id&rclk=1;Zama Tapis Dan Sulam Usus;Pedagang tekstil;JL. Sultan Badaruddin Gg. Harapan1, No 18, Gedong Air, Kec. Tj. Karang Bar., Kota Bandar Lampung, Lampung 35152;0812-7966-363;Google Maps
+23;https://www.google.com/maps/place/Toko+Tapis+Lampung+,Pengrajin+Tapis+,Souvenir+dan+oleh-oleh+Lampung+Mutiara+Sikep/data=!4m7!3m6!1s0x2e40d1a3e4ca2ba7:0x4338b9c428a65d5a!8m2!3d-5.3964685!4d105.1977676!16s%2Fg%2F11t8dbrmyw!19sChIJpyvK5KPRQC4RWl2mKMS5OEM?authuser=0&hl=id&rclk=1;Toko Tapis Lampung ,Pengrajin Tapis ,Souvenir dan oleh-oleh Lampung Mutiara Sikep;Toko Kerajinan Tangan;Jl. Eforbia 7 No.Perum Blok 19B1, RW.5, Beringin Raya, Kec. Kemiling, Kota Bandar Lampung, Lampung 35158;0812-7251-1523;Google Maps
+24;https://www.google.com/maps/place/Tapisku+by+Hannan/data=!4m7!3m6!1s0x2e40da5798431bd3:0xc866e002c98f434d!8m2!3d-5.4094413!4d105.2559901!16s%2Fg%2F11b7xndycc!19sChIJ0xtDmFfaQC4RTUOPyQLgZsg?authuser=0&hl=id&rclk=1;Tapisku by Hannan;Toko Pakaian;Jl. Imam Bonjol No.25, Pasir Gintung, Kec. Tj. Karang Pusat, Kota Bandar Lampung, Lampung 35127;0821-8317-1155;Google Maps
+25;https://www.google.com/maps/place/Sella+Tapis+Lampung/data=!4m7!3m6!1s0x2e40c5698ade83b9:0x386df2c5e3e2752a!8m2!3d-5.3692686!4d105.2257749!16s%2Fg%2F11f5hpkfs1!19sChIJuYPeimnFQC4RKnXi48XybTg?authuser=0&hl=id&rclk=1;Sella Tapis Lampung;Kantor Perusahaan;Jl. Kav. Raya Jl. Pramuka, Rajabasa, Kec. Rajabasa, Kota Bandar Lampung, Lampung;0895-0552-0521;Google Maps
+26;https://www.google.com/maps/place/Akfar+tapis+lampung/data=!4m7!3m6!1s0x2e40db6d17dbc27f:0x251b6513e561aad7!8m2!3d-5.4253989!4d105.2756189!16s%2Fg%2F11yy0qsfks!19sChIJf8LbF23bQC4R16ph5RNlGyU?authuser=0&hl=id&rclk=1;Akfar tapis lampung;Pabrik tenun;Jl. Perintis Kemerdekaan No.144, Tj. Gading, Kec. Kedamaian, Kota Bandar Lampung, Lampung 35128;0821-7783-4770;Google Maps
+27;https://www.google.com/maps/place/Jual+Tapis+lampung+%26+Sulam+usus/data=!4m7!3m6!1s0x2e40c5897c514f7b:0x11f1aec8781ca22d!8m2!3d-5.3606986!4d105.2335196!16s%2Fg%2F11qntshpf4!19sChIJe09RfInFQC4RLaIceMiu8RE?authuser=0&hl=id&rclk=1;Jual Tapis lampung & Sulam usus;Perancang busana;Gg. Masjid Nurussalam No.39A, Rajabasa, Kec. Rajabasa, Kota Bandar Lampung, Lampung 35144;0812-7334-0753;Google Maps
+28;https://www.google.com/maps/place/Jual+Tapis+Lampung+Rosse/data=!4m7!3m6!1s0x2e40db957b7ce343:0xdb5555538e231279!8m2!3d-5.3720247!4d105.2310983!16s%2Fg%2F11tsjtlq1z!19sChIJQ-N8e5XbQC4ReRIjjlNVVds?authuser=0&hl=id&rclk=1;Jual Tapis Lampung Rosse;Kerajinan;Perumahan Sejahtera, Blk. C No.10, Rajabasa, Kec. Rajabasa, Kota Bandar Lampung, Lampung 35362;0813-6734-4770;Google Maps
+29;https://www.google.com/maps/place/antoni+tapis/data=!4m7!3m6!1s0x2e40d07f0092b4dd:0xd45c2cd872a1e595!8m2!3d-5.3883611!4d105.2170251!16s%2Fg%2F11gc59w3yb!19sChIJ3bSSAH_QQC4RleWhctgsXNQ?authuser=0&hl=id&rclk=1;antoni tapis;Toko Pakaian;Raya, 31351, Jl. Raden Imba Kusuma No.35, Kemiling Permai, Kec. Kemiling, Kota Bandar Lampung, Lampung 35156;0813-7919-2966;Google Maps
+30;https://www.google.com/maps/place/Faqih+tapis+lampung/data=!4m7!3m6!1s0x2e40d188685bd263:0xe170617e4b6639a0!8m2!3d-5.3908604!4d105.2150586!16s%2Fg%2F11s2njrcjl!19sChIJY9JbaIjRQC4RoDlmS35hcOE?authuser=0&hl=id&rclk=1;Faqih tapis lampung;Toko;Jl. Raden Imba Kusuma No.1, Kemiling Permai, Kec. Kemiling, Kota Bandar Lampung, Lampung 35151;0821-7522-2795;Google Maps
+31;https://www.google.com/maps/place/Ruwa+Jurai+Tapis+Lampung/data=!4m7!3m6!1s0x2e40da4c0a2fdc51:0x2c2b3b152cb6b9df!8m2!3d-5.4223411!4d105.2615676!16s%2Fg%2F11c6lbvbjd!19sChIJUdwvCkzaQC4R37m2LBU7Kyw?authuser=0&hl=id&rclk=1;Ruwa Jurai Tapis Lampung;Toko Pakaian;Jl. Jend. Sudirman No.43C, Enggal, Engal, Kota Bandar Lampung, Lampung 35118;0815-4005-0815;Google Maps
+32;https://www.google.com/maps/place/Tati+tapis+Lampung/data=!4m7!3m6!1s0x2e40c5ebcb4dfc57:0x58bcfe6d1c359e24!8m2!3d-5.3581136!4d105.2408079!16s%2Fg%2F11txtg4m8j!19sChIJV_xNy-vFQC4RJJ41HG3-vFg?authuser=0&hl=id&rclk=1;Tati tapis Lampung;Toko Suvenir;Jl. Hi Komarudin Gg Nusantara 07 No.60, Rajabasa Raya, Kec. Rajabasa, Kota Bandar Lampung, Lampung 35144;0852-0838-3313;Google Maps
+33;https://www.google.com/maps/place/Toko+Tapis+Fitri/data=!4m7!3m6!1s0x2e40db8533dfe699:0xaca03ee41af95adb!8m2!3d-5.4126729!4d105.2557886!16s%2Fg%2F11sbg4fssx!19sChIJmebfM4XbQC4R21r5GuQ-oKw?authuser=0&hl=id&rclk=1;Toko Tapis Fitri;Toko Suvenir;Jl. Kartini No.189, Tj. Karang, Kec. Tj. Karang Pusat, Kota Bandar Lampung, Lampung 35127;0897-5777-771;Google Maps
+34;https://www.google.com/maps/place/HADI+TAPIS/data=!4m7!3m6!1s0x2e40db73e59dc3fb:0xfbb471856ef58ad1!8m2!3d-5.4096969!4d105.2561329!16s%2Fg%2F11w46ncpkz!19sChIJ-8Od5XPbQC4R0Yr1boVxtPs?authuser=0&hl=id&rclk=1;HADI TAPIS;Toko Pakaian;Jl. Imam Bonjol No.34, Pasir Gintung, Kec. Tj. Karang Pusat, Kota Bandar Lampung, Lampung 35127;;Google Maps
+35;https://www.google.com/maps/place/Krui+Putra+,+Tapis+Krui+,+Lampung/data=!4m7!3m6!1s0x2e40dbb360cd35cd:0xddee5fd39d120032!8m2!3d-5.4221412!4d105.2687773!16s%2Fg%2F1ptzsb73_!19sChIJzTXNYLPbQC4RMgASndNf7t0?authuser=0&hl=id&rclk=1;Krui Putra , Tapis Krui , Lampung;Toko;Jl. Wijaya Kusuma No.27, Rw. Laut, Engal, Kota Bandar Lampung, Lampung 35128;0853-7926-5777;Google Maps
+36;https://www.google.com/maps/place/Kaosqu+tapis+lampung/data=!4m7!3m6!1s0x2e40c574c6281005:0x4e6858a98a313a74!8m2!3d-5.3590084!4d105.2585411!16s%2Fg%2F11sdszmr2s!19sChIJBRAoxnTFQC4RdDoxiqlYaE4?authuser=0&hl=id&rclk=1;Kaosqu tapis lampung;Toko Kaos Custom;Jl. R.A. Basyid No.15/70, Labuhan Dalam, Kec. Tj. Senang, Kota Bandar Lampung, Lampung;0821-7753-8398;Google Maps
+37;https://www.google.com/maps/place/Tupperware+Wayhalim+Leni+SHI/data=!4m7!3m6!1s0x2e40db2f9d0658e9:0xb097467f75736ae7!8m2!3d-5.3763301!4d105.275084!16s%2Fg%2F11bvt3xzcg!19sChIJ6VgGnS_bQC4R52pzdX9Gl7A?authuser=0&hl=id&rclk=1;Tupperware Wayhalim Leni SHI;Toko Perlengkapan Rumah;Jl. Kopi Selatan III No.96, RT.3/RW.3, Perumnas Way Halim, Kec. Way Halim, Kota Bandar Lampung, Lampung 35132;0852-7905-4895;Google Maps
+38;https://www.google.com/maps/place/Kizuu+Tapis+Lampung+%26+Hijab/data=!4m7!3m6!1s0x2e40c53a259fc99f:0x7051198a9af5367b!8m2!3d-5.3588778!4d105.2465505!16s%2Fg%2F11t6lj6j7q!19sChIJn8mfJTrFQC4Rezb1mooZUXA?authuser=0&hl=id&rclk=1;Kizuu Tapis Lampung & Hijab;Toko;Gg. Angkola, Kp. Baru, Kec. Kedaton, Kota Bandar Lampung, Lampung 35124;0821-8309-4978;Google Maps
+39;https://www.google.com/maps/place/Tapis+Lampung+Online+Kemiling/data=!4m7!3m6!1s0x2e40d1796935a3e1:0x464c62e8ac06e46e!8m2!3d-5.388909!4d105.216231!16s%2Fg%2F11j2nlkhld!19sChIJ4aM1aXnRQC4RbuQGrOhiTEY?authuser=0&hl=id&rclk=1;Tapis Lampung Online Kemiling;Toko Kerajinan Tangan;Jl. Raden Imba Kusuma Gg. Palem No.35, Beringin Raya, Kec. Kemiling, Kota Bandar Lampung, Lampung 35153;0813-7919-2966;Google Maps
+40;https://www.google.com/maps/place/Tapis+Dompet+Aida+Craft/data=!4m7!3m6!1s0x2e40d008b6112ec5:0x2eec34ee021b8685!8m2!3d-5.3793196!4d105.2140823!16s%2Fg%2F11hbv535xt!19sChIJxS4RtgjQQC4RhYYbAu407C4?authuser=0&hl=id&rclk=1;Tapis Dompet Aida Craft;Toko Kerajinan Tangan;J6C7+7JG Tapis Dompet Aida Craft, Kemiling Permai, Kec. Kemiling, Kota Bandar Lampung, Lampung 35152;0852-6904-2433;Google Maps
+41;https://www.google.com/maps/place/Toko+Dan+Sanggar+Tapis+Singgah+Pay+Art+Shop/data=!4m7!3m6!1s0x2e40da57775fa9e1:0xcdffa61d949ebb70!8m2!3d-5.410262!4d105.25533!16s%2Fg%2F1pzr0n7jm!19sChIJ4alfd1faQC4RcLuelB2m_80?authuser=0&hl=id&rclk=1;Toko Dan Sanggar Tapis Singgah Pay Art Shop;Toko Suvenir;Simpur Center Blok A No.6 F B, JL. Batusangkar, No.22, Tanjung Karang, Klp. Tiga, Kec. Tj. Karang Pusat, Kota Bandar Lampung, Lampung 35127;(0721) 259279;Google Maps
+42;https://www.google.com/maps/place/TAPIS+SINGGAH+PAY+BAMBU+KUNING/data=!4m7!3m6!1s0x2e40dbd67318a72b:0x6e7027853b81a301!8m2!3d-5.4100641!4d105.2557867!16s%2Fg%2F11l5tb11zl!19sChIJK6cYc9bbQC4RAaOBO4UncG4?authuser=0&hl=id&rclk=1;TAPIS SINGGAH PAY BAMBU KUNING;Toko Suvenir;H7Q4+X8F TAPIS SINGGAH PAY BAMBU KUNING, Jl. Batusangkar, Klp. Tiga, Kec. Tj. Karang Pusat, Kota Bandar Lampung, Lampung 35111;;Google Maps
+43;https://www.google.com/maps/place/PT.+Tapis+Eka+Modern+%28Tupperware+Lampung%29/data=!4m7!3m6!1s0x2e40dbb380da1fe1:0xc0586e14c7e6d7c!8m2!3d-5.4222097!4d105.2697219!16s%2Fg%2F11c73fdrv3!19sChIJ4R_agLPbQC4RfG1-TOGGBQw?authuser=0&hl=id&rclk=1;PT. Tapis Eka Modern (Tupperware Lampung);Toko Perlengkapan Rumah;Jl. Gajah Mada No.1&2, Tj. Raya, Kec. Kedamaian, Kota Bandar Lampung, Lampung 35214;(0721) 240899;Google Maps
+44;https://www.google.com/maps/place/TAPIS+12/data=!4m7!3m6!1s0x2e40dbab19c5e329:0x92c06f933c7b3633!8m2!3d-5.4102654!4d105.2679879!16s%2Fg%2F11y914q1lk!19sChIJKePFGavbQC4RMzZ7PJNvwJI?authuser=0&hl=id&rclk=1;TAPIS 12;;Tj. Agung Raya, Kec. Kedamaian, Kota Bandar Lampung, Lampung;;Google Maps
+45;https://www.google.com/maps/place/jual+tapis+dewi/data=!4m7!3m6!1s0x2e40d1a0fa544aa5:0xcdf841b03f957b67!8m2!3d-5.3746574!4d105.2107383!16s%2Fg%2F11lh5mxzl4!19sChIJpUpU-qDRQC4RZ3uVP7BB-M0?authuser=0&hl=id&rclk=1;jual tapis dewi;Toko Buku Agama;Jl. Perum BKP No.P.346, RT.12/RW.LK 11, Kemiling Permai, Kec. Kemiling, Kota Bandar Lampung, Lampung 35153;0895-7050-08693;Google Maps
+46;https://www.google.com/maps/place/Tapis+Lampung/data=!4m7!3m6!1s0x2e40da3a0464d211:0x5bb0d7eeb6240244!8m2!3d-5.433236!4d105.2540719!16s%2Fg%2F11c3j5cb2t!19sChIJEdJkBDraQC4RRAIktu7XsFs?authuser=0&hl=id&rclk=1;Tapis Lampung;Butik;Jl. Wolter Monginsidi No.159 J, Pengajaran, Kec. Tlk. Betung Utara, Kota Bandar Lampung, Lampung 35224;0813-2023-9892;Google Maps
+47;https://www.google.com/maps/place/RAHAYU+GALERY/data=!4m7!3m6!1s0x2e40c50df26f8857:0x73b47a3693216418!8m2!3d-5.3668504!4d105.2679595!16s%2Fg%2F11gh956vkw!19sChIJV4hv8g3FQC4RGGQhkzZ6tHM?authuser=0&hl=id&rclk=1;RAHAYU GALERY;Toko Pakaian;Jl. Lintas Sumatera No.5, Tj. Senang, Kec. Tj. Senang, Kota Bandar Lampung, Lampung 35141;;Google Maps
+48;https://www.google.com/maps/place/Taps+In+Lampung/data=!4m7!3m6!1s0x2e40db0067786c7b:0x6e7f3c987f33b2e1!8m2!3d-5.3963999!4d105.2873965!16s%2Fg%2F11w4lms3tw!19sChIJe2x4ZwDbQC4R4bIzf5g8f24?authuser=0&hl=id&rclk=1;Taps In Lampung;Toko Pakaian;Jl. Pangeran Antasari Gg. Waru II, Kalibalau Kencana, Kec. Kedamaian, Kota Bandar Lampung, Lampung 35122;0882-7432-8405;Google Maps
+49;https://www.google.com/maps/place/CV.+Pelajar+Tapis+Berseri/data=!4m7!3m6!1s0x2e40db0b62d87edb:0x4972c1481d81ad2f!8m2!3d-5.4120663!4d105.286727!16s%2Fg%2F11q3nfzm8s!19sChIJ237YYgvbQC4RL62BHUjBckk?authuser=0&hl=id&rclk=1;CV. Pelajar Tapis Berseri;Toko Buku;Jl. HRM Mangundiprojo No.35-37, Kedamaian, Kec. Tanjungkarang Timur, Kota Bandar Lampung, Lampung 35122;0812-7979-288;Google Maps
+50;https://www.google.com/maps/place/toko+Agil+Tapis+Lampung/data=!4m7!3m6!1s0x2e40d1043cf229fd:0x9b34e7cdedf7df69!8m2!3d-5.3886024!4d105.2010902!16s%2Fg%2F11j8hhkrs8!19sChIJ_SnyPATRQC4Rad_37c3nNJs?authuser=0&hl=id&rclk=1;toko Agil Tapis Lampung;Toko Pakaian;J662+HC4 toko Agil Tapis Lampung, Jl. Mata Air, Pinang Jaya, Kec. Kemiling, Kota Bandar Lampung, Lampung 35154;;Google Maps
+51;https://www.google.com/maps/place/Dina+CRAFT%2FTAPIS+LAMPUNG/data=!4m7!3m6!1s0x2e40c54fe66a423d:0xf3f9224fe6d21651!8m2!3d-5.3575155!4d105.278534!16s%2Fg%2F11g1v9klqq!19sChIJPUJq5k_FQC4RURbS5k8i-fM?authuser=0&hl=id&rclk=1;Dina CRAFT/TAPIS LAMPUNG;Toko Tas Tangan;Blok C4, No.21, Perum Tanjung Raya Permai, Kelurahan, Pematang wangi, Kec. Tj. Senang, Kota Bandar Lampung, Lampung 35141;0812-8181-0982;Google Maps
+52;https://www.google.com/maps/place/Desti+tapis/data=!4m7!3m6!1s0x2e40c50068b923fd:0x7662379ee1c32517!8m2!3d-5.3516018!4d105.265872!16s%2Fg%2F11vqn7g9pl!19sChIJ_SO5aADFQC4RFyXD4Z43YnY?authuser=0&hl=id&rclk=1;Desti tapis;Toko;J7X8+895 Desti tapis, Fajar Baru, Kec. Jati Agung, Kabupaten Lampung Selatan, Lampung 35141;;Google Maps
+53;https://www.google.com/maps/place/Ney+Ney+tapis+Lampung/data=!4m7!3m6!1s0x2e40c5003e32c679:0x9928febdc9411368!8m2!3d-5.365892!4d105.2853208!16s%2Fg%2F11x6zjtmpq!19sChIJecYyPgDFQC4RaBNByb3-KJk?authuser=0&hl=id&rclk=1;Ney Ney tapis Lampung;Toko Pakaian Wanita;J7MP+J4W Ney Ney tapis Lampung, Perumnas Way Kandis, Kec. Tj. Senang, Kota Bandar Lampung, Lampung 35135;;Google Maps
+54;https://www.google.com/maps/place/Tapis+Minan+Emi/data=!4m7!3m6!1s0x2e40d169a1d38c99:0x41c6adcdd4daa766!8m2!3d-5.3740442!4d105.2108536!16s%2Fg%2F11kh_qy3cq!19sChIJmYzToWnRQC4RZqfa1M2txkE?authuser=0&hl=id&rclk=1;Tapis Minan Emi;Asosiasi Kerajinan Tangan;J6G6+6H9 Tapis Minan Emi, Kemiling Permai, Kec. Kemiling, Kota Bandar Lampung, Lampung 35152;0813-6953-7198;Google Maps
+55;https://www.google.com/maps/place/Roti+Bakar+Tapis/data=!4m7!3m6!1s0x2e40db97c3268549:0xe2a110650a1cc2f7!8m2!3d-5.3889398!4d105.285011!16s%2Fg%2F11mvzll134!19sChIJSYUmw5fbQC4R98IcCmUQoeI?authuser=0&hl=id&rclk=1;Roti Bakar Tapis;Toko Roti;Jl. Mangris Perum BTN III No.14/15, Way Dadi, Kec. Sukarame, Kota Bandar Lampung, Lampung 35131;0812-9156-5095;Google Maps
+56;https://www.google.com/maps/place/PKBM+GEMA+TAPIS+BERSERI/data=!4m7!3m6!1s0x2e40dbd90a2418ab:0xdc76170831291dad!8m2!3d-5.4003042!4d105.2478405!16s%2Fg%2F11k3jc_j_9!19sChIJqxgkCtnbQC4RrR0pMQgXdtw?authuser=0&hl=id&rclk=1;PKBM GEMA TAPIS BERSERI;Institusi Pendidikan;Gg. Teratai I No.6B, Gedong Air, Kec. Tj. Karang Bar., Kota Bandar Lampung, Lampung 35118;0895-7050-26275;Google Maps
+57;https://www.google.com/maps/place/Tapis+Group/data=!4m7!3m6!1s0x2e40db0034eed0e5:0x14be1793c2c6e427!8m2!3d-5.4089673!4d105.2895265!16s%2Fg%2F11xtw_yylv!19sChIJ5dDuNADbQC4RJ-TGwpMXvhQ?authuser=0&hl=id&rclk=1;Tapis Group;Grosir;H7RQ+CR5 Tapis Group, Jl. HRM Mangundiprojo, Kedamaian, Bandar Lampung City, Lampung 35122;0813-1883-6786;Google Maps
+58;https://www.google.com/maps/place/PT.+TAPIS+MEDIKA+ABADI/data=!4m7!3m6!1s0x2e40db003595aa15:0x63e78f0062980edc!8m2!3d-5.392097!4d105.2865123!16s%2Fg%2F11msqv46xh!19sChIJFaqVNQDbQC4R3A6YYgCP52M?authuser=0&hl=id&rclk=1;PT. TAPIS MEDIKA ABADI;Gudang;J75P+5J6 PT. TAPIS MEDIKA ABADI, Gg. Bintara I, Sukarame, Bandar Lampung City, Lampung 35122;0821-7222-2105;Google Maps
+59;https://www.google.com/maps/place/SANGGAR+PESONA+SULAM+USUS+TAPIS/data=!4m7!3m6!1s0x2e40da52511ff921:0xd956c0a07f507415!8m2!3d-5.4162892!4d105.2628297!16s%2Fg%2F11f3n30g4t!19sChIJIfkfUVLaQC4RFXRQf6DAVtk?authuser=0&hl=id&rclk=1;SANGGAR PESONA SULAM USUS TAPIS;Toko Pakaian;Jl. MJ. Sutioso No.75, Kota Baru, Kec. Tanjungkarang Timur, Kota Bandar Lampung, Lampung 35128;0812-7921-190;Google Maps
+60;https://www.google.com/maps/place/Tapis+Shop+%26+MCI/data=!4m7!3m6!1s0x2e40db1d2fec347f:0xe1788f42936e54c5!8m2!3d-5.3721699!4d105.2948994!16s%2Fg%2F11pk9gzt2r!19sChIJfzTsLx3bQC4RxVRuk0KPeOE?authuser=0&hl=id&rclk=1;Tapis Shop & MCI;Servis Komputer;J7HV+4WX Tapis Shop & MCI, Harapan Jaya, Kec. Sukarame, Kota Bandar Lampung, Lampung 35131;0822-8243-1843;Google Maps
+61;https://www.google.com/maps/place/Sekar+Tapis/data=!4m7!3m6!1s0x2e40db7022358d0b:0x31d1273c850b05b0!8m2!3d-5.4136189!4d105.2554001!16s%2Fg%2F11kj6xwgcr!19sChIJC401InDbQC4RsAULhTwn0TE?authuser=0&hl=id&rclk=1;Sekar Tapis;Pusat Perbelanjaan;H7P4+H52 Sekar Tapis, Jl. Kartini, Kaliawi, Kec. Tj. Karang Pusat, Kota Bandar Lampung, Lampung;;Google Maps
+62;https://www.google.com/maps/place/Jual+Baju+tapis+KSA.idfashion/data=!4m7!3m6!1s0x2e40dbdb73066031:0x160ee9eb97068407!8m2!3d-5.3871021!4d105.2803554!16s%2Fg%2F11lh5ms9rf!19sChIJMWAGc9vbQC4RB4QGl-vpDhY?authuser=0&hl=id&rclk=1;Jual Baju tapis KSA.idfashion;Pasar pakaian;Jl. Alam Baru No.mor 15, Way Halim Permai, Kec. Way Halim, Kota Bandar Lampung, Lampung 35135;0812-7213-396;Google Maps
+63;https://www.google.com/maps/place/tapis+dan+sulam+usus+lampung/data=!4m7!3m6!1s0x2e40db4cff73dcd5:0xd0fa832f045a16d8!8m2!3d-5.376128!4d105.2936251!16s%2Fg%2F11qntsmmbx!19sChIJ1dxz_0zbQC4R2BZaBC-D-tA?authuser=0&hl=id&rclk=1;tapis dan sulam usus lampung;Toko Kerajinan Tangan;Jl. Ryacudu Jl. Perintis E, Way Dadi, Kec. Sukarame, Kota Bandar Lampung, Lampung 35131;0852-7918-7181;Google Maps
+64;https://www.google.com/maps/place/GEDUNG+SENTRA+INDUSTRI+TAPIS+KOTA+BANDAR+LAMPUNG/data=!4m7!3m6!1s0x2e40d14689b214cf:0xd73496697569a2e8!8m2!3d-5.4011398!4d105.2078961!16s%2Fg%2F11s5jw719_!19sChIJzxSyiUbRQC4R6KJpdWmWNNc?authuser=0&hl=id&rclk=1;GEDUNG SENTRA INDUSTRI TAPIS KOTA BANDAR LAMPUNG;Kantor Pemerintah;Jl. Lap. Kalpataru, Beringin Raya, Kec. Kemiling, Kota Bandar Lampung, Lampung 35155;;Google Maps
+65;https://www.google.com/maps/place/Raswan+Tapis/data=!4m7!3m6!1s0x2e40da49852c09d3:0x79ea8baab80e818f!8m2!3d-5.4255718!4d105.2597679!16s%2Fg%2F11bc7s3ch_!19sChIJ0wkshUnaQC4Rj4EOuKqL6nk?authuser=0&hl=id&rclk=1;Raswan Tapis;Toko Suvenir;JL Wolter Monginsidi, No. 159, Tanjung Betung, Enggal, Bandar Lampung, Kota Bandar Lampung, Lampung 35213;0815-4095-0837;Google Maps
+66;https://www.google.com/maps/place/Tapis+Serama+Lampung/data=!4m7!3m6!1s0x2e40d16324145f91:0x84d269c15bf039ce!8m2!3d-5.393542!4d105.2009663!16s%2Fg%2F11qq02h94d!19sChIJkV8UJGPRQC4RzjnwW8Fp0oQ?authuser=0&hl=id&rclk=1;Tapis Serama Lampung;Peternakan Ayam;Jl. Beringin II, Beringin Raya, Kec. Kemiling, Kota Bandar Lampung, Lampung 35154;0856-0920-3900;Google Maps
+67;https://www.google.com/maps/place/Eli+%28galeri+tapis%29/data=!4m7!3m6!1s0x2e40c5e52fbd9615:0xab7cde8c79061f0a!8m2!3d-5.3567188!4d105.2464293!16s%2Fg%2F11jfcj0hm1!19sChIJFZa9L-XFQC4RCh8GeYzefKs?authuser=0&hl=id&rclk=1;Eli (galeri tapis);Galeri Seni;Jl padat karya, Jl. Perum Polri Gg. Cendana No.100, Rajabasa Jaya, Kec. Rajabasa, Kota Bandar Lampung, Lampung 35142;;Google Maps
+68;https://www.google.com/maps/place/Raswan+Tapis/data=!4m7!3m6!1s0x2e40da4f97bd7107:0x27ad6c768394e935!8m2!3d-5.4194286!4d105.255924!16s%2Fg%2F1pzvd0nq9!19sChIJB3G9l0_aQC4RNemUg3ZsrSc?authuser=0&hl=id&rclk=1;Raswan Tapis;Perusahaan;Jl. S. Parman No.23, Pelita, Engal, Kota Bandar Lampung, Lampung 35213;(0721) 240696;Google Maps
+69;https://www.google.com/maps/place/PD+PASAR+TAPIS+BERSERI+KOTA+BANDAR+LAMPUNG/data=!4m7!3m6!1s0x2e40db07188108df:0xf197925fa443be57!8m2!3d-5.4257951!4d105.2602699!16s%2Fg%2F11rpln326y!19sChIJ3wiBGAfbQC4RV75DpF-Sl_E?authuser=0&hl=id&rclk=1;PD PASAR TAPIS BERSERI KOTA BANDAR LAMPUNG;Kantor Perusahaan;Jl. Skala Bekhak No.1, RT.02/RW.2, Enggal, Kec. Tlk. Betung Utara, Kota Bandar Lampung, Lampung 35213;(0721) 6011979;Google Maps
+70;https://www.google.com/maps/place/Servis+Peci+Tapis/data=!4m7!3m6!1s0x2e40db44aeb7dde7:0xcc541a6a37134f39!8m2!3d-5.4118337!4d105.2531487!16s%2Fg%2F11l6x8wmrw!19sChIJ5923rkTbQC4ROU8TN2oaVMw?authuser=0&hl=id&rclk=1;Servis Peci Tapis;Penjahit;Jl. Hi Gg. Hasanudin No.5, Klp. Tiga, Kec. Tj. Karang Pusat, Kota Bandar Lampung, Lampung 35127;0822-8103-4948;Google Maps
+71;https://www.google.com/maps/place/Galery+tapis+lampung+Faida/data=!4m7!3m6!1s0x2e40c52e598eebe5:0x628210a05e6dac2!8m2!3d-5.3440834!4d105.2267329!16s%2Fg%2F11fn64j_z9!19sChIJ5euOWS7FQC4RwtrmBQohKAY?authuser=0&hl=id&rclk=1;Galery tapis lampung Faida;Pusat Perbelanjaan;Jl. Serbajadi No.37, Pemanggilan, Kec. Natar, Kabupaten Lampung Selatan, Lampung 35143;0812-7922-857;Google Maps
+72;https://www.google.com/maps/place/ditha+Tapis/data=!4m7!3m6!1s0x2e40c570de605c2d:0xeb18369d8e6898b3!8m2!3d-5.3438761!4d105.2442956!16s%2Fg%2F11f5tbh5qq!19sChIJLVxg3nDFQC4Rs5hojp02GOs?authuser=0&hl=id&rclk=1;ditha Tapis;Toko Pakaian;M64V+CPV ditha Tapis, Rajabasa Jaya, Kec. Rajabasa, Kota Bandar Lampung, Lampung 35142;0813-6673-0134;Google Maps
+73;https://www.google.com/maps/place/Gg+tapis/data=!4m7!3m6!1s0x2e40db003e22a349:0x38dd8e61486a04b7!8m2!3d-5.3917902!4d105.3003794!16s%2Fg%2F11vk2zn86l!19sChIJSaMiPgDbQC4RtwRqSGGO3Tg?authuser=0&hl=id&rclk=1;Gg tapis;Komplek perumahan;Jl. Pulau Singkep No.36, Sukarame, Kec. Sukarame, Kota Bandar Lampung, Lampung 35122;;Google Maps
+74;https://www.google.com/maps/place/Tapis+Sukma/data=!4m7!3m6!1s0x2e40c4f2f3061cb3:0x5e724818c2a302ca!8m2!3d-5.3343537!4d105.2872931!16s%2Fg%2F11f32zgj4z!19sChIJsxwG8_LEQC4RygKjwhhIcl4?authuser=0&hl=id&rclk=1;Tapis Sukma;Toko Pakaian;perintis 6, jl. pangeran pasopati gg. tamin 8, Jatimulyo, Kec. Jati Agung, Kabupaten Lampung Selatan, Lampung 35143;0852-7937-9747;Google Maps
+75;https://www.google.com/maps/place/Mulia+Tapis+dan+Souvenir+%28+tas,+dompet,+tempat+lipstik,+dll%29/data=!4m7!3m6!1s0x2e40dbec12b68735:0x2811726ad294e92e!8m2!3d-5.4000197!4d105.3098148!16s%2Fg%2F11hzsm8_ly!19sChIJNYe2EuzbQC4RLumU0mpyESg?authuser=0&hl=id&rclk=1;Mulia Tapis dan Souvenir ( tas, dompet, tempat lipstik, dll);Toko Kerajinan Tangan;Perumahan Villa Bukit Tirtayasa. Block CB 3, Jl. P. Tirtayasa No.22, Sukabumi, Kec. Sukabumi, Kota Bandar Lampung, Lampung 35122;0813-1080-9073;Google Maps
+76;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+77;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+78;https://www.tokopedia.com/helau-tapis-lampung;helau tapis lampung;Mainan & Hobi;Bandar Lampung;;Tokopedia
+79;https://www.tokopedia.com/icha-tapislampung;Icha Tapislampung;Fashion Muslim;Kab. Pesawaran;;Tokopedia
+80;https://www.tokopedia.com/helau-tapis-lampung;helau tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+81;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+82;https://www.tokopedia.com/nitapis-lampung;Nitapis lampung;Office & Stationery;Bandar Lampung;;Tokopedia
+83;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+84;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+85;https://www.tokopedia.com/frenita-tapis-lampung;Frenita Tapis Lampung_NEW;Fashion Muslim;Kab. Pringsewu;;Tokopedia
+86;https://www.tokopedia.com/toko-tapis-rani-bordir;toko tapis rani bordir;Fashion Wanita;Kab. Lampung Utara;;Tokopedia
+87;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+88;https://www.tokopedia.com/icha-tapislampung;Icha Tapislampung;Fashion Pria;Kab. Pesawaran;;Tokopedia
+89;https://www.tokopedia.com/archive-samboraz-1718150;Fadilah Bordir Tapis Lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+90;https://www.tokopedia.com/icha-tapislampung;Icha Tapislampung;Fashion Muslim;Kab. Pesawaran;;Tokopedia
+91;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Pria;Bandar Lampung;;Tokopedia
+92;https://www.tokopedia.com/lampung-ethnica;Lampung Ethnica_NEW;Fashion Pria;Kab. Lampung Timur;;Tokopedia
+93;https://www.tokopedia.com/toko-tapis-rani-bordir;toko tapis rani bordir;Fashion Wanita;Kab. Lampung Utara;;Tokopedia
+94;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+95;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+96;https://www.tokopedia.com/toko-tapis-rani-bordir;toko tapis rani bordir;Fashion Wanita;Kab. Lampung Utara;;Tokopedia
+97;https://www.tokopedia.com/toko-tapis-rani-bordir;toko tapis rani bordir;Fashion Wanita;Kab. Lampung Utara;;Tokopedia
+98;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+99;https://www.tokopedia.com/icha-tapislampung;Icha Tapislampung;Fashion Muslim;Kab. Pesawaran;;Tokopedia
+100;https://www.tokopedia.com/icha-tapislampung;Icha Tapislampung;Fashion Muslim;Kab. Pesawaran;;Tokopedia
+101;https://www.tokopedia.com/supplier-tapis;Supplier tapis;Fashion Wanita;Kab. Pesawaran;;Tokopedia
+102;https://www.tokopedia.com/desti-tapis;desti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+103;https://www.tokopedia.com/samisutra;SAMI SUTRA;Fashion Wanita;Bandar Lampung;;Tokopedia
+104;https://www.tokopedia.com/samisutra;SAMI SUTRA;Fashion Wanita;Bandar Lampung;;Tokopedia
+105;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+106;https://www.tokopedia.com/toko-tapis-rani-bordir;toko tapis rani bordir;Rumah Tangga;Kab. Lampung Utara;;Tokopedia
+107;https://www.tokopedia.com/samisutra;SAMI SUTRA;Fashion Wanita;Bandar Lampung;;Tokopedia
+108;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+109;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+110;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+111;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+112;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+113;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+114;https://www.tokopedia.com/samisutra;SAMI SUTRA;Fashion Wanita;Bandar Lampung;;Tokopedia
+115;https://www.tokopedia.com/sella-tapis;Sella Tapis;Office & Stationery;Bandar Lampung;;Tokopedia
+116;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+117;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+118;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+119;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+120;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+121;https://www.tokopedia.com/yn146;Yn146;Fashion Wanita;Kab. Lampung Tengah;;Tokopedia
+122;https://www.tokopedia.com/toko-tapis-rani-bordir;toko tapis rani bordir;Fashion Wanita;Kab. Lampung Utara;;Tokopedia
+123;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+124;https://www.tokopedia.com/toko-tapis-rani-bordir;toko tapis rani bordir;Fashion Wanita;Kab. Lampung Utara;;Tokopedia
+125;https://www.tokopedia.com/nitapis-lampung;Nitapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+126;https://www.tokopedia.com/helau-tapis-lampung;helau tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+127;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+128;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+129;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+130;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+131;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+132;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+133;https://www.tokopedia.com/frenita-tapis-lampung;Frenita Tapis Lampung_NEW;Fashion Wanita;Kab. Pringsewu;;Tokopedia
+134;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+135;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+136;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Muslim;Bandar Lampung;;Tokopedia
+137;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+138;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+139;https://www.tokopedia.com/frenita-tapis-lampung;Frenita Tapis Lampung_NEW;Office & Stationery;Kab. Pringsewu;;Tokopedia
+140;https://www.tokopedia.com/rktl;Rumah Kaos Tapis Lampung;Fashion Pria;Metro;;Tokopedia
+141;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+142;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+143;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+144;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+145;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+146;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Muslim;Bandar Lampung;;Tokopedia
+147;https://www.tokopedia.com/archive-samboraz-1718150;Fadilah Bordir Tapis Lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+148;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+149;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Muslim;Bandar Lampung;;Tokopedia
+150;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+151;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+152;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+153;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+154;https://www.tokopedia.com/frenita-tapis-lampung;Frenita Tapis Lampung_NEW;Office & Stationery;Kab. Pringsewu;;Tokopedia
+155;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+156;https://www.tokopedia.com/icha-tapislampung;Icha Tapislampung;Fashion Wanita;Kab. Pesawaran;;Tokopedia
+157;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+158;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+159;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+160;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+161;https://www.tokopedia.com/archive-samboraz-1718150;Fadilah Bordir Tapis Lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+162;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Pria;Bandar Lampung;;Tokopedia
+163;https://www.tokopedia.com/nitapis-lampung;Nitapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+164;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Muslim;Bandar Lampung;;Tokopedia
+165;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+166;https://www.tokopedia.com/frenita-tapis-lampung;Frenita Tapis Lampung_NEW;Fashion Wanita;Kab. Pringsewu;;Tokopedia
+167;https://www.tokopedia.com/nitapis-lampung;Nitapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+168;https://www.tokopedia.com/fc-fina-collection;FC Fina Collection;Fashion Muslim;Kab. Pesawaran;;Tokopedia
+169;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+170;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+171;https://www.tokopedia.com/supplier-tapis;Supplier tapis;Fashion Muslim;Kab. Pesawaran;;Tokopedia
+172;https://www.tokopedia.com/archive-samboraz-1718150;Fadilah Bordir Tapis Lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+173;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+174;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+175;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+176;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+177;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+178;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+179;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+180;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+181;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+182;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+183;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+184;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+185;https://www.tokopedia.com/samisutra;SAMI SUTRA;Fashion Wanita;Bandar Lampung;;Tokopedia
+186;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+187;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+188;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Pria;Bandar Lampung;;Tokopedia
+189;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+190;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+191;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+192;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+193;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+194;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+195;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+196;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+197;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+198;https://www.tokopedia.com/archive-samboraz-1718150;Fadilah Bordir Tapis Lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+199;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+200;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+201;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+202;https://www.tokopedia.com/archive--oema--163073877;-oema-;Fashion Wanita;Bandar Lampung;;Tokopedia
+203;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+204;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+205;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+206;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+207;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+208;https://www.tokopedia.com/toko-tapis-rani-bordir;toko tapis rani bordir;Fashion Wanita;Kab. Lampung Utara;;Tokopedia
+209;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Muslim;Bandar Lampung;;Tokopedia
+210;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+211;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+212;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+213;https://www.tokopedia.com/archive-samboraz-1718150;Fadilah Bordir Tapis Lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+214;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+215;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+216;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+217;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+218;https://www.tokopedia.com/archive-samboraz-1718150;Fadilah Bordir Tapis Lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+219;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+220;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+221;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+222;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+223;https://www.tokopedia.com/archive-samboraz-1718150;Fadilah Bordir Tapis Lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+224;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+225;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+226;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+227;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+228;https://www.tokopedia.com/archive-samboraz-1718150;Fadilah Bordir Tapis Lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+229;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+230;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+231;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+232;https://www.tokopedia.com/archive-samboraz-1718150;Fadilah Bordir Tapis Lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+233;https://www.tokopedia.com/nitapis-lampung;Nitapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+234;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+235;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+236;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+237;https://www.tokopedia.com/rajawijaya;rajawijaya;Fashion Wanita;Kab. Lampung Tengah;;Tokopedia
+238;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+239;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+240;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+241;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+242;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+243;https://www.tokopedia.com/frenita-tapis-lampung;Frenita Tapis Lampung_NEW;Fashion Wanita;Kab. Pringsewu;;Tokopedia
+244;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+245;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+246;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+247;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+248;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+249;https://www.tokopedia.com/rktl;Rumah Kaos Tapis Lampung;Fashion Muslim;Metro;;Tokopedia
+250;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Muslim;Bandar Lampung;;Tokopedia
+251;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Muslim;Bandar Lampung;;Tokopedia
+252;https://www.tokopedia.com/toko-tapis-rani-bordir;toko tapis rani bordir;Fashion Wanita;Kab. Lampung Utara;;Tokopedia
+253;https://www.tokopedia.com/frenita-tapis-lampung;Frenita Tapis Lampung_NEW;Fashion Muslim;Kab. Pringsewu;;Tokopedia
+254;https://www.tokopedia.com/lampung-ethnica;Lampung Ethnica_NEW;Fashion Muslim;Kab. Lampung Timur;;Tokopedia
+255;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Muslim;Bandar Lampung;;Tokopedia
+256;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Pria;Bandar Lampung;;Tokopedia
+257;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Muslim;Bandar Lampung;;Tokopedia
+258;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Muslim;Bandar Lampung;;Tokopedia
+259;https://www.tokopedia.com/lampung-ethnica;Lampung Ethnica_NEW;Fashion Pria;Kab. Lampung Timur;;Tokopedia
+260;https://www.tokopedia.com/frenita-tapis-lampung;Frenita Tapis Lampung_NEW;Fashion Wanita;Kab. Pringsewu;;Tokopedia
+261;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Muslim;Bandar Lampung;;Tokopedia
+262;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Muslim;Bandar Lampung;;Tokopedia
+263;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Perlengkapan Pesta;Bandar Lampung;;Tokopedia
+264;https://www.tokopedia.com/rktl;Rumah Kaos Tapis Lampung;Fashion Pria;Metro;;Tokopedia
+265;https://www.tokopedia.com/nitapis-lampung;Nitapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+266;https://www.tokopedia.com/lampung-ethnica;Lampung Ethnica_NEW;Fashion Pria;Kab. Lampung Timur;;Tokopedia
+267;https://www.tokopedia.com/samisutra;SAMI SUTRA;Fashion Wanita;Bandar Lampung;;Tokopedia
+268;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+269;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+270;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Muslim;Bandar Lampung;;Tokopedia
+271;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+272;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+273;https://www.tokopedia.com/nusantara-text;Nusantara Text;Fashion Wanita;Bandar Lampung;;Tokopedia
+274;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+275;https://www.tokopedia.com/frenita-tapis-lampung;Frenita Tapis Lampung_NEW;Fashion Muslim;Kab. Pringsewu;;Tokopedia
+276;https://www.tokopedia.com/rajawijaya;rajawijaya;Fashion Muslim;Kab. Lampung Tengah;;Tokopedia
+277;https://www.tokopedia.com/samisutra;SAMI SUTRA;Fashion Wanita;Bandar Lampung;;Tokopedia
+278;https://www.tokopedia.com/lampung-ethnica;Lampung Ethnica_NEW;Fashion Pria;Kab. Lampung Timur;;Tokopedia
+279;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Perlengkapan Pesta;Bandar Lampung;;Tokopedia
+280;https://www.tokopedia.com/andanan-batik;ANDANAN BATIK;Fashion Wanita;Bandar Lampung;;Tokopedia
+281;https://www.tokopedia.com/toko-tapis-rani-bordir;toko tapis rani bordir;Buku;Kab. Lampung Utara;;Tokopedia
+282;https://www.tokopedia.com/icha-tapislampung;Icha Tapislampung;Fashion Muslim;Kab. Pesawaran;;Tokopedia
+283;https://www.tokopedia.com/desti-tapis;desti tapis;Fashion Muslim;Bandar Lampung;;Tokopedia
+284;https://www.tokopedia.com/samisutra;SAMI SUTRA;Fashion Muslim;Bandar Lampung;;Tokopedia
+285;https://www.tokopedia.com/toko-tapis-rani-bordir;toko tapis rani bordir;Fashion Wanita;Kab. Lampung Utara;;Tokopedia
+286;https://www.tokopedia.com/samisutra;SAMI SUTRA;Fashion Muslim;Bandar Lampung;;Tokopedia
+287;https://www.tokopedia.com/-2-372;𝗔𝘀𝗶𝗵𝗰𝗿𝗮𝗳𝘁𝗹𝗮𝗺𝗽𝘂𝗻𝗴 2;Fashion Wanita;Bandar Lampung;;Tokopedia
+288;https://www.tokopedia.com/rktl;Rumah Kaos Tapis Lampung;Fashion Pria;Metro;;Tokopedia
+289;https://www.tokopedia.com/frenita-tapis-lampung;Frenita Tapis Lampung_NEW;Kecantikan;Kab. Pringsewu;;Tokopedia
+290;https://www.tokopedia.com/toko-tapis-rani-bordir;toko tapis rani bordir;Rumah Tangga;Kab. Lampung Utara;;Tokopedia
+291;https://www.tokopedia.com/lampung-ethnica;Lampung Ethnica_NEW;Fashion Muslim;Kab. Lampung Timur;;Tokopedia
+292;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Muslim;Bandar Lampung;;Tokopedia
+293;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Muslim;Bandar Lampung;;Tokopedia
+294;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Perlengkapan Pesta;Bandar Lampung;;Tokopedia
+295;https://www.tokopedia.com/-2-372;𝗔𝘀𝗶𝗵𝗰𝗿𝗮𝗳𝘁𝗹𝗮𝗺𝗽𝘂𝗻𝗴 2;Fashion Wanita;Bandar Lampung;;Tokopedia
+296;https://www.tokopedia.com/lampung-ethnica;Lampung Ethnica_NEW;Fashion Muslim;Kab. Lampung Timur;;Tokopedia
+297;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Muslim;Bandar Lampung;;Tokopedia
+298;https://www.tokopedia.com/chelsea-tapis;chelsea tapis;Fashion Wanita;Kab. Lampung Selatan;;Tokopedia
+299;https://www.tokopedia.com/indah-acc-shop;Indah Acc shop_NEW;Fashion Muslim;Metro;;Tokopedia
+300;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Muslim;Bandar Lampung;;Tokopedia
+301;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Muslim;Bandar Lampung;;Tokopedia
+302;https://www.tokopedia.com/-2-372;𝗔𝘀𝗶𝗵𝗰𝗿𝗮𝗳𝘁𝗹𝗮𝗺𝗽𝘂𝗻𝗴 2;Rumah Tangga;Bandar Lampung;;Tokopedia
+303;https://www.tokopedia.com/frenita-tapis-lampung;Frenita Tapis Lampung_NEW;Fashion Muslim;Kab. Pringsewu;;Tokopedia
+304;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+305;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+306;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+307;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+308;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+309;https://www.tokopedia.com/nitapis-lampung;Nitapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+310;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+311;https://www.tokopedia.com/toko-tapis-rani-bordir;toko tapis rani bordir;Fashion Wanita;Kab. Lampung Utara;;Tokopedia
+312;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+313;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+314;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+315;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Muslim;Bandar Lampung;;Tokopedia
+316;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Muslim;Bandar Lampung;;Tokopedia
+317;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+318;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+319;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+320;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+321;https://www.tokopedia.com/indah-acc-shop;Indah Acc shop_NEW;Fashion Muslim;Metro;;Tokopedia
+322;https://www.tokopedia.com/nitapis-lampung;Nitapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+323;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+324;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+325;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+326;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+327;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+328;https://www.tokopedia.com/frenita-tapis-lampung;Frenita Tapis Lampung_NEW;Fashion Wanita;Kab. Pringsewu;;Tokopedia
+329;https://www.tokopedia.com/frenita-tapis-lampung;Frenita Tapis Lampung_NEW;Fashion Wanita;Kab. Pringsewu;;Tokopedia
+330;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+331;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+332;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+333;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+334;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+335;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+336;https://www.tokopedia.com/archive--oema--163073877;-oema-;Fashion Wanita;Bandar Lampung;;Tokopedia
+337;https://www.tokopedia.com/samisutra;SAMI SUTRA;Fashion Wanita;Bandar Lampung;;Tokopedia
+338;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+339;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+340;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+341;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+342;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+343;https://www.tokopedia.com/archive--oema--163073877;-oema-;Fashion Wanita;Bandar Lampung;;Tokopedia
+344;https://www.tokopedia.com/archive--oema--163073877;-oema-;Fashion Wanita;Bandar Lampung;;Tokopedia
+345;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+346;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+347;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+348;https://www.tokopedia.com/lampung-ethnica;Lampung Ethnica_NEW;Fashion Muslim;Kab. Lampung Timur;;Tokopedia
+349;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+350;https://www.tokopedia.com/-2-372;𝗔𝘀𝗶𝗵𝗰𝗿𝗮𝗳𝘁𝗹𝗮𝗺𝗽𝘂𝗻𝗴 2;Fashion Wanita;Bandar Lampung;;Tokopedia
+351;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+352;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+353;https://www.tokopedia.com/-2-372;𝗔𝘀𝗶𝗵𝗰𝗿𝗮𝗳𝘁𝗹𝗮𝗺𝗽𝘂𝗻𝗴 2;Fashion Wanita;Bandar Lampung;;Tokopedia
+354;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+355;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+356;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+357;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+358;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+359;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+360;https://www.tokopedia.com/wr-udud-online;WR UDUD Online;Fashion Muslim;Bandar Lampung;;Tokopedia
+361;https://www.tokopedia.com/nitapis-lampung;Nitapis lampung;Office & Stationery;Bandar Lampung;;Tokopedia
+362;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+363;https://www.tokopedia.com/nitapis-lampung;Nitapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+364;https://www.tokopedia.com/sella-tapis;Sella Tapis;Office & Stationery;Bandar Lampung;;Tokopedia
+365;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+366;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+367;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+368;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+369;https://www.tokopedia.com/sambordir-tapis-lampung;SamBordir Tapis Lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+370;https://www.tokopedia.com/-2-372;𝗔𝘀𝗶𝗵𝗰𝗿𝗮𝗳𝘁𝗹𝗮𝗺𝗽𝘂𝗻𝗴 2;Fashion Pria;Bandar Lampung;;Tokopedia
+371;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+372;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+373;https://www.tokopedia.com/rateusinar;RateuSinar;Rumah Tangga;Kab. Lampung Timur;;Tokopedia
+374;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+375;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Muslim;Bandar Lampung;;Tokopedia
+376;https://www.tokopedia.com/-2-372;𝗔𝘀𝗶𝗵𝗰𝗿𝗮𝗳𝘁𝗹𝗮𝗺𝗽𝘂𝗻𝗴 2;Fashion Wanita;Bandar Lampung;;Tokopedia
+377;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+378;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+379;https://www.tokopedia.com/supplier-tapis;Supplier tapis;Fashion Muslim;Kab. Pesawaran;;Tokopedia
+380;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+381;https://www.tokopedia.com/rktl;Rumah Kaos Tapis Lampung;Fashion Wanita;Metro;;Tokopedia
+382;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+383;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Muslim;Bandar Lampung;;Tokopedia
+384;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+385;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+386;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+387;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+388;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+389;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+390;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+391;https://www.tokopedia.com/samisutra;SAMI SUTRA;Fashion Wanita;Bandar Lampung;;Tokopedia
+392;https://www.tokopedia.com/guba-galery-tapis;Guba Galery Tapis;Makanan & Minuman;Kab. Lampung Tengah;;Tokopedia
+393;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+394;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+395;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Muslim;Bandar Lampung;;Tokopedia
+396;https://www.tokopedia.com/rktl;Rumah Kaos Tapis Lampung;Fashion Pria;Metro;;Tokopedia
+397;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+398;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+399;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+400;https://www.tokopedia.com/sella-tapis;Sella Tapis;Dapur;Bandar Lampung;;Tokopedia
+401;https://www.tokopedia.com/nitapis-lampung;Nitapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+402;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+403;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+404;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+405;https://www.tokopedia.com/desti-tapis;desti tapis;Fashion Pria;Bandar Lampung;;Tokopedia
+406;https://www.tokopedia.com/supplier-tapis;Supplier tapis;Fashion Muslim;Kab. Pesawaran;;Tokopedia
+407;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+408;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+409;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+410;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+411;https://www.tokopedia.com/frenita-tapis-lampung;Frenita Tapis Lampung_NEW;Rumah Tangga;Kab. Pringsewu;;Tokopedia
+412;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+413;https://www.tokopedia.com/indah-acc-shop;Indah Acc shop_NEW;Fashion Muslim;Metro;;Tokopedia
+414;https://www.tokopedia.com/nusantara-text;Nusantara Text;Fashion Wanita;Bandar Lampung;;Tokopedia
+415;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+416;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+417;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+418;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+419;https://www.tokopedia.com/frenita-tapis-lampung;Frenita Tapis Lampung_NEW;Fashion Wanita;Kab. Pringsewu;;Tokopedia
+420;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Muslim;Bandar Lampung;;Tokopedia
+421;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+422;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+423;https://www.tokopedia.com/nitapis-lampung;Nitapis lampung;Fashion Muslim;Bandar Lampung;;Tokopedia
+424;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+425;https://www.tokopedia.com/supplier-tapis;Supplier tapis;Fashion Wanita;Kab. Pesawaran;;Tokopedia
+426;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+427;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+428;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+429;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+430;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+431;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+432;https://www.tokopedia.com/frenita-tapis-lampung;Frenita Tapis Lampung_NEW;Fashion Wanita;Kab. Pringsewu;;Tokopedia
+433;https://www.tokopedia.com/nitapis-lampung;Nitapis lampung;Office & Stationery;Bandar Lampung;;Tokopedia
+434;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+435;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Office & Stationery;Bandar Lampung;;Tokopedia
+436;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+437;https://www.tokopedia.com/nitapis-lampung;Nitapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+438;https://www.tokopedia.com/lampung-ethnica;Lampung Ethnica_NEW;Fashion Wanita;Kab. Lampung Timur;;Tokopedia
+439;https://www.tokopedia.com/frenita-tapis-lampung;Frenita Tapis Lampung_NEW;Fashion Wanita;Kab. Pringsewu;;Tokopedia
+440;https://www.tokopedia.com/supplier-tapis;Supplier tapis;Fashion Wanita;Kab. Pesawaran;;Tokopedia
+441;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+442;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+443;https://www.tokopedia.com/nitapis-lampung;Nitapis lampung;Office & Stationery;Bandar Lampung;;Tokopedia
+444;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+445;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+446;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+447;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+448;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Perlengkapan Pesta;Bandar Lampung;;Tokopedia
+449;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+450;https://www.tokopedia.com/samisutra;SAMI SUTRA;Fashion Wanita;Bandar Lampung;;Tokopedia
+451;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+452;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Muslim;Bandar Lampung;;Tokopedia
+453;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+454;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+455;https://www.tokopedia.com/supplier-tapis;Supplier tapis;Fashion Wanita;Kab. Pesawaran;;Tokopedia
+456;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Kecantikan;Bandar Lampung;;Tokopedia
+457;https://www.tokopedia.com/tapisinaja-k4;TapisinAja K4;Fashion Wanita;Bandar Lampung;;Tokopedia
+458;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+459;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+460;https://www.tokopedia.com/desti-tapis;desti tapis;Fashion Muslim;Bandar Lampung;;Tokopedia
+461;https://www.tokopedia.com/lampung-ethnica;Lampung Ethnica_NEW;Fashion Wanita;Kab. Lampung Timur;;Tokopedia
+462;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+463;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+464;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+465;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+466;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+467;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+468;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Muslim;Bandar Lampung;;Tokopedia
+469;https://www.tokopedia.com/supplier-tapis;Supplier tapis;Fashion Wanita;Kab. Pesawaran;;Tokopedia
+470;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+471;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+472;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+473;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+474;https://www.tokopedia.com/samisutra;SAMI SUTRA;Fashion Wanita;Bandar Lampung;;Tokopedia
+475;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Muslim;Bandar Lampung;;Tokopedia
+476;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+477;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+478;https://www.tokopedia.com/sambordir-tapis-lampung;SamBordir Tapis Lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+479;https://www.tokopedia.com/sella-tapis;Sella Tapis;Kecantikan;Bandar Lampung;;Tokopedia
+480;https://www.tokopedia.com/nitapis-lampung;Nitapis lampung;Office & Stationery;Bandar Lampung;;Tokopedia
+481;https://www.tokopedia.com/supplier-tapis;Supplier tapis;Fashion Wanita;Kab. Pesawaran;;Tokopedia
+482;https://www.tokopedia.com/sambordir-tapis-lampung;SamBordir Tapis Lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+483;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+484;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+485;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Muslim;Bandar Lampung;;Tokopedia
+486;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+487;https://www.tokopedia.com/sella-tapis;Sella Tapis;Office & Stationery;Bandar Lampung;;Tokopedia
+488;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+489;https://www.tokopedia.com/sambordir-tapis-lampung;SamBordir Tapis Lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+490;https://www.tokopedia.com/lampung-ethnica;Lampung Ethnica_NEW;Olahraga;Kab. Lampung Timur;;Tokopedia
+491;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+492;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+493;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+494;https://www.tokopedia.com/nitapis-lampung;Nitapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+495;https://www.tokopedia.com/toko-tapis-rani-bordir;toko tapis rani bordir;Fashion Muslim;Kab. Lampung Utara;;Tokopedia
+496;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+497;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+498;https://www.tokopedia.com/seftia-sahwan-tapis-lampung;Seftia sahwan tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+499;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+500;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+501;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+502;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+503;https://www.tokopedia.com/lampung-ethnica;Lampung Ethnica_NEW;Fashion Pria;Kab. Lampung Timur;;Tokopedia
+504;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Muslim;Bandar Lampung;;Tokopedia
+505;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+506;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Muslim;Bandar Lampung;;Tokopedia
+507;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+508;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+509;https://www.tokopedia.com/icha-tapislampung;Icha Tapislampung;Fashion Muslim;Kab. Pesawaran;;Tokopedia
+510;https://www.tokopedia.com/sambordir-tapis-lampung;SamBordir Tapis Lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+511;https://www.tokopedia.com/samisutra;SAMI SUTRA;Office & Stationery;Bandar Lampung;;Tokopedia
+512;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+513;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+514;https://www.tokopedia.com/snailycraft;Maharani tapis lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+515;https://www.tokopedia.com/samisutra;SAMI SUTRA;Fashion Wanita;Bandar Lampung;;Tokopedia
+516;https://www.tokopedia.com/nitapis-lampung;Nitapis lampung;Office & Stationery;Bandar Lampung;;Tokopedia
+517;https://www.tokopedia.com/samisutra;SAMI SUTRA;Fashion Wanita;Bandar Lampung;;Tokopedia
+518;https://www.tokopedia.com/sambordir-tapis-lampung;SamBordir Tapis Lampung;Fashion Wanita;Bandar Lampung;;Tokopedia
+519;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Office & Stationery;Bandar Lampung;;Tokopedia
+520;https://www.tokopedia.com/sefti-tapis;Sefti tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+521;https://www.tokopedia.com/lampung-ethnica;Lampung Ethnica_NEW;Fashion Pria;Kab. Lampung Timur;;Tokopedia
+522;https://www.tokopedia.com/sella-tapis;Sella Tapis;Fashion Wanita;Bandar Lampung;;Tokopedia
+523;https://www.tokopedia.com/lampung-ethnica;Lampung Ethnica_NEW;Fashion Pria;Kab. Lampung Timur;;Tokopedia
+524;https://www.tokopedia.com/sella-tapis;Sella Tapis;Dapur;Bandar Lampung;;Tokopedia
+525;https://www.tokopedia.com/sellacraft;Sellacraft_NEW;Fashion Wanita;Bandar Lampung;;Tokopedia
+526;https://www.tokopedia.com/ciara-beauty;Ciara Beauty;Kecantikan;Bandar Lampung;;Tokopedia
+527;https://www.tokopedia.com/ciara-beauty;Ciara Beauty;Kecantikan;Bandar Lampung;;Tokopedia
+528;https://www.tokopedia.com/ciara-beauty;Ciara Beauty;Kecantikan;Bandar Lampung;;Tokopedia
+529;https://www.tokopedia.com/ciara-beauty;Ciara Beauty;Kecantikan;Bandar Lampung;;Tokopedia
+530;https://www.tokopedia.com/ciara-beauty;Ciara Beauty;Kecantikan;Bandar Lampung;;Tokopedia
+531;https://www.tokopedia.com/bdl-olshopp;BDL OLSHOPP;Kecantikan;Bandar Lampung;;Tokopedia
+532;https://www.tokopedia.com/ciara-beauty;Ciara Beauty;Kecantikan;Bandar Lampung;;Tokopedia
+533;https://www.tokopedia.com/ciara-beauty;Ciara Beauty;Kecantikan;Bandar Lampung;;Tokopedia
+534;https://www.tokopedia.com/ciara-beauty;Ciara Beauty;Kecantikan;Bandar Lampung;;Tokopedia
+535;https://www.tokopedia.com/agen-jglow-lampung;agen jglow lampung;Kecantikan;Bandar Lampung;;Tokopedia
+536;https://www.tokopedia.com/kartikabeauty-521;kartikabeauty_NEW;Kecantikan;Metro;;Tokopedia
+537;https://www.tokopedia.com/johshop-pringsewu;Johshop Pringsewu;Kecantikan;Kab. Pringsewu;;Tokopedia
+538;https://www.tokopedia.com/larasshop21-435;Larasshop21_NEW;Kecantikan;Bandar Lampung;;Tokopedia
+539;https://www.tokopedia.com/ciara-beauty;Ciara Beauty;Kecantikan;Bandar Lampung;;Tokopedia
+540;https://www.tokopedia.com/agen-jglow-lampung;agen jglow lampung;Kecantikan;Bandar Lampung;;Tokopedia
+541;https://www.tokopedia.com/daviena-skincare-lampung-geh;Daviena Skincare Lampung Geh;Kecantikan;Bandar Lampung;;Tokopedia
+542;https://www.tokopedia.com/ciara-beauty;Ciara Beauty;Kecantikan;Bandar Lampung;;Tokopedia
+543;https://www.tokopedia.com/ciara-beauty;Ciara Beauty;Kecantikan;Bandar Lampung;;Tokopedia
+544;https://www.tokopedia.com/mk-skin-pusat-lampung;mk skin pusat lampung;Kecantikan;Kab. Tanggamus;;Tokopedia
+545;https://www.tokopedia.com/ciara-beauty;Ciara Beauty;Kecantikan;Bandar Lampung;;Tokopedia
+546;https://www.tokopedia.com/ciara-beauty;Ciara Beauty;Kecantikan;Bandar Lampung;;Tokopedia
+547;https://www.tokopedia.com/ciara-beauty;Ciara Beauty;Kecantikan;Bandar Lampung;;Tokopedia
+548;https://www.tokopedia.com/sucicollection12;sucicollection12;Kecantikan;Kab. Pringsewu;;Tokopedia
+549;https://www.tokopedia.com/yangratu-mirahayati-lampung;YANGRATU MIRAHAYATI LAMPUNG;Kecantikan;Bandar Lampung;;Tokopedia
+550;https://www.tokopedia.com/ciara-beauty;Ciara Beauty;Kecantikan;Bandar Lampung;;Tokopedia
+551;https://www.tokopedia.com/agen-jglow-lampung;agen jglow lampung;Perawatan Tubuh;Bandar Lampung;;Tokopedia
+552;https://www.tokopedia.com/mysaslampung;MYSAS.LAMPUNG;Perawatan Tubuh;Kab. Lampung Timur;;Tokopedia
+553;https://www.tokopedia.com/mysaslampung;MYSAS.LAMPUNG;Kecantikan;Kab. Lampung Timur;;Tokopedia
+554;https://www.tokopedia.com/davienaskincarelampung;Davienaskincare.lampung;Kecantikan;Kab. Lampung Utara;;Tokopedia
+555;https://www.tokopedia.com/mysaslampung;MYSAS.LAMPUNG;Kecantikan;Kab. Lampung Timur;;Tokopedia
+556;https://www.tokopedia.com/yangratu-mirahayati-lampung;YANGRATU MIRAHAYATI LAMPUNG;Kecantikan;Bandar Lampung;;Tokopedia
+557;https://www.tokopedia.com/yangratu-mirahayati-lampung;YANGRATU MIRAHAYATI LAMPUNG;Kecantikan;Bandar Lampung;;Tokopedia
+558;https://www.tokopedia.com/bdl-olshopp;BDL OLSHOPP;Kecantikan;Bandar Lampung;;Tokopedia
+559;https://www.tokopedia.com/review-by-mintiez;Review by mintiez;Kecantikan;Bandar Lampung;;Tokopedia
+560;https://www.tokopedia.com/toko-sb-skincare;TOKO SB SKINCARE;Kesehatan;Bandar Lampung;;Tokopedia
+561;https://www.tokopedia.com/sri-rohayati-skincare;Sri Rohayati skincare;Kecantikan;Kab. Mesuji;;Tokopedia
+562;https://www.tokopedia.com/sri-rohayati-skincare;Sri Rohayati skincare;Kecantikan;Kab. Mesuji;;Tokopedia
+563;https://www.tokopedia.com/ciara-beauty;Ciara Beauty;Kecantikan;Bandar Lampung;;Tokopedia
+564;https://www.tokopedia.com/kinzashop26;KINZASHOP25;Kecantikan;Bandar Lampung;;Tokopedia
+565;https://www.tokopedia.com/skinnaza-pusat;SKINNAZA PUSAT;Kecantikan;Kab. Lampung Selatan;;Tokopedia
+566;https://www.tokopedia.com/flogiftid;flogift.id;Perawatan Tubuh;Bandar Lampung;;Tokopedia
+567;https://www.tokopedia.com/ksskincare-1;KS cosmetic;Perawatan Tubuh;Bandar Lampung;;Tokopedia
+568;https://www.tokopedia.com/indragstn;toko indra agustian;Kecantikan;Bandar Lampung;;Tokopedia
+569;https://www.tokopedia.com/sr12bandarlampung;BELANJA SR12;Kecantikan;Bandar Lampung;;Tokopedia
+570;https://www.tokopedia.com/sr12bandarlampung;BELANJA SR12;Perawatan Tubuh;Bandar Lampung;;Tokopedia
+571;https://www.tokopedia.com/bdlshop;BDLSHOP@;Kecantikan;Bandar Lampung;;Tokopedia
+572;https://www.tokopedia.com/chintachink;Chintachink Shop;Makanan & Minuman;Bandar Lampung;;Tokopedia
+573;https://www.tokopedia.com/ciara-beauty;Ciara Beauty;Kecantikan;Bandar Lampung;;Tokopedia
+574;https://www.tokopedia.com/sri-rohayati-skincare;Sri Rohayati skincare;Kecantikan;Kab. Mesuji;;Tokopedia
+575;https://www.tokopedia.com/yangratu-mirahayati-lampung;YANGRATU MIRAHAYATI LAMPUNG;Kecantikan;Bandar Lampung;;Tokopedia
+576;https://www.tokopedia.com/three-nill;Three nill;Kecantikan;Kab. Lampung Selatan;;Tokopedia
+577;https://www.tokopedia.com/yangratu-mirahayati-lampung;YANGRATU MIRAHAYATI LAMPUNG;Kecantikan;Bandar Lampung;;Tokopedia
+578;https://www.tokopedia.com/skinnaza-pusat;SKINNAZA PUSAT;Kecantikan;Kab. Lampung Selatan;;Tokopedia
+579;https://www.tokopedia.com/keripik-pisang-asli-lampung;KERIPIK PISANG ASLI LAMPUNG;Makanan & Minuman;Kab. Pringsewu;;Tokopedia
+580;https://www.tokopedia.com/kinzashop26;KINZASHOP25;Kecantikan;Bandar Lampung;;Tokopedia
+581;https://www.tokopedia.com/ciara-beauty;Ciara Beauty;Kecantikan;Bandar Lampung;;Tokopedia
+582;https://www.tokopedia.com/isnackshop;isnack shop;Makanan & Minuman;Bandar Lampung;;Tokopedia
+583;https://www.tokopedia.com/dbestplaza2;Dbestplaza;Kecantikan;Bandar Lampung;;Tokopedia
+584;https://www.tokopedia.com/grahacomp;Graha Computer Lampung;Komputer & Laptop;Bandar Lampung;;Tokopedia
+585;https://www.tokopedia.com/grahacomp;Graha Computer Lampung;Komputer & Laptop;Bandar Lampung;;Tokopedia
+586;https://www.tokopedia.com/grahacomp;Graha Computer Lampung;Komputer & Laptop;Bandar Lampung;;Tokopedia
+587;https://www.tokopedia.com/grahacomp;Graha Computer Lampung;Komputer & Laptop;Bandar Lampung;;Tokopedia
+588;https://www.tokopedia.com/grahacomp;Graha Computer Lampung;Komputer & Laptop;Bandar Lampung;;Tokopedia
+589;https://www.tokopedia.com/grahacomp;Graha Computer Lampung;Komputer & Laptop;Bandar Lampung;;Tokopedia
+590;https://www.tokopedia.com/grahacomp;Graha Computer Lampung;Komputer & Laptop;Bandar Lampung;;Tokopedia
+591;https://www.tokopedia.com/grahacomp;Graha Computer Lampung;Komputer & Laptop;Bandar Lampung;;Tokopedia
+592;https://www.tokopedia.com/grahacomp;Graha Computer Lampung;Komputer & Laptop;Bandar Lampung;;Tokopedia
+593;https://www.tokopedia.com/ssynergyid;Ssynergy.id;Komputer & Laptop;Bandar Lampung;;Tokopedia
+594;https://www.tokopedia.com/satriabarbir;Satria Komputer_NEW;Komputer & Laptop;Kab. Lampung Selatan;;Tokopedia
+595;https://www.tokopedia.com/grahacomp;Graha Computer Lampung;Komputer & Laptop;Bandar Lampung;;Tokopedia
+596;https://www.tokopedia.com/grahacomp;Graha Computer Lampung;Komputer & Laptop;Bandar Lampung;;Tokopedia
+597;https://www.tokopedia.com/jacom-cell;JACOM CELL;Komputer & Laptop;Metro;;Tokopedia

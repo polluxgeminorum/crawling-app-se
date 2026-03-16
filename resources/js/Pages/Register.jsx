@@ -228,10 +228,6 @@ export default function Register() {
                         </Link>
                     </div>
                 </div>
-
-                <p className="mt-6 text-center text-sm text-slate-500">
-                    Data akan disimpan di database db_crawl_se
-                </p>
             </div>
         </div>
     );

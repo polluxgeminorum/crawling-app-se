@@ -34,7 +34,6 @@ const navigation = [
     { name: 'Beranda', href: '/', icon: HomeIcon },
     { name: 'Tentang', href: '/tentang', icon: DocumentTextIcon },
     { name: 'Sensus Ekonomi 2026', href: '/sensus-ekonomi', icon: ChartBarIcon },
-    { name: 'Crawling', href: '/crawling', icon: ChartBarIcon },
     { name: 'Panduan', href: '/panduan', icon: DocumentTextIcon },
     { name: 'Log Aktivitas', href: '/activity-log', icon: ClockIcon },
     { name: 'Kelola User', href: '/tabel-user', icon: Cog6ToothIcon },
@@ -315,22 +314,23 @@ export default function SidebarLayout({ children, title = 'DIGI-TRACE SE26' }) {
                                     </div>
                                 )}
 
-                                {/* Crawling - only for Admin and Pegawai */}
-                                {canAccessCrawl() && (
+                                {/* Digital Tracing - Direct Link */}
+                                {canAccessTable() && (
                                     <Link
-                                        href="/crawling"
-                                        className={`flex items-center px-3 py-2.5 text-sm font-medium rounded-lg transition-colors mt-1
-                                            ${currentPath.startsWith('/crawling') 
-                                                ? 'bg-orange-50 text-orange-600' 
+                                        href="/tabel-digital-tracing"
+                                        className={`flex items-center px-3 py-2.5 text-sm font-medium rounded-lg transition-colors mt-1 ${
+                                            currentPath.startsWith('/tabel-digital-tracing')
+                                                ? 'bg-orange-50 text-orange-600'
                                                 : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
-                                            }
-                                        `}
+                                        }`}
                                         onClick={() => setMobileOpen(false)}
                                     >
-                                        <ChartBarIcon className={`w-5 h-5 mr-3 ${currentPath.startsWith('/crawling') ? 'text-orange-600' : 'text-gray-400'}`} />
-                                        Crawling
+                                        <DocumentTextIcon className="w-5 h-5 mr-3 text-gray-400" />
+                                        Digital Tracing
                                     </Link>
                                 )}
+
+
 
                                  {/* Dashboard Monitoring - only for Admin */}
                                  {isAdmin() && (

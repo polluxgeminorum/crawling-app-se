@@ -269,7 +269,8 @@ export default function TabelDTSEN() {
             )}
 
             <div className="p-6">
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+                <div className="bg-white rounded-2xl shadow-lg border border-slate-100 p-6">
+                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
                     <h2 className="text-2xl font-bold text-slate-900">Data DTSEN</h2>
                     <div className="flex gap-2 items-center w-full md:w-auto flex-wrap">
                         <button
@@ -484,6 +485,7 @@ export default function TabelDTSEN() {
                 <div className="mt-4 text-sm text-slate-500">
                     Menampilkan {filteredData.length} dari {data.length} data
                 </div>
+            </div>
             </div>
 
             {/* Edit Modal */}
