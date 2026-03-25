@@ -109,7 +109,7 @@ export default function FormCrowdlisting() {
     };
 
     return (
-        <SidebarLayout title="Form Data Crowdlisting">
+        <SidebarLayout title="Form Data Pendekatan Usaha">
             {/* Toast Notification - Top Right */}
             {success && (
                 <div className="fixed top-4 right-4 z-50 animate-slide-in-right">
@@ -119,7 +119,7 @@ export default function FormCrowdlisting() {
                         </svg>
                         <div className="flex-1">
                             <p className="font-semibold">Berhasil!</p>
-                            <p className="text-sm text-green-100">Data crowdlisting berhasil disimpan</p>
+                            <p className="text-sm text-green-100">Data pendekatan usaha berhasil disimpan</p>
                         </div>
                         <button 
                             onClick={() => setSuccess(false)}

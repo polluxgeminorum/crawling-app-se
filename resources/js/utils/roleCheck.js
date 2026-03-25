@@ -92,15 +92,15 @@ export const getNavLinksByRole = () => {
     
     // Add role-specific links
     if (userRole === 'pelaku_usaha' || userRole === 'pegawai' || userRole === 'admin') {
-        links.push({ name: 'Form Crowdlisting', href: '/form-crowdlisting', active: false });
+        links.push({ name: 'Form Pendekatan Usaha', href: '/form-crowdlisting', active: false });
         links.push({ name: 'Form Snowball', href: '/form-snowball', active: false });
     }
     
     if (userRole === 'pegawai' || userRole === 'admin') {
         links.push({ name: 'Crawling', href: '/crawling', active: false });
-        links.push({ name: 'Tabel Crowdlisting', href: '/tabel-crowdlisting', active: false });
+        links.push({ name: 'Tabel Pendekatan Usaha', href: '/tabel-crowdlisting', active: false });
         links.push({ name: 'Tabel Snowball', href: '/tabel-snowball', active: false });
-        links.push({ name: 'Tabel DTSEN', href: '/tabel-dtsen', active: false });
+        links.push({ name: 'Tabel Pendekatan Ruta', href: '/tabel-dtsen', active: false });
     }
     
     if (userRole === 'admin') {
@@ -129,7 +129,7 @@ export const getBreadcrumbs = (pathname) => {
         ],
         '/form-crowdlisting': [
             { name: 'Beranda', href: '/' },
-            { name: 'Form Crowdlisting', href: '/form-crowdlisting' }
+            { name: 'Form Pendekatan Usaha', href: '/form-crowdlisting' }
         ],
         '/form-snowball': [
             { name: 'Beranda', href: '/' },
@@ -141,7 +141,7 @@ export const getBreadcrumbs = (pathname) => {
         ],
         '/tabel-crowdlisting': [
             { name: 'Beranda', href: '/' },
-            { name: 'Tabel Crowdlisting', href: '/tabel-crowdlisting' }
+            { name: 'Tabel Pendekatan Usaha', href: '/tabel-crowdlisting' }
         ],
         '/tabel-snowball': [
             { name: 'Beranda', href: '/' },
@@ -149,11 +149,11 @@ export const getBreadcrumbs = (pathname) => {
         ],
         '/tabel-dtsen': [
             { name: 'Beranda', href: '/' },
-            { name: 'Tabel DTSEN', href: '/tabel-dtsen' }
+            { name: 'Tabel Pendekatan Ruta', href: '/tabel-dtsen' }
         ],
         '/form-dtsen': [
             { name: 'Beranda', href: '/' },
-            { name: 'Form DTSEN', href: '/form-dtsen' }
+            { name: 'Form Pendekatan Ruta', href: '/form-dtsen' }
         ],
         '/activity-log': [
             { name: 'Beranda', href: '/' },

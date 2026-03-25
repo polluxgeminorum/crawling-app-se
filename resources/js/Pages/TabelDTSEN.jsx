@@ -237,12 +237,12 @@ export default function TabelDTSEN() {
         })));
         
         const workbook = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(workbook, worksheet, 'DTSEN');
-        XLSX.writeFile(workbook, 'Data_DTSEN.xlsx');
+        XLSX.utils.book_append_sheet(workbook, worksheet, 'Data Pendekatan Ruta');
+        XLSX.writeFile(workbook, 'data_pendekatan_ruta.xlsx');
     };
 
     return (
-        <SidebarLayout title="Tabel Data DTSEN">
+        <SidebarLayout title="Tabel Data Pendekatan Ruta">
             {/* Toast Notification */}
             {notification && (
                 <div className="fixed top-4 right-4 z-50 animate-slide-in-right">
@@ -271,7 +271,7 @@ export default function TabelDTSEN() {
             <div className="p-6">
                 <div className="bg-white rounded-2xl shadow-lg border border-slate-100 p-6">
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
-                    <h2 className="text-2xl font-bold text-slate-900">Data DTSEN</h2>
+                    <h2 className="text-2xl font-bold text-slate-900">Data Pendekatan Ruta</h2>
                     <div className="flex gap-2 items-center w-full md:w-auto flex-wrap">
                         <button
                             onClick={() => setShowFilters(!showFilters)}
@@ -493,7 +493,7 @@ export default function TabelDTSEN() {
                 <div className="fixed inset-0 bg-white/30 backdrop-blur-sm flex items-center justify-center z-50">
                     <div className="bg-white rounded-xl shadow-2xl border-2 border-orange-200 w-full max-w-2xl mx-4 max-h-[90vh] overflow-y-auto">
                         <div className="p-6 border-b">
-                            <h3 className="text-xl font-bold">Edit Data DTSEN</h3>
+                            <h3 className="text-xl font-bold">Edit Data Pendekatan Ruta</h3>
                         </div>
                         <form onSubmit={handleEdit}>
                             <div className="p-6 space-y-4">
@@ -605,7 +605,7 @@ export default function TabelDTSEN() {
                         <div className="p-6">
                             <h2 className="text-xl font-bold mb-4">Hapus Data</h2>
                         <p className="text-slate-600 mb-6">
-                            Apakah Anda yakin ingin menghapus data DTSEN dengan No. KK <strong>{selectedItem?.no_kk}</strong>?
+                            Apakah Anda yakin ingin menghapus data Pendekatan Ruta dengan No. KK <strong>{selectedItem?.no_kk}</strong>?
                         </p>
                         <div className="flex gap-3 justify-end">
                             <button

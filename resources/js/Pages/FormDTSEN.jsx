@@ -107,7 +107,7 @@ export default function FormDTSEN() {
     };
     
     return (
-        <SidebarLayout title="Form DTSEN">
+        <SidebarLayout title="Form Pendekatan Ruta">
             {/* Toast Notification - Top Right */}
             {success && (
                 <div className="fixed top-4 right-4 z-50 animate-slide-in-right">
@@ -117,7 +117,7 @@ export default function FormDTSEN() {
                         </svg>
                         <div className="flex-1">
                             <p className="font-semibold">Berhasil!</p>
-                            <p className="text-sm text-green-100">Data DTSEN berhasil disimpan</p>
+                            <p className="text-sm text-green-100">Data Pendekatan Ruta berhasil disimpan</p>
                         </div>
                         <button 
                             onClick={() => setSuccess(false)}
@@ -133,9 +133,9 @@ export default function FormDTSEN() {
 
             <div className="max-w-4xl mx-auto px-4 py-8">
                 <div className="bg-white rounded-2xl shadow-lg border border-slate-100 p-8">
-                    <h2 className="text-2xl font-bold text-slate-900 mb-6">Form Data DTSEN</h2>
+                    <h2 className="text-2xl font-bold text-slate-900 mb-6">Form Data Pendekatan Ruta</h2>
                     <p className="text-slate-600 mb-8">
-                        Silakan isi data DTSEN di bawah ini untuk mendukung Sensus Ekonomi 2026.
+                        Silakan isi data Pendekatan Ruta di bawah ini untuk mendukung Sensus Ekonomi 2026.
                     </p>
 
                     {error && (

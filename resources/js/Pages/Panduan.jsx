@@ -21,8 +21,8 @@ export default function Panduan() {
         },
         {
             number: '03',
-            title: 'Isi Form Crowdlisting',
-            description: 'Setelah login, isi formulir crowdlisting untuk mendaftarkan pelaku ekonomi digital.',
+            title: 'Isi Form Pendekatan Usaha',
+            description: 'Setelah login, isi formulir pendekatan usaha untuk mendaftarkan pelaku ekonomi digital.',
         },
         {
             number: '04',
@@ -126,7 +126,7 @@ export default function Panduan() {
                     <div className="text-center mb-16">
                         <h1 className="text-4xl font-bold text-slate-900 mb-4">Panduan Registrasi & Login</h1>
                         <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                            Pelajari cara daftar dan login untuk mengisi formulir crowdlisting dan snowball
+                            Pelajari cara daftar dan login untuk mengisi formulir pendekatan usaha dan snowball
                         </p>
                     </div>
                     
@@ -153,7 +153,7 @@ export default function Panduan() {
                     {/* CTA for Guest */}
                     <div className="bg-gradient-to-br from-orange-50 to-orange-50 rounded-2xl p-8 border border-orange-100 text-center">
                         <h2 className="text-2xl font-bold text-slate-900 mb-4">Siap Untuk Mulai?</h2>
-                        <p className="text-slate-600 mb-6">Daftar sekarang untuk mengisi formulir crowdlisting dan snowball</p>
+                        <p className="text-slate-600 mb-6">Daftar sekarang untuk mengisi formulir pendekatan usaha dan snowball</p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <a
                                 href="/register"
@@ -333,7 +333,7 @@ export default function Panduan() {
                     <div className="text-center mb-16">
                         <h1 className="text-4xl font-bold text-slate-900 mb-4">Panduan Pelaku Usaha</h1>
                         <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                            Pelajari cara mengisi formulir crowdlisting dan snowball
+                            Pelajari cara mengisi formulir pendekatan usaha dan snowball
                         </p>
                     </div>
                     
@@ -360,7 +360,7 @@ export default function Panduan() {
                     {/* CTA */}
                     <div className="bg-gradient-to-br from-orange-50 to-orange-50 rounded-2xl p-8 border border-orange-100 text-center">
                         <h2 className="text-2xl font-bold text-slate-900 mb-4">Siap Untuk Mengisi?</h2>
-                        <p className="text-slate-600 mb-6">Isi formulir crowdlisting dan snowball sekarang</p>
+                        <p className="text-slate-600 mb-6">Isi formulir pendekatan usaha dan snowball sekarang</p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <a
                                 href="/form-crowdlisting"

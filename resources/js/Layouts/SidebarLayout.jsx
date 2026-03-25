@@ -16,8 +16,8 @@ import useAuthStore from '../stores/authStore';
 import { checkPageAccess } from '../utils/roleCheck';
 
 const crowdlistingMenu = [
-    { name: 'Form Crowdlisting', href: '/form-crowdlisting' },
-    { name: 'Tabel Crowdlisting', href: '/tabel-crowdlisting' },
+    { name: 'Form Pendekatan Usaha', href: '/form-crowdlisting' },
+    { name: 'Tabel Pendekatan Usaha', href: '/tabel-crowdlisting' },
 ];
 
 const snowballMenu = [
@@ -26,8 +26,8 @@ const snowballMenu = [
 ];
 
 const dtsenMenu = [
-    { name: 'Form DTSEN', href: '/form-dtsen' },
-    { name: 'Tabel DTSEN', href: '/tabel-dtsen' },
+    { name: 'Form Pendekatan Ruta', href: '/form-dtsen' },
+    { name: 'Tabel Pendekatan Ruta', href: '/tabel-dtsen' },
 ];
 
 const navigation = [
@@ -179,7 +179,7 @@ export default function SidebarLayout({ children, title = 'DIGI-TRACE SE26' }) {
                                         >
                                             <span className="flex items-center">
                                                 <DocumentTextIcon className="w-5 h-5 mr-3 text-gray-400" />
-                                                Crowdlisting
+                                                Pendekatan Usaha
                                             </span>
                                             <ChevronDownIcon className={`w-4 h-4 transition-transform ${crowdlistingOpen ? 'rotate-180' : ''}`} />
                                         </button>
@@ -194,7 +194,7 @@ export default function SidebarLayout({ children, title = 'DIGI-TRACE SE26' }) {
                                                     }`}
                                                     onClick={() => setMobileOpen(false)}
                                                 >
-                                                    Form Crowdlisting
+                                                    Form Pendekatan Usaha
                                                 </Link>
                                                 {canAccessTable() && (
                                                     <Link
@@ -206,7 +206,7 @@ export default function SidebarLayout({ children, title = 'DIGI-TRACE SE26' }) {
                                                         }`}
                                                         onClick={() => setMobileOpen(false)}
                                                     >
-                                                        Tabel Crowdlisting
+                                                        Tabel Pendekatan Usaha
                                                     </Link>
                                                 )}
                                             </div>
@@ -275,7 +275,7 @@ export default function SidebarLayout({ children, title = 'DIGI-TRACE SE26' }) {
                                         >
                                             <span className="flex items-center">
                                                 <DocumentTextIcon className="w-5 h-5 mr-3 text-gray-400" />
-                                                DTSEN
+                                                Pendekatan Ruta
                                             </span>
                                             <svg className={`w-4 h-4 transition-transform ${dtsenOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -293,7 +293,7 @@ export default function SidebarLayout({ children, title = 'DIGI-TRACE SE26' }) {
                                                         }`}
                                                         onClick={() => setMobileOpen(false)}
                                                     >
-                                                        Form DTSEN
+                                                        Form Pendekatan Ruta
                                                     </Link>
                                                 )}
                                                 {canAccessTable() && (
@@ -306,7 +306,7 @@ export default function SidebarLayout({ children, title = 'DIGI-TRACE SE26' }) {
                                                         }`}
                                                         onClick={() => setMobileOpen(false)}
                                                     >
-                                                        Tabel DTSEN
+                                                        Tabel Pendekatan Ruta
                                                     </Link>
                                                 )}
                                             </div>

@@ -13,6 +13,7 @@ class DigitalTracing extends Model
     
     protected $fillable = [
         'link',
+        'maps',
         'nama_usaha',
         'kategori',
         'alamat',

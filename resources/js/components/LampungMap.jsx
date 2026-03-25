@@ -232,11 +232,11 @@ export default function LampungMap({ kabKotaStats = [] }) {
           {hoveredRegion.stats ? (
             <div className="space-y-1 text-sm">
               <div className="flex justify-between">
-                <span className="text-slate-500">DTSEN:</span>
+                <span className="text-slate-500">Pendekatan Ruta:</span>
                 <span className="font-semibold">{hoveredRegion.stats.dtsen}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-slate-500">Crowdlisting:</span>
+                <span className="text-slate-500">Pendekatan Usaha:</span>
                 <span className="font-semibold">{hoveredRegion.stats.crowdlisting}</span>
               </div>
               <div className="flex justify-between">

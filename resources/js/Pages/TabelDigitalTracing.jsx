@@ -54,6 +54,8 @@ export default function TabelDigitalTracing() {
     // Modal states
     const [showEditModal, setShowEditModal] = useState(false);
     const [showDeleteModal, setShowDeleteModal] = useState(false);
+    const [showMapsModal, setShowMapsModal] = useState(false);
+    const [selectedMapsUrl, setSelectedMapsUrl] = useState('');
     const [selectedItem, setSelectedItem] = useState(null);
     const [editForm, setEditForm] = useState({});
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -178,6 +180,7 @@ export default function TabelDigitalTracing() {
         setSelectedItem(item);
         setEditForm({
             link: item.link || '',
+            maps: item.maps || '',
             nama_usaha: item.nama_usaha || '',
             kategori: item.kategori || '',
             alamat: item.alamat || '',
@@ -239,6 +242,7 @@ export default function TabelDigitalTracing() {
         const worksheet = XLSX.utils.json_to_sheet(filteredData.map((item, index) => ({
             'No': index + 1,
             'Link': item.link || '',
+            'Link Maps': item.maps || '',
             'Nama Usaha': item.nama_usaha || '',
             'Kategori': item.kategori || '',
             'Alamat': item.alamat || '',
@@ -340,6 +344,16 @@ export default function TabelDigitalTracing() {
                                     className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-orange-500"
                                 />
                             </div>
+                            <div>
+                                <label className="block text-sm font-medium text-slate-700 mb-1">Link Google Maps</label>
+                                <input
+                                    type="text"
+                                    value={editForm.maps || ''}
+                                    onChange={(e) => setEditForm({...editForm, maps: e.target.value})}
+                                    className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-orange-500"
+                                    placeholder="https://maps.google.com/..."
+                                />
+                            </div>
                             <div className="flex justify-end gap-3 pt-4">
                                 <button
                                     type="button"
@@ -388,6 +402,37 @@ export default function TabelDigitalTracing() {
                                     {isSubmitting ? 'Menghapus...' : 'Hapus'}
                                 </button>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Maps Modal */}
+            {showMapsModal && (
+                <div className="fixed inset-0 bg-white/30 backdrop-blur-sm flex items-center justify-center z-50">
+                    <div className="bg-white rounded-xl shadow-2xl border-2 border-green-200 w-full max-w-4xl mx-4 max-h-[90vh] overflow-hidden">
+                        <div className="p-4 border-b flex justify-between items-center">
+                            <h3 className="text-xl font-bold">Lokasi di Google Maps</h3>
+                            <button
+                                onClick={() => setShowMapsModal(false)}
+                                className="text-gray-500 hover:text-gray-700"
+                            >
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div className="h-[70vh]">
+                            <iframe
+                                src={selectedMapsUrl}
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                title="Google Maps Location"
+                            />
                         </div>
                     </div>
                 </div>
@@ -498,6 +543,9 @@ export default function TabelDigitalTracing() {
                                     <th className="px-4 py-3 cursor-pointer hover:bg-slate-100" onClick={() => handleSort('link')}>
                                         Link {getSortIcon('link')}
                                     </th>
+                                    <th className="px-4 py-3">
+                                        Tampilkan Maps
+                                    </th>
                                     <th className="px-4 py-3 cursor-pointer hover:bg-slate-100" onClick={() => handleSort('nama_usaha')}>
                                         Nama Usaha {getSortIcon('nama_usaha')}
                                     </th>
@@ -524,6 +572,25 @@ export default function TabelDigitalTracing() {
                                             <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
                                                 {item.link ? 'Link' : '-'}
                                             </a>
+                                        </td>
+                                        <td className="px-4 py-3">
+                                            {item.maps ? (
+                                                <button
+                                                    onClick={() => {
+                                                        setSelectedMapsUrl(item.maps);
+                                                        setShowMapsModal(true);
+                                                    }}
+                                                    className="p-2 text-green-600 hover:bg-green-50 rounded"
+                                                    title="Tampilkan Maps"
+                                                >
+                                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                    </svg>
+                                                </button>
+                                            ) : (
+                                                <span className="text-gray-400">-</span>
+                                            )}
                                         </td>
                                         <td className="px-4 py-3 font-medium">{item.nama_usaha}</td>
                                         <td className="px-4 py-3">{item.kategori || '-'}</td>
