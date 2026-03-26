@@ -254,6 +254,32 @@ export default function TabelDigitalTracing() {
         XLSX.writeFile(workbook, 'data_digital_tracing.xlsx');
     };
 
+    function convertToEmbedUrl(url) {
+        if (!url) return '';
+
+        // 1. Ambil nama tempat dari URL (/place/NAMA_TEMPAT/)
+        const placeMatch = url.match(/\/place\/([^/]+)/);
+
+        if (placeMatch) {
+            const placeName = decodeURIComponent(placeMatch[1]);
+            
+            return `https://www.google.com/maps?q=${placeName}&output=embed`;
+        }
+
+        // 2. fallback ke koordinat
+        const coordMatch = url.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/);
+
+        if (coordMatch) {
+            const lat = coordMatch[1];
+            const lng = coordMatch[2];
+
+            return `https://www.google.com/maps?q=${lat},${lng}&z=17&output=embed`;
+        }
+
+        // 3. fallback terakhir
+        return `https://www.google.com/maps?q=${encodeURIComponent(url)}&output=embed`;
+    }
+
     return (
         <SidebarLayout title="Tabel Data Digital Tracing">
             {/* Toast Notification */}
@@ -424,6 +450,7 @@ export default function TabelDigitalTracing() {
                         </div>
                         <div className="h-[70vh]">
                             <iframe
+                                key={selectedMapsUrl}
                                 src={selectedMapsUrl}
                                 width="100%"
                                 height="100%"
@@ -577,7 +604,8 @@ export default function TabelDigitalTracing() {
                                             {item.maps ? (
                                                 <button
                                                     onClick={() => {
-                                                        setSelectedMapsUrl(item.maps);
+                                                        const embedUrl = convertToEmbedUrl(item.maps);
+                                                        setSelectedMapsUrl(embedUrl);
                                                         setShowMapsModal(true);
                                                     }}
                                                     className="p-2 text-green-600 hover:bg-green-50 rounded"
