@@ -257,27 +257,54 @@ export default function TabelDigitalTracing() {
     function convertToEmbedUrl(url) {
         if (!url) return '';
 
-        // 1. Ambil nama tempat dari URL (/place/NAMA_TEMPAT/)
-        const placeMatch = url.match(/\/place\/([^/]+)/);
+        try {
+            const decodedUrl = decodeURIComponent(url);
 
-        if (placeMatch) {
-            const placeName = decodeURIComponent(placeMatch[1]);
-            
-            return `https://www.google.com/maps?q=${placeName}&output=embed`;
+            // 1. FORMAT EXCEL: q=nama & ll=lat,lng
+            const qllMatch = decodedUrl.match(/[?&]q=([^&]+)&ll=(-?\d+\.\d+),(-?\d+\.\d+)/);
+            if (qllMatch) {
+                const place = qllMatch[1];
+                const lat = qllMatch[2];
+                const lng = qllMatch[3];
+
+                // gunakan label tapi tetap prioritaskan koordinat
+                return `https://www.google.com/maps?q=${lat},${lng}(${encodeURIComponent(place)})&z=17&output=embed`;
+            }
+
+            // 2. FORMAT EXCEL: q=lat,lng
+            const qMatch = decodedUrl.match(/[?&]q=(-?\d+\.\d+),(-?\d+\.\d+)/);
+            if (qMatch) {
+                const lat = qMatch[1];
+                const lng = qMatch[2];
+
+                return `https://www.google.com/maps?q=${lat},${lng}&z=17&output=embed`;
+            }
+
+            // 3. FORMAT /place/ (PALING BAGUS UNTUK LABEL)
+            const placeMatch = decodedUrl.match(/\/place\/([^/]+)/);
+            if (placeMatch) {
+                const placeName = placeMatch[1];
+
+                // ini satu-satunya cara paling reliable untuk munculin label
+                return `https://www.google.com/maps?q=${encodeURIComponent(placeName)}&z=17&output=embed`;
+            }
+
+            // 4. FORMAT @lat,lng
+            const coordMatch = decodedUrl.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/);
+            if (coordMatch) {
+                const lat = coordMatch[1];
+                const lng = coordMatch[2];
+
+                return `https://www.google.com/maps?q=${lat},${lng}&z=17&output=embed`;
+            }
+
+            // 5. FALLBACK
+            return `https://www.google.com/maps?q=${encodeURIComponent(decodedUrl)}&z=17&output=embed`;
+
+        } catch (error) {
+            console.error('Error parsing maps URL:', url);
+            return '';
         }
-
-        // 2. fallback ke koordinat
-        const coordMatch = url.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/);
-
-        if (coordMatch) {
-            const lat = coordMatch[1];
-            const lng = coordMatch[2];
-
-            return `https://www.google.com/maps?q=${lat},${lng}&z=17&output=embed`;
-        }
-
-        // 3. fallback terakhir
-        return `https://www.google.com/maps?q=${encodeURIComponent(url)}&output=embed`;
     }
 
     return (
