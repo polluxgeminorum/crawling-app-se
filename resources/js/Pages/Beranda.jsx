@@ -214,7 +214,7 @@ export default function Beranda() {
                             Anda sudah login sebagai {formatRole(user?.role)}
                         </p>
                         <Link
-                            href="/sensus-ekonomi"
+                            href="/tentang"
                             className="inline-block px-10 py-4 bg-white text-orange-600 text-lg font-semibold rounded-xl hover:bg-orange-50 transition-colors shadow-lg"
                         >
                             Lihat Penjelasan
